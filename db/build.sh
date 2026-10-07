@@ -104,7 +104,7 @@ short=${CORE_REF:0:7}
 cmd=$(printf '"%s",' mysqld "${MYSQLD_OPTS[@]}")
 docker commit --change "CMD [${cmd%,}]" --change "ENV MYSQL_ROOT_PASSWORD=ci" \
   --change "LABEL org.opencontainers.image.source=https://github.com/buildthehomelab/wow-ci" \
-  --change "LABEL org.opencontainers.image.description=AzerothCore DB snapshot for module CI (core $short)" \
+  --change "LABEL org.opencontainers.image.description=\"AzerothCore DB snapshot for module CI (core $short)\"" \
   wow-ci-db "$IMAGE:$short"
 docker tag "$IMAGE:$short" "$IMAGE:latest"
 docker images "$IMAGE"
