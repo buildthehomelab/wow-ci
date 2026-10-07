@@ -1,0 +1,258 @@
+# Reusable CI for buildthehomelab WoW modules and addons. Each repo calls it with a
+# small caller (templates/ci.yml). Jobs run only for what the repo contains:
+#   cpp     src/*.cpp        loader name + syntax check against the server's core
+#   sql     data/sql/**      apply on a snapshot of the server DB, re-apply, uninstall
+#   addon   *.toc / *.lua    .toc/.xml structure, Lua 5.1 syntax, luacheck
+#   php     *.php            php -l
+#   shell   *.sh             shellcheck
+#   python  *.py             compile + ruff (fatal error classes only)
+# Errors fail the check; warnings are annotations on the PR diff and in the job summary.
+name: wow-ci
+
+on:
+  workflow_call:
+    inputs:
+      module:
+        description: "Module folder name on the server (default: repo name without the wow- prefix)"
+        type: string
+        default: ""
+      core-ref:
+        description: "Core commit to check against (default: the server's, from config/core.env)"
+        type: string
+        default: ""
+      extra-modules:
+        description: "Space-separated owner/repo@ref modules whose headers this module includes"
+        type: string
+        default: ""
+      lua-exclude:
+        description: "Space-separated globs of vendored Lua to skip in luacheck"
+        type: string
+        default: ""
+      sql-rerun:
+        description: "'error' or 'warning': how to report SQL that fails when applied twice"
+        type: string
+        default: "error"
+      repository:
+        description: "Repo to check (default: the calling repo; the fleet run sets it)"
+        type: string
+        default: ""
+      ref:
+        description: "Ref of that repo to check"
+        type: string
+        default: ""
+      ci-ref:
+        description: "wow-ci ref to take scripts from"
+        type: string
+        default: "main"
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+    outputs:
+      module: ${{ steps.d.outputs.module }}
+      cpp: ${{ steps.d.outputs.cpp }}
+      sql: ${{ steps.d.outputs.sql }}
+      addon: ${{ steps.d.outputs.addon }}
+      php: ${{ steps.d.outputs.php }}
+      shell: ${{ steps.d.outputs.shell }}
+      python: ${{ steps.d.outputs.python }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.repository || github.repository }}
+          ref: ${{ inputs.ref }}
+      - id: d
+        env:
+          MODULE: ${{ inputs.module }}
+          REPO: ${{ inputs.repository || github.repository }}
+        run: |
+          REPO=${REPO#*/}
+          has() { [ -n "$(git ls-files "$@" | head -1)" ] && echo true || echo false; }
+          if [ -z "$MODULE" ]; then
+            MODULE=$REPO
+            case "$MODULE" in wow-mod-*) MODULE=${MODULE#wow-} ;; esac
+          fi
+          {
+            echo "module=$MODULE"
+            echo "cpp=$(has 'src/*.cpp')"
+            echo "sql=$(has 'data/sql/*.sql' '*uninstall*.sql')"
+            echo "addon=$(has '*.toc' '*.lua')"
+            echo "php=$(has '*.php')"
+            echo "shell=$(has '*.sh')"
+            echo "python=$(has '*.py')"
+          } | tee -a "$GITHUB_OUTPUT"
+
+  cpp:
+    needs: detect
+    if: needs.detect.outputs.cpp == 'true'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.repository || github.repository }}
+          ref: ${{ inputs.ref }}
+          path: module
+      - uses: actions/checkout@v4
+        with:
+          repository: buildthehomelab/wow-ci
+          ref: ${{ inputs.ci-ref }}
+          path: .wow-ci
+      - name: Loader name
+        working-directory: module
+        run: python3 ../.wow-ci/scripts/loader-check.py "${{ needs.detect.outputs.module }}" src
+      - name: Fetch core and mod-playerbots headers
+        env:
+          CORE_REF_INPUT: ${{ inputs.core-ref }}
+          EXTRA: ${{ inputs.extra-modules }}
+        run: |
+          . .wow-ci/config/core.env
+          [ -n "$CORE_REF_INPUT" ] && CORE_REF=$CORE_REF_INPUT
+          fetch() {
+            git init -q "$3"; git -C "$3" remote add origin "$1"
+            git -C "$3" sparse-checkout set --no-cone /src/ /deps/ /modules/*.h
+            git -C "$3" fetch -q --depth 1 --filter=blob:none origin "$2"
+            git -C "$3" checkout -q FETCH_HEAD
+          }
+          fetch "$CORE_REPO" "$CORE_REF" core
+          fetch "$PLAYERBOTS_REPO" "$PLAYERBOTS_REF" playerbots
+          extra=""
+          for spec in $EXTRA; do
+            repo=${spec%@*}; ref=${spec#*@}; [ "$ref" = "$spec" ] && ref=HEAD
+            fetch "https://github.com/$repo.git" "$ref" "extra/${repo#*/}"
+            extra="$extra $PWD/extra/${repo#*/}"
+          done
+          echo "CORE_REF=$CORE_REF" >>"$GITHUB_ENV"
+          echo "EXTRA_INCLUDES=$extra" >>"$GITHUB_ENV"
+      - name: Install headers
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends libboost-dev libmysqlclient-dev libssl-dev >/dev/null
+      - name: Syntax check against the server's core
+        working-directory: module
+        run: |
+          CXX=$(command -v clang++-18 || command -v clang++)
+          CXX=$CXX CORE_DIR=$GITHUB_WORKSPACE/core PLAYERBOTS_DIR=$GITHUB_WORKSPACE/playerbots \
+            bash ../.wow-ci/scripts/cpp-check.sh
+
+  sql:
+    needs: detect
+    if: needs.detect.outputs.sql == 'true'
+    runs-on: ubuntu-24.04
+    services:
+      db:
+        image: ghcr.io/buildthehomelab/wow-ci-db:latest
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd "mysqladmin ping -h127.0.0.1 -uroot -pci"
+          --health-interval 5s --health-timeout 5s --health-retries 60
+    env:
+      MYSQL_HOST: 127.0.0.1
+      MYSQL_PORT: "3306"
+      MYSQL_USER: root
+      MYSQL_PWD: ci
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.repository || github.repository }}
+          ref: ${{ inputs.ref }}
+          path: module
+      - uses: actions/checkout@v4
+        with:
+          repository: buildthehomelab/wow-ci
+          ref: ${{ inputs.ci-ref }}
+          path: .wow-ci
+      - name: Snapshot info
+        run: mysql -h127.0.0.1 -uroot -t -e "SELECT * FROM ci_meta.info"
+      - name: Apply module SQL like ac-db-import
+        run: python3 .wow-ci/scripts/sqlcheck.py check module --module "${{ needs.detect.outputs.module }}" --rerun-level "${{ inputs.sql-rerun }}"
+
+  addon:
+    needs: detect
+    if: needs.detect.outputs.addon == 'true'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.repository || github.repository }}
+          ref: ${{ inputs.ref }}
+      - uses: actions/checkout@v4
+        with:
+          repository: buildthehomelab/wow-ci
+          ref: ${{ inputs.ci-ref }}
+          path: .wow-ci
+      - name: Install Lua 5.1 and luacheck
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends lua5.1 lua-check >/dev/null
+      - name: Addon structure (.toc / .xml)
+        if: always()
+        run: python3 .wow-ci/scripts/addon-check.py
+      - name: Lua
+        if: always()
+        env:
+          LUA_EXCLUDE: ${{ inputs.lua-exclude }}
+        run: bash .wow-ci/scripts/lua-check.sh
+
+  php:
+    needs: detect
+    if: needs.detect.outputs.php == 'true'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.repository || github.repository }}
+          ref: ${{ inputs.ref }}
+      - name: php -l
+        run: |
+          fail=0
+          while IFS= read -r f; do
+            out=$(php -l "$f" 2>&1) || { fail=1; line=$(sed -nE 's/.* on line ([0-9]+).*/\1/p' <<<"$out" | head -1)
+              echo "::error file=$f,line=${line:-1}::$(grep -m1 -E 'Parse error|Fatal error' <<<"$out")"; }
+          done < <(git ls-files '*.php')
+          exit $fail
+
+  shell:
+    needs: detect
+    if: needs.detect.outputs.shell == 'true'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.repository || github.repository }}
+          ref: ${{ inputs.ref }}
+      - uses: actions/checkout@v4
+        with:
+          repository: buildthehomelab/wow-ci
+          ref: ${{ inputs.ci-ref }}
+          path: .wow-ci
+      - name: shellcheck
+        run: |
+          git ls-files '*.sh' | xargs shellcheck -f gcc -S warning >shellcheck.log || true
+          # Only shellcheck's error severity (real breakage) fails; warnings are annotations.
+          python3 .wow-ci/scripts/annotate.py gcc shellcheck.log --title shellcheck
+
+  python:
+    needs: detect
+    if: needs.detect.outputs.python == 'true'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.repository || github.repository }}
+          ref: ${{ inputs.ref }}
+      - uses: actions/checkout@v4
+        with:
+          repository: buildthehomelab/wow-ci
+          ref: ${{ inputs.ci-ref }}
+          path: .wow-ci
+      - name: ruff
+        run: |
+          # Syntax errors, undefined names and broken comparisons fail; other pyflakes findings are warnings.
+          pipx run ruff check --no-cache --output-format concise --select E9,F $(git ls-files '*.py') >ruff.log || true
+          sed -nE 's/^([^:]+):([0-9]+):[0-9]+: ((E9|F63|F7|F82)[0-9]* .*)$/error|\1|\2|\3/p; t; s/^([^:]+):([0-9]+):[0-9]+: (F[0-9]+ .*)$/warning|\1|\2|\3/p' ruff.log >ruff.raw
+          python3 .wow-ci/scripts/annotate.py raw ruff.raw --title "Python"

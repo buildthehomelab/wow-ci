@@ -1,0 +1,41 @@
+# Runs the CI against the default branch of every repo in config/repos.txt. Use it after
+# changing a check, to see what it would flag everywhere before the repos pick it up.
+name: Fleet run
+
+on:
+  workflow_dispatch:
+    inputs:
+      repos:
+        description: "Space-separated repo names (empty = all of config/repos.txt)"
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    outputs:
+      repos: ${{ steps.l.outputs.repos }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: l
+        env:
+          REPOS: ${{ inputs.repos }}
+        run: |
+          [ -z "$REPOS" ] && REPOS=$(grep -v '^#' config/repos.txt)
+          echo "repos=$(printf '%s\n' $REPOS | jq -R . | jq -sc .)" >>"$GITHUB_OUTPUT"
+
+  ci:
+    needs: list
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        repo: ${{ fromJSON(needs.list.outputs.repos) }}
+    uses: ./.github/workflows/ci.yml
+    with:
+      repository: buildthehomelab/${{ matrix.repo }}
+      ci-ref: ${{ github.sha }}
