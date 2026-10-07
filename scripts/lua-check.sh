@@ -35,12 +35,17 @@ PY
 
 fail=0
 if command -v "$LUAC" >/dev/null; then
-  : >"$OUT/luac.log"
+  : >"$OUT/luac.raw"
   for f in "${files[@]}"; do
-    "$LUAC" -p -o /dev/null "$f" 2>>"$OUT/luac.log" || fail=1
+    # The client skips a UTF-8 BOM; standalone luac doesn't, so strip it first.
+    if ! out=$(sed '1s/^\xEF\xBB\xBF//' "$f" | "$LUAC" -p - 2>&1); then
+      fail=1
+      # "luac5.1: stdin:12: 'end' expected near '&'"
+      line=$(sed -nE 's/.*stdin:([0-9]+):.*/\1/p' <<<"$out" | head -1)
+      msg=$(sed -E 's/^[^:]+: stdin:[0-9]+: //' <<<"$out" | head -1)
+      echo "error|$f|${line:-1}|Lua 5.1 syntax error: $msg" >>"$OUT/luac.raw"
+    fi
   done
-  # luac5.1: "luac5.1: file.lua:12: unexpected symbol near 'x'"
-  sed -E 's/^[^:]+: ([^:]+):([0-9]+): (.*)$/error|\1|\2|Lua 5.1 syntax error: \3/' "$OUT/luac.log" >"$OUT/luac.raw"
   python3 "$HERE/annotate.py" raw "$OUT/luac.raw" --title "Lua 5.1 syntax" || fail=1
 else
   echo "::warning::$LUAC not found; skipping the Lua 5.1 syntax check"
