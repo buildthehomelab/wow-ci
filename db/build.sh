@@ -57,6 +57,13 @@ apply_dir() {  # apply_dir DIR DATABASE LABEL
   local dir=$1 db=$2 label=$3 n=0
   [ -d "$dir" ] || return 0
   while IFS= read -r f; do
+    # Like dbimport: updates already listed in the DB's `updates` table (the base dumps
+    # ship with that list) are skipped.
+    if [ "$label" = core-updates ] && [ -n "$(mysql -h127.0.0.1 -uroot -N -e \
+         "SELECT 1 FROM \`updates\` WHERE name='$(basename "$f")'" "$db" 2>/dev/null)" ]; then
+      mysql -h127.0.0.1 -uroot -e "INSERT IGNORE INTO ci_meta.sql_files VALUES ('$db', 'core', '$(basename "$f")', 1)"
+      continue
+    fi
     mysql -h127.0.0.1 -uroot --default-character-set=utf8 --max-allowed-packet=1GB "$db" <"$f" \
       || { echo "::error::$label: $(basename "$f") failed"; exit 1; }
     if [ "$label" = core-updates ]; then
