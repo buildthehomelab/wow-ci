@@ -98,8 +98,8 @@ mysql -h127.0.0.1 -uroot -e "REPLACE INTO ci_meta.info VALUES ('core_ref', '$COR
 mysql -h127.0.0.1 -uroot -N -e "SELECT module, SUM(ok=0) FROM ci_meta.sql_files GROUP BY module HAVING SUM(ok=0) > 0" \
   | while read -r m n; do echo "::warning::$m: $n file(s) failed to apply in the snapshot"; done
 
-docker exec wow-ci-db mysqladmin -uroot -pci shutdown
-docker wait wow-ci-db >/dev/null || true
+# SIGTERM is a clean InnoDB shutdown (`docker exec mysqladmin shutdown` dies with the container).
+docker stop -t 600 wow-ci-db
 short=${CORE_REF:0:7}
 cmd=$(printf '"%s",' mysqld "${MYSQLD_OPTS[@]}")
 docker commit --change "CMD [${cmd%,}]" --change "ENV MYSQL_ROOT_PASSWORD=ci" \
