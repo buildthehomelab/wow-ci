@@ -41,7 +41,7 @@ awk -F'\t' 'NR==1{print "folder\turl\tcommit";next}{print $1"\t"$2"\t"$4}' \
 
 ## Adding CI to a repo
 
-Copy `templates/ci.yml` (and optionally `templates/review.yml`) into the repo's
+Copy `templates/ci.yml` into the repo's
 `.github/workflows/`. Add the repo to `config/repos.txt`. Inputs, all optional:
 
 | Input | Default | Use |
@@ -52,13 +52,11 @@ Copy `templates/ci.yml` (and optionally `templates/review.yml`) into the repo's
 | `sql-rerun` | `error` | `warning` to only warn on SQL that can't be applied twice |
 | `core-ref` | the server's | check against a different core commit |
 
-## On-demand Claude review
+## Reviews
 
-`templates/review.yml` adds a Claude review for big changes. It does nothing until you
-label a PR `claude-review` or comment `@claude` on it. It needs a `CLAUDE_CODE_OAUTH_TOKEN`
-secret in the repo (from `claude setup-token`). Without one, it skips itself. The review
-checklist (dupes, bots, world-thread stalls, era leaks, SQL re-runs, addon taint) lives
-in `config/review-prompt.md`.
+There's no reviewer bot. For big changes, ask Claude Code for a review (for example
+`/code-review` on the PR). [REVIEW.md](REVIEW.md) is the checklist: dupes, bots,
+world-thread stalls, era leaks, SQL re-runs, addon taint, object lifetimes.
 
 ## Fleet run
 

@@ -1,7 +1,8 @@
-Review this pull request for a World of Warcraft 3.3.5a private server (AzerothCore,
-mod-playerbots "Playerbot" branch). The repo is either a C++ server module, SQL for the
-world/characters/auth databases, or a Lua client addon. CI already covers syntax, the loader
-name, SQL apply/re-apply and luacheck, so spend your effort on bugs a compiler can't catch.
+# Review checklist
+
+Used when a big change is reviewed in Claude Code (for example `/code-review` on a PR).
+CI already covers syntax, loader names, SQL apply/re-apply, and luacheck, so a review
+should spend its effort on bugs a compiler can't catch.
 
 Look hardest for:
 - **Item/gold duplication and exploits.** Async DB writes (CharacterDatabase.Execute) racing
@@ -22,9 +23,3 @@ Look hardest for:
   frames created repeatedly, events never unregistered, and DragonUI being optional.
 - **Lifetime.** Raw Player*/Creature* pointers kept past the current call (store the
   ObjectGuid instead); events and timers that outlive the map or player.
-
-How to report:
-- Use inline comments (mcp__github_inline_comment__create_inline_comment) for specific lines.
-  Give the concrete failure scenario and a fix. Skip style nits.
-- Then post one summary comment with `gh pr comment`. List the findings by severity (High /
-  Med / Low), or say clearly that you found no issues.
