@@ -20,7 +20,7 @@ jobs:
     outputs:
       repos: ${{ steps.l.outputs.repos }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - id: l
         env:
           REPOS: ${{ inputs.repos }}

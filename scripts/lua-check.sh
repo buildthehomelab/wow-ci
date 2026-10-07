@@ -12,9 +12,26 @@ OUT=${RUNNER_TEMP:-/tmp}/lua-check
 rm -rf "$OUT" && mkdir -p "$OUT/src"
 LUAC=${LUAC:-luac5.1}
 
+# Only addon code: Lua under a folder that has a .toc. Other Lua in the repo (dev tools,
+# test harnesses run with a modern Lua) never reaches the 5.1 client.
 files=()
-while IFS= read -r f; do files+=("$f"); done < <(git ls-files '*.lua')
-[ ${#files[@]} -eq 0 ] && { echo "No Lua files."; exit 0; }
+while IFS= read -r f; do files+=("$f"); done < <(python3 - <<'PY'
+import subprocess, posixpath
+tracked = subprocess.run(["git", "ls-files"], capture_output=True, text=True).stdout.splitlines()
+roots = {posixpath.dirname(f) for f in tracked if f.lower().endswith(".toc")}
+for f in tracked:
+    if f.endswith(".lua"):
+        d = posixpath.dirname(f)
+        while True:
+            if d in roots:
+                print(f)
+                break
+            if not d:
+                break
+            d = posixpath.dirname(d)
+PY
+)
+[ ${#files[@]} -eq 0 ] && { echo "No addon Lua files (Lua under a folder with a .toc)."; exit 0; }
 
 fail=0
 if command -v "$LUAC" >/dev/null; then

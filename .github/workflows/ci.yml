@@ -61,7 +61,7 @@ jobs:
       shell: ${{ steps.d.outputs.shell }}
       python: ${{ steps.d.outputs.python }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: ${{ inputs.repository || github.repository }}
           ref: ${{ inputs.ref }}
@@ -91,12 +91,12 @@ jobs:
     if: needs.detect.outputs.cpp == 'true'
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: ${{ inputs.repository || github.repository }}
           ref: ${{ inputs.ref }}
           path: module
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: buildthehomelab/wow-ci
           ref: ${{ inputs.ci-ref }}
@@ -156,12 +156,12 @@ jobs:
       MYSQL_USER: root
       MYSQL_PWD: ci
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: ${{ inputs.repository || github.repository }}
           ref: ${{ inputs.ref }}
           path: module
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: buildthehomelab/wow-ci
           ref: ${{ inputs.ci-ref }}
@@ -176,11 +176,11 @@ jobs:
     if: needs.detect.outputs.addon == 'true'
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: ${{ inputs.repository || github.repository }}
           ref: ${{ inputs.ref }}
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: buildthehomelab/wow-ci
           ref: ${{ inputs.ci-ref }}
@@ -203,7 +203,7 @@ jobs:
     if: needs.detect.outputs.php == 'true'
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: ${{ inputs.repository || github.repository }}
           ref: ${{ inputs.ref }}
@@ -221,19 +221,20 @@ jobs:
     if: needs.detect.outputs.shell == 'true'
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: ${{ inputs.repository || github.repository }}
           ref: ${{ inputs.ref }}
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: buildthehomelab/wow-ci
           ref: ${{ inputs.ci-ref }}
           path: .wow-ci
       - name: shellcheck
         run: |
-          git ls-files '*.sh' | xargs shellcheck -f gcc -S warning >shellcheck.log || true
+          git ls-files '*.sh' | xargs shellcheck -f gcc -S warning -e SC2148 >shellcheck.log || true
           # Only shellcheck's error severity (real breakage) fails; warnings are annotations.
+          # SC2148 (no shebang) is off: AzerothCore's include.sh files are sourced, not run.
           python3 .wow-ci/scripts/annotate.py gcc shellcheck.log --title shellcheck
 
   python:
@@ -241,11 +242,11 @@ jobs:
     if: needs.detect.outputs.python == 'true'
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: ${{ inputs.repository || github.repository }}
           ref: ${{ inputs.ref }}
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: buildthehomelab/wow-ci
           ref: ${{ inputs.ci-ref }}
