@@ -61,3 +61,4 @@ wow-mod-talent-per-level
 wow-mod-tier0-trainers
 wow-mod-transmog-plus
 wow-mod-weather
+wow-mod-visible-bags
