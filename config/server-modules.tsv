@@ -2,7 +2,7 @@ folder	url	commit
 mod-accountwide-flight-paths	https://github.com/buildthehomelab/wow-mod-accountwide-flight-paths.git	03e8fd4c9a87d11aa9b53bdfd1d7c62517ed7cf4
 mod-accountwide-mounts	https://github.com/buildthehomelab/wow-mod-accountwide-mounts.git	619317f197d1b234f198f1a220da19814fedb3bb
 mod-accountwide-pets	https://github.com/buildthehomelab/wow-mod-accountwide-pets.git	8e81b66c1c0445be2dbc2f74cefaa4ff98a826da
-mod-ah-bot-plus	https://github.com/NathanHandley/mod-ah-bot-plus	f685832994c825f90aa5a3dc0e1620aa568e875b
+mod-ah-bot-plus	https://github.com/buildthehomelab/wow-mod-ah-bot-plus.git	c1179642c5c3fd2190cd61b10310df439171b780
 mod-aoe-loot	https://github.com/azerothcore/mod-aoe-loot.git	57279b660a278e9b3a1afa425e7c7a5edc72b7bb
 mod-auto-gather-tracking	https://github.com/Day36512/mod-auto-gather-tracking	7bec5b96f26f7b7efb625cd5917c41549c3f4fd2
 mod-beast-collection	https://github.com/buildthehomelab/wow-mod-beast-collection.git	7ecf7b6c78783669aca12d9d8ffc33e5c6ab456b
@@ -56,11 +56,11 @@ mod-raid-bwl	https://github.com/buildthehomelab/wow-mod-raid-bwl.git	2200e414378
 mod-raid-clear	https://github.com/buildthehomelab/wow-mod-raid-clear.git	62fa492f347623e52dea7754d02aa059cac99503
 mod-raid-lockout	https://github.com/buildthehomelab/wow-mod-raid-lockout.git	307bb2f46f18a800d85bf3d5e44ce2970fde5d38
 mod-raid-onyxia	https://github.com/buildthehomelab/wow-mod-raid-onyxia.git	50d7079262d16e7f253a611d4cd20c5b28a4b0fd
-mod-rare-tracker	https://github.com/buildthehomelab/wow-mod-rare-tracker.git	ffa181bcfe50bbc89aeefe49c8a77c33bf3e3317
+mod-rare-tracker	https://github.com/buildthehomelab/wow-mod-rare-tracker.git	9dca5b09af992334f08bbe6ed58564f16c9709d7
 mod-reagent-bank-account	https://github.com/buildthehomelab/mod-reagent-bank-account.git	d3f4dae9e4ab823d9450da7b1b238585a4bdc8a0
 mod-realm-armory	https://github.com/Hisha/mod-realm-armory	9cb817dafa94ece12af0c44ad5d0c75ad3260ced
 mod-realm-config	https://github.com/Hisha/mod-realm-config	fe36db9ba90c5d86e8d3a0315e2cac4367e7843f
-mod-retail-ah	https://github.com/buildthehomelab/wow-mod-retail-ah.git	dda4ee616a6079aa819c752f9042d6769b26851b
+mod-retail-ah	https://github.com/buildthehomelab/wow-mod-retail-ah.git	2b8531ab49c08061c7b40afe5eac4011058ff384
 mod-retail-professions	https://github.com/buildthehomelab/wow-mod-retail-professions.git	69e3bc3ab650ffbbc858aab5d362b064ce51e1ab
 mod-server-mail	https://github.com/buildthehomelab/wow-mod-server-mail.git	e685615b25ecc5293f7f70b09bbc5f08ae187cdc
 mod-setxpbar	https://github.com/brian8544/mod-setxpbar	a8ed628e0d18c2bb50bf5a64be392bf8b6c9165c
