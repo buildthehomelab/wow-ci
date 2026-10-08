@@ -17,7 +17,7 @@ read_globals = {
     "strmatch", "strrep", "strrev", "strsplit", "strsub", "strtrim", "strupper", "strconcat",
     "strlenutf8", "gmatch", "gfind", "tostringall",
     -- table aliases
-    "tinsert", "tremove", "wipe", "sort", "getn", "foreach", "foreachi", "tContains",
+    "tinsert", "tremove", "wipe", "sort", "getn", "foreach", "foreachi", "tContains", "tDeleteItem",
     -- math aliases
     "abs", "ceil", "floor", "max", "min", "mod", "sqrt", "random", "fmod", "exp", "log",
     "log10", "frexp", "ldexp", "sin", "cos", "tan", "asin", "acos", "atan", "atan2",
