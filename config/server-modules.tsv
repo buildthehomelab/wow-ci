@@ -36,7 +36,7 @@ mod-individual-xp	https://github.com/azerothcore/mod-individual-xp	503471f766bc4
 mod-junk-to-gold-plus	https://github.com/buildthehomelab/wow-mod-junk-to-gold-plus	91f575b69e2c9c90801db773d92e04478e3327a6
 mod-learn-spells	https://github.com/buildthehomelab/wow-mod-learn-spells.git	84206b8a857b149d38227ab61cc2ec01477f8b83
 mod-learnable-mounts	https://github.com/buildthehomelab/mod-learnable-mounts	230485a8e6bdccfe10d1635fc85b35fca1128e59
-mod-lfg-progression	https://github.com/buildthehomelab/wow-mod-lfg-progression.git	fc90bfbf3b296626db584e82175e08096bfb3b93
+mod-lfg-progression	https://github.com/buildthehomelab/wow-mod-lfg-progression.git	5d64585dd2ac6d9313165f8c46f278980ae89f37
 mod-llm-chatter	https://github.com/buildthehomelab/mod-llm-chatter	58943d3374e2f193409e520f2fbc82f84cf9baf1
 mod-mass-milling	https://github.com/buildthehomelab/mod-mass-milling	85dc502aa7dbca24a8262eaa923b1bdb6958ced3
 mod-mass-prospecting	https://github.com/buildthehomelab/mod-mass-prospecting	a5a0082e25b3cd937c3a395d93e72e8871873ea6
@@ -68,6 +68,6 @@ mod-stack-size	https://github.com/buildthehomelab/wow-mod-stack-size.git	f3c7146
 mod-starting-pet	https://github.com/Gozzim/mod-starting-pet	00d0543e79fb74dde4903706f4e096197b974e57
 mod-talent-per-level	https://github.com/buildthehomelab/wow-mod-talent-per-level.git	622a103999c25e39cdf2e4e475bb79a0da094036
 mod-tier0-trainers	https://github.com/buildthehomelab/wow-mod-tier0-trainers.git	f6d94bc8ca72f0802b9eee7360ef6325842c2798
-mod-transmog-plus	https://github.com/buildthehomelab/wow-mod-transmog-plus.git	435fd8866b2ac5ce8672269fb1ba83eca9982ac8
+mod-transmog-plus	https://github.com/buildthehomelab/wow-mod-transmog-plus.git	f8cf3c252db8ae126816b4f36bcfc9937c70a9eb
 mod-weather	https://github.com/buildthehomelab/wow-mod-weather.git	e09d41a31f56e387ca42f63e665de28384ebb3f8
 mod-world-buff-bots	https://github.com/buildthehomelab/mod-world-buff-bots	8a8a1a513bddbd78925e2465c3756be56a60be5c
