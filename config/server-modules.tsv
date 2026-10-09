@@ -8,6 +8,7 @@ mod-auto-gather-tracking	https://github.com/Day36512/mod-auto-gather-tracking	7b
 mod-beast-collection	https://github.com/buildthehomelab/wow-mod-beast-collection.git	7ecf7b6c78783669aca12d9d8ffc33e5c6ab456b
 mod-biome-effects	https://github.com/buildthehomelab/wow-mod-biome-effects	528b8ffd77fd11398ff1c83d62112a2437a222d6
 mod-bot-lfg-accept	https://github.com/buildthehomelab/wow-mod-bot-lfg-accept.git	c40c4ec646b8fda111de3899157b75dcc6a7a12b
+mod-cache-version	https://github.com/buildthehomelab/wow-mod-cache-version.git	e05e24caf0afab24b0d43171ca98ba23ec23fb61
 mod-character-services	https://github.com/Zerkenn/mod-character-services	35459efdc958d457311f67a5cc6567907d83089b
 mod-combat-watchdog	https://github.com/buildthehomelab/wow-mod-combat-watchdog.git	0ed66e680be132cdb2f276a98c1a68a68ea431fd
 mod-druid-swipe-fishing	https://github.com/buildthehomelab/wow-mod-druid-swipe-fishing.git	fbed8a55d5b07662c81b4510258e85cc2d20100e
