@@ -22,7 +22,7 @@ mod-forever-class-combos	https://github.com/buildthehomelab/wow-mod-forever-clas
 mod-forever-druid	https://github.com/buildthehomelab/wow-mod-forever-druid.git	3dd80dd0f81155733027cf189d97df5729ef66cd
 mod-forever-dungeon-journal	https://github.com/buildthehomelab/wow-mod-forever-dungeon-journal.git	30580636ab9c0f3648c091ae71bb94fe24c5fd81
 mod-forever-dungeon-xp	https://github.com/buildthehomelab/wow-mod-forever-dungeon-xp.git	e59eda5b617ccc447ad6b5951399f02fa02e28e5
-mod-forever-hunter	https://github.com/buildthehomelab/wow-mod-forever-hunter.git	ae2215d311e929fe0d117db30ebd1d574e8c6e67
+mod-forever-hunter	https://github.com/buildthehomelab/wow-mod-forever-hunter.git	e436e7514412540ba89dc66da28fbc2bd74b1c8d
 mod-forever-paladin	https://github.com/buildthehomelab/wow-mod-forever-paladin.git	27585fc6fecb245de7a1b71c1938d0cf953ff117
 mod-forever-periodic-crit	https://github.com/buildthehomelab/wow-mod-forever-periodic-crit.git	b50f4d30a16334cbccfba5e51c6f3fddeb006562
 mod-forever-racials	https://github.com/buildthehomelab/wow-mod-forever-racials.git	23f0e7dac109fad5866fe6f82d9302a714097e7e
@@ -48,15 +48,13 @@ mod-npc-finder	https://github.com/buildthehomelab/wow-mod-npc-finder.git	08bb65c
 mod-npc-services	https://github.com/azerothcore/mod-npc-services	aa44c28acb21fdc1d45084788214f2eee2d5f87c
 mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid.git	7e2f589290498dd2868f71da6b4617dea58966ee
 mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	09dbea17c70fbcef7c4bbf3f62ca0c1e60ca69a0
-mod-playerbots	https://github.com/mod-playerbots/mod-playerbots.git	037c01418b5d01506917a3db9b44fd56ac5f965c
+mod-playerbots	https://github.com/mod-playerbots/mod-playerbots.git	79bd428115c8f33b74b13de23b133d49c3f75c60
 mod-playerbots-city-life	https://github.com/vrzgames/mod-playerbots-city-life	ce6a05df450f04c4961d09254ad73cf11f1afee2
 mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-craft-cd.git	76acc2964cc3aee1a80ffdf1628cca2256132b3e
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	82191bd618739477ddaec95d02aadaf0ee87f43c
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	6f073c1bef1bba1aa73787d1e30db7429f2b1c7b
-mod-raid-bwl	https://github.com/buildthehomelab/wow-mod-raid-bwl.git	2200e414378064ee3332a1e74aded34bd416d702
 mod-raid-clear	https://github.com/buildthehomelab/wow-mod-raid-clear.git	62fa492f347623e52dea7754d02aa059cac99503
 mod-raid-lockout	https://github.com/buildthehomelab/wow-mod-raid-lockout.git	307bb2f46f18a800d85bf3d5e44ce2970fde5d38
-mod-raid-onyxia	https://github.com/buildthehomelab/wow-mod-raid-onyxia.git	50d7079262d16e7f253a611d4cd20c5b28a4b0fd
 mod-rare-tracker	https://github.com/buildthehomelab/wow-mod-rare-tracker.git	9dca5b09af992334f08bbe6ed58564f16c9709d7
 mod-reagent-bank-account	https://github.com/buildthehomelab/mod-reagent-bank-account.git	d3f4dae9e4ab823d9450da7b1b238585a4bdc8a0
 mod-realm-armory	https://github.com/Hisha/mod-realm-armory	9cb817dafa94ece12af0c44ad5d0c75ad3260ced
