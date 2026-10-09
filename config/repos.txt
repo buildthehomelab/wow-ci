@@ -39,6 +39,7 @@ wow-mod-forever-rogue
 wow-mod-forever-shaman
 wow-mod-gathering-tools
 wow-mod-hearthstone-cd
+wow-mod-junk-to-gold-plus
 wow-mod-holiday-control
 wow-mod-learn-spells
 wow-mod-lfg-progression

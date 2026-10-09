@@ -33,7 +33,7 @@ mod-hearthstone-cd	https://github.com/buildthehomelab/wow-mod-hearthstone-cd.git
 mod-individual-progression	https://github.com/ZhengPeiRu21/mod-individual-progression.git	60336b349cce2bc209d154bb840f2370f1cc16f2
 mod-individual-progression-announce	https://github.com/borrowjack/mod-individual-progression-announce	744833b053c3d989e1b3ee18a7fadfb33b474efc
 mod-individual-xp	https://github.com/azerothcore/mod-individual-xp	503471f766bc4f21dca0aa05e6a9d3d40718a780
-mod-junk-to-gold-plus	https://github.com/TrisBits/mod-junk-to-gold-plus	8409491a5ea8590dc52c76ca0851d4fb2e19975a
+mod-junk-to-gold-plus	https://github.com/buildthehomelab/wow-mod-junk-to-gold-plus	91f575b69e2c9c90801db773d92e04478e3327a6
 mod-learn-spells	https://github.com/buildthehomelab/wow-mod-learn-spells.git	84206b8a857b149d38227ab61cc2ec01477f8b83
 mod-learnable-mounts	https://github.com/buildthehomelab/mod-learnable-mounts	230485a8e6bdccfe10d1635fc85b35fca1128e59
 mod-lfg-progression	https://github.com/buildthehomelab/wow-mod-lfg-progression.git	fc90bfbf3b296626db584e82175e08096bfb3b93
