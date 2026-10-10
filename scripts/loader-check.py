@@ -4,6 +4,9 @@
 1. AzerothCore calls Add<folder>Scripts() for each module, with '-' turned into '_'
    (modules/CMakeLists.txt). The folder is the module name (mod-foo), not the repo name
    (wow-mod-foo), so a module needs `void Addmod_fooScripts()`.
+   A module whose own CMakeLists.txt calls AC_ADD_SCRIPT_LOADER("Foo" ...) uses the core's
+   deprecated loader API instead: the core then calls AddFooScripts() and skips the
+   folder-derived name.
 2. Every Add...Scripts() the module declares and calls must also be defined somewhere in
    src/. A missing one only shows up as an undefined reference at link time.
 
@@ -16,6 +19,11 @@ import sys
 name = sys.argv[1]
 src = pathlib.Path(sys.argv[2] if len(sys.argv) > 2 else "src")
 expected = "Add" + name.replace("-", "_") + "Scripts"
+cmake = src.parent / "CMakeLists.txt"
+if cmake.is_file():
+    old_api = re.search(r'^\s*AC_ADD_SCRIPT_LOADER\(\s*"(\w+)"', cmake.read_text(errors="replace"), re.M)
+    if old_api:
+        expected = f"Add{old_api.group(1)}Scripts"
 
 files = sorted(p for p in src.rglob("*") if p.suffix in (".cpp", ".h", ".hpp"))
 code = {}

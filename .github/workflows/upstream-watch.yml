@@ -75,6 +75,7 @@ jobs:
       module: ${{ matrix.m.module }}
       core-ref: ${{ needs.check.outputs.core-new }}
       playerbots-ref: ${{ needs.check.outputs.playerbots-new }}
+      extra-modules: ${{ matrix.m.extra }}
       only: cpp
       ci-ref: ${{ github.sha }}
 

@@ -48,6 +48,12 @@ def core_env():
     return env
 
 
+def tsv(path):
+    """Data rows of a config .tsv: no header, comments or blank lines."""
+    rows = [r for r in (ROOT / path).read_text().splitlines() if r.strip() and not r.startswith("#")]
+    return rows[1:]
+
+
 def slug(url):
     return re.sub(r"\.git$", "", url.split("github.com/", 1)[1])
 
@@ -93,12 +99,17 @@ def check():
         print(f"Already reported in #{issue['number']}.")
         moved = False
 
-    # mod-playerbots is left out: upstream keeps it building against its own core.
+    pins = dict(line.split("\t", 1) for line in tsv("config/server-modules.tsv"))
+    needs = dict(line.split("\t") for line in tsv("config/module-headers.tsv"))
     modules = []
-    for line in (ROOT / "config/server-modules.tsv").read_text().splitlines()[1:]:
-        folder, url, commit = line.split("\t")
-        if folder != "mod-playerbots":
-            modules.append({"module": folder, "repository": slug(url), "ref": commit})
+    for folder, pin in pins.items():
+        # mod-playerbots is left out: upstream keeps it building against its own core.
+        if folder == "mod-playerbots":
+            continue
+        url, commit = pin.split("\t")
+        extra = [pins[n].split("\t") for n in needs.get(folder, "").split()]
+        modules.append({"module": folder, "repository": slug(url), "ref": commit,
+                        "extra": " ".join(f"{slug(u)}@{c}" for u, c in extra)})
 
     with open(os.environ["GITHUB_OUTPUT"], "a") as out:
         out.write(f"moved={'true' if moved else 'false'}\n")

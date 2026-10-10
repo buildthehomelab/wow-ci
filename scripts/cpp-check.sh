@@ -51,14 +51,23 @@ if [ ${#files[@]} -eq 0 ]; then
   exit 0
 fi
 
+# One compiler per CPU. Each file logs on its own, so the output below stays in file order.
+printf '%s\n' "${flags[@]}" "${defines[@]}" >>"$rsp"
+logs="$OUT/logs"
+rm -rf "$logs"
+mkdir -p "$logs"
+for i in "${!files[@]}"; do printf '%s\0%s\0' "$i" "${files[$i]}"; done |
+  CXX=$CXX RSP=$rsp LOGS=$logs xargs -0 -n 2 -P "$(getconf _NPROCESSORS_ONLN 2>/dev/null || echo 2)" \
+    sh -c '"$CXX" @"$RSP" "$2" >"$LOGS/$1.log" 2>&1 || touch "$LOGS/$1.fail"' sh
+
 fail=0
 log="$OUT/compile.log"
 : >"$log"
-for f in "${files[@]}"; do
-  echo "::group::$f"
-  "$CXX" "${flags[@]}" "${defines[@]}" @"$rsp" "$f" >"$OUT/one.log" 2>&1 || fail=1
-  cat "$OUT/one.log"
-  cat "$OUT/one.log" >>"$log"
+for i in "${!files[@]}"; do
+  echo "::group::${files[$i]}"
+  cat "$logs/$i.log"
+  cat "$logs/$i.log" >>"$log"
+  [ -e "$logs/$i.fail" ] && fail=1
   echo "::endgroup::"
 done
 
