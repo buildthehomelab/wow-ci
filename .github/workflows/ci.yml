@@ -20,6 +20,10 @@ on:
         description: "Core commit to check against (default: the server's, from config/core.env)"
         type: string
         default: ""
+      playerbots-ref:
+        description: "mod-playerbots commit to check against (default: the server's)"
+        type: string
+        default: ""
       extra-modules:
         description: "Space-separated owner/repo@ref modules whose headers this module includes"
         type: string
@@ -44,6 +48,10 @@ on:
         description: "wow-ci ref to take scripts from"
         type: string
         default: "main"
+      only:
+        description: "Space-separated jobs to run (default: all the repo has files for)"
+        type: string
+        default: ""
 
 permissions:
   contents: read
@@ -70,21 +78,26 @@ jobs:
         env:
           MODULE: ${{ inputs.module }}
           REPO: ${{ inputs.repository || github.repository }}
+          ONLY: ${{ inputs.only }}
         run: |
           REPO=${REPO#*/}
-          has() { [ -n "$(git ls-files "$@" | head -1)" ] && echo true || echo false; }
+          has() {
+            job=$1; shift
+            case " ${ONLY:-$job} " in *" $job "*) ;; *) echo false; return ;; esac
+            [ -n "$(git ls-files "$@" | head -1)" ] && echo true || echo false
+          }
           if [ -z "$MODULE" ]; then
             MODULE=$REPO
             case "$MODULE" in wow-mod-*) MODULE=${MODULE#wow-} ;; esac
           fi
           {
             echo "module=$MODULE"
-            echo "cpp=$(has 'src/*.cpp')"
-            echo "sql=$(has 'data/sql/*.sql' '*uninstall*.sql')"
-            echo "addon=$(has '*.toc' '*.lua')"
-            echo "php=$(has '*.php')"
-            echo "shell=$(has '*.sh')"
-            echo "python=$(has '*.py')"
+            echo "cpp=$(has cpp 'src/*.cpp')"
+            echo "sql=$(has sql 'data/sql/*.sql' '*uninstall*.sql')"
+            echo "addon=$(has addon '*.toc' '*.lua')"
+            echo "php=$(has php '*.php')"
+            echo "shell=$(has shell '*.sh')"
+            echo "python=$(has python '*.py')"
           } | tee -a "$GITHUB_OUTPUT"
 
   cpp:
@@ -110,10 +123,12 @@ jobs:
       - name: Fetch core and mod-playerbots headers
         env:
           CORE_REF_INPUT: ${{ inputs.core-ref }}
+          PLAYERBOTS_REF_INPUT: ${{ inputs.playerbots-ref }}
           EXTRA: ${{ inputs.extra-modules }}
         run: |
           . .wow-ci/config/core.env
           [ -n "$CORE_REF_INPUT" ] && CORE_REF=$CORE_REF_INPUT
+          [ -n "$PLAYERBOTS_REF_INPUT" ] && PLAYERBOTS_REF=$PLAYERBOTS_REF_INPUT
           fetch() {
             git init -q "$3"; git -C "$3" remote add origin "$1"
             git -C "$3" sparse-checkout set --no-cone /src/ /deps/ /modules/*.h

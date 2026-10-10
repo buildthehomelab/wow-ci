@@ -1,0 +1,99 @@
+# Looks once a day whether the server's upstream has new commits: the core branch and
+# mod-playerbots (config/core.env). When it has, every module on the server
+# (config/server-modules.tsv, at its pinned commit) is syntax-checked against the new
+# commits, and one issue with the label `upstream` says what changed and which modules
+# would stop building. The issue closes itself once the pins match upstream again.
+name: Upstream watch
+
+on:
+  schedule:
+    - cron: "43 5 * * *"
+  workflow_dispatch:
+    inputs:
+      base-core-ref:
+        description: "Pretend the server is on this core commit (to try the report)"
+        type: string
+        default: ""
+      base-playerbots-ref:
+        description: "Pretend the server is on this mod-playerbots commit"
+        type: string
+        default: ""
+      dry-run:
+        description: "Only write the report to the run summary; don't touch issues"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: upstream-watch
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      issues: write
+    outputs:
+      moved: ${{ steps.c.outputs.moved }}
+      core-old: ${{ steps.c.outputs.core-old }}
+      core-new: ${{ steps.c.outputs.core-new }}
+      playerbots-old: ${{ steps.c.outputs.playerbots-old }}
+      playerbots-new: ${{ steps.c.outputs.playerbots-new }}
+      modules: ${{ steps.c.outputs.modules }}
+    steps:
+      - uses: actions/checkout@v5
+      - id: c
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BASE_CORE_REF: ${{ inputs.base-core-ref }}
+          BASE_PLAYERBOTS_REF: ${{ inputs.base-playerbots-ref }}
+          DRY_RUN: ${{ inputs.dry-run }}
+          # A manual run reports again even if these heads already have an issue.
+          RECHECK: ${{ github.event_name == 'workflow_dispatch' }}
+        run: python3 scripts/upstream-watch.py check
+
+  modules:
+    needs: check
+    if: needs.check.outputs.moved == 'true'
+    name: ${{ matrix.m.module }}
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        m: ${{ fromJSON(needs.check.outputs.modules) }}
+    permissions:
+      contents: read
+      packages: read
+    uses: ./.github/workflows/ci.yml
+    with:
+      repository: ${{ matrix.m.repository }}
+      ref: ${{ matrix.m.ref }}
+      module: ${{ matrix.m.module }}
+      core-ref: ${{ needs.check.outputs.core-new }}
+      playerbots-ref: ${{ needs.check.outputs.playerbots-new }}
+      only: cpp
+      ci-ref: ${{ github.sha }}
+
+  report:
+    needs: [check, modules]
+    if: always() && needs.check.outputs.moved == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      actions: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v5
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          CORE_OLD: ${{ needs.check.outputs.core-old }}
+          CORE_NEW: ${{ needs.check.outputs.core-new }}
+          PLAYERBOTS_OLD: ${{ needs.check.outputs.playerbots-old }}
+          PLAYERBOTS_NEW: ${{ needs.check.outputs.playerbots-new }}
+          DRY_RUN: ${{ inputs.dry-run }}
+        run: python3 scripts/upstream-watch.py report
