@@ -6,6 +6,7 @@
 #   PLAYERBOTS_DIR  mod-playerbots checkout (optional; adds -DMOD_PLAYERBOTS + its headers)
 #   EXTRA_INCLUDES  extra module checkouts whose src/ dirs are added (space separated)
 #   MODULE_DIR      module checkout (default: .)
+#   MODULE_NAME     module folder on the server; picks its rows in config/module-defines.tsv
 set -uo pipefail
 
 CORE_DIR=${CORE_DIR:?CORE_DIR not set}
@@ -38,6 +39,9 @@ done
 
 defines=(-DACORE_API_EXPORT_COMMON= -DCONFIG_FILE_LIST= )
 [ -n "${PLAYERBOTS_DIR:-}" ] && defines+=(-DMOD_PLAYERBOTS)
+while IFS=$'\t' read -r module define file text; do
+  [ "$module" = "${MODULE_NAME:-}" ] && grep -qF "$text" "$CORE_DIR/$file" 2>/dev/null && defines+=("-D$define")
+done <"$HERE/../config/module-defines.tsv"
 
 # -Wunused-parameter is off: script hooks routinely ignore most of their arguments.
 flags=(-std=gnu++20 -fsyntax-only -fno-color-diagnostics -fdiagnostics-absolute-paths

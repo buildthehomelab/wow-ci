@@ -147,6 +147,8 @@ jobs:
           echo "EXTRA_INCLUDES=$extra" >>"$GITHUB_ENV"
       - name: Syntax check against the server's core
         working-directory: module
+        env:
+          MODULE_NAME: ${{ needs.detect.outputs.module }}
         run: |
           CXX=clang++ CORE_DIR=$GITHUB_WORKSPACE/core PLAYERBOTS_DIR=$GITHUB_WORKSPACE/playerbots \
             bash ../.wow-ci/scripts/cpp-check.sh

@@ -55,7 +55,8 @@ check only: it doesn't build the core, link, or apply the new SQL. Later upstrea
 update the same issue, and it closes by itself once the pins match upstream again.
 
 A module that includes another module's headers needs a line in
-`config/module-headers.tsv`. Run the workflow by hand with **dry-run** to get the report in
+`config/module-headers.tsv`; one whose own CMake sets defines after probing the core needs
+them in `config/module-defines.tsv`. Run the workflow by hand with **dry-run** to get the report in
 the run summary without touching issues.
 
 ## Adding CI to a repo
