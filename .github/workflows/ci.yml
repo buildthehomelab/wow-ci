@@ -81,6 +81,9 @@ jobs:
           ONLY: ${{ inputs.only }}
         run: |
           REPO=${REPO#*/}
+          for job in $ONLY; do
+            case "$job" in cpp|sql|addon|php|shell|python) ;; *) echo "::error::only: no job named '$job'"; exit 1 ;; esac
+          done
           has() {
             job=$1; shift
             case " ${ONLY:-$job} " in *" $job "*) ;; *) echo false; return ;; esac
@@ -104,7 +107,8 @@ jobs:
     needs: detect
     if: needs.detect.outputs.cpp == 'true'
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    # mod-dungeon-clear (206 files) takes 9 minutes.
+    timeout-minutes: 30
     container: ghcr.io/buildthehomelab/wow-ci-tools:latest
     steps:
       - uses: actions/checkout@v5

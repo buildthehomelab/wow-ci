@@ -3,6 +3,7 @@
 # (config/server-modules.tsv, at its pinned commit) is syntax-checked against the new
 # commits, and one issue with the label `upstream` says what changed and which modules
 # would stop building. The issue closes itself once the pins match upstream again.
+# A run that could not check every module is redone the next day.
 name: Upstream watch
 
 on:
@@ -11,11 +12,11 @@ on:
   workflow_dispatch:
     inputs:
       base-core-ref:
-        description: "Pretend the server is on this core commit (to try the report)"
+        description: "Pretend the server is on this core commit (to try the report; implies dry-run)"
         type: string
         default: ""
       base-playerbots-ref:
-        description: "Pretend the server is on this mod-playerbots commit"
+        description: "Pretend the server is on this mod-playerbots commit (implies dry-run)"
         type: string
         default: ""
       dry-run:
@@ -26,9 +27,10 @@ on:
 permissions:
   contents: read
 
+# Never cancel a run half way: its report would be written from partial results.
 concurrency:
   group: upstream-watch
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   check:
@@ -39,6 +41,8 @@ jobs:
       issues: write
     outputs:
       moved: ${{ steps.c.outputs.moved }}
+      dry-run: ${{ steps.c.outputs.dry-run }}
+      state: ${{ steps.c.outputs.state }}
       core-old: ${{ steps.c.outputs.core-old }}
       core-new: ${{ steps.c.outputs.core-new }}
       playerbots-old: ${{ steps.c.outputs.playerbots-old }}
@@ -52,7 +56,7 @@ jobs:
           BASE_CORE_REF: ${{ inputs.base-core-ref }}
           BASE_PLAYERBOTS_REF: ${{ inputs.base-playerbots-ref }}
           DRY_RUN: ${{ inputs.dry-run }}
-          # A manual run reports again even if these heads already have an issue.
+          # A manual run reports again even if this state already has an issue.
           RECHECK: ${{ github.event_name == 'workflow_dispatch' }}
         run: python3 scripts/upstream-watch.py check
 
@@ -81,7 +85,7 @@ jobs:
 
   report:
     needs: [check, modules]
-    if: always() && needs.check.outputs.moved == 'true'
+    if: ${{ !cancelled() && needs.check.outputs.moved == 'true' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     permissions:
@@ -96,5 +100,7 @@ jobs:
           CORE_NEW: ${{ needs.check.outputs.core-new }}
           PLAYERBOTS_OLD: ${{ needs.check.outputs.playerbots-old }}
           PLAYERBOTS_NEW: ${{ needs.check.outputs.playerbots-new }}
-          DRY_RUN: ${{ inputs.dry-run }}
+          STATE: ${{ needs.check.outputs.state }}
+          MODULES: ${{ needs.check.outputs.modules }}
+          DRY_RUN: ${{ needs.check.outputs.dry-run }}
         run: python3 scripts/upstream-watch.py report

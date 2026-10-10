@@ -35,6 +35,7 @@ rebuilds by itself.
 
 ```bash
 tail -n +2 ../wow-server/manifest/core.tsv      # -> config/core.env (CORE_REF)
+awk -F'\t' '$1=="mod-playerbots"{print $4}' ../wow-server/manifest/modules.tsv   # -> PLAYERBOTS_REF
 awk -F'\t' 'NR==1{print "folder\turl\tcommit";next}{print $1"\t"$2"\t"$4}' \
   ../wow-server/manifest/modules.tsv >config/server-modules.tsv
 ```
@@ -46,18 +47,19 @@ and mod-playerbots `master` with the pins in `config/core.env`. When upstream ha
 commits it syntax-checks every module in `config/server-modules.tsv`, at its pinned commit,
 against them, and opens one issue with the label `upstream`:
 
-- the new commits, how many SQL updates they bring, and any `.conf.dist` that changed (a
+- the new commits, how many SQL files they add, and any `.conf.dist` that changed (a
   renamed config key is silently ignored by the server);
 - the modules that no longer compile, with a link to each log.
 
 So the issue says whether it's safe to pull on the server, before pulling. It is a syntax
-check only: it doesn't build the core, link, or apply the new SQL. Later upstream commits
-update the same issue, and it closes by itself once the pins match upstream again.
+check only: it doesn't build the core, link, or apply the new SQL. New upstream commits or
+a changed pin update the same issue, and it closes by itself once the pins match upstream
+again. A run where some module couldn't be checked says so and is redone the next day.
 
 A module that includes another module's headers needs a line in
 `config/module-headers.tsv`; one whose own CMake sets defines after probing the core needs
 them in `config/module-defines.tsv`. Run the workflow by hand with **dry-run** to get the report in
-the run summary without touching issues.
+the run summary without touching issues; giving a **base** commit does the same for an older pin.
 
 ## Adding CI to a repo
 
