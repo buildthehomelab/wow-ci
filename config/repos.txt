@@ -63,3 +63,4 @@ wow-mod-transmog-plus
 wow-mod-weather
 wow-mod-visible-bags
 wow-mod-cache-version
+wow-mod-lost-legendaries
