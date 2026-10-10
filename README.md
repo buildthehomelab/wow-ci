@@ -39,6 +39,25 @@ awk -F'\t' 'NR==1{print "folder\turl\tcommit";next}{print $1"\t"$2"\t"$4}' \
   ../wow-server/manifest/modules.tsv >config/server-modules.tsv
 ```
 
+## Upstream watch
+
+**Actions → Upstream watch** runs every morning. It compares the core's `Playerbot` branch
+and mod-playerbots `master` with the pins in `config/core.env`. When upstream has new
+commits it syntax-checks every module in `config/server-modules.tsv`, at its pinned commit,
+against them, and opens one issue with the label `upstream`:
+
+- the new commits, how many SQL updates they bring, and any `.conf.dist` that changed (a
+  renamed config key is silently ignored by the server);
+- the modules that no longer compile, with a link to each log.
+
+So the issue says whether it's safe to pull on the server, before pulling. It is a syntax
+check only: it doesn't build the core, link, or apply the new SQL. Later upstream commits
+update the same issue, and it closes by itself once the pins match upstream again.
+
+A module that includes another module's headers needs a line in
+`config/module-headers.tsv`. Run the workflow by hand with **dry-run** to get the report in
+the run summary without touching issues.
+
 ## Adding CI to a repo
 
 Copy `templates/ci.yml` into the repo's
@@ -51,6 +70,8 @@ Copy `templates/ci.yml` into the repo's
 | `lua-exclude` | | globs for vendored Lua outside `Libs/` (e.g. `Astrolabe/**`) |
 | `sql-rerun` | `error` | `warning` to only warn on SQL that can't be applied twice |
 | `core-ref` | the server's | check against a different core commit |
+| `playerbots-ref` | the server's | check against a different mod-playerbots commit |
+| `only` | all | space-separated jobs to run, e.g. `cpp` |
 
 ## Reviews
 
