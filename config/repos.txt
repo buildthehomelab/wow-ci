@@ -11,7 +11,6 @@ wow-addon-AtlasLootHD
 wow-addon-DBM
 wow-addon-MinimalHunter
 wow-addon-RareAlert-Dungeon
-wow-addon-RecipeRadar
 wow-addon-WeaponSkillInfo
 wow-addon-unbot
 wow-mod-accountwide-flight-paths
