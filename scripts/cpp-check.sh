@@ -6,6 +6,7 @@
 #   PLAYERBOTS_DIR  mod-playerbots checkout (optional; adds -DMOD_PLAYERBOTS + its headers)
 #   EXTRA_INCLUDES  extra module checkouts whose src/ dirs are added (space separated)
 #   MODULE_DIR      module checkout (default: .)
+#   MODULE_NAME     module folder on the server; picks its rows in config/module-defines.tsv
 set -uo pipefail
 
 CORE_DIR=${CORE_DIR:?CORE_DIR not set}
@@ -38,6 +39,10 @@ done
 
 defines=(-DACORE_API_EXPORT_COMMON= -DCONFIG_FILE_LIST= )
 [ -n "${PLAYERBOTS_DIR:-}" ] && defines+=(-DMOD_PLAYERBOTS)
+while IFS=$'\t' read -r module define file text || [ -n "$module" ]; do
+  text=${text%$'\r'}
+  [ "$module" = "${MODULE_NAME:-}" ] && grep -qF -e "$text" "$CORE_DIR/$file" 2>/dev/null && defines+=("-D$define")
+done <"$HERE/../config/module-defines.tsv"
 
 # -Wunused-parameter is off: script hooks routinely ignore most of their arguments.
 flags=(-std=gnu++20 -fsyntax-only -fno-color-diagnostics -fdiagnostics-absolute-paths
@@ -51,14 +56,23 @@ if [ ${#files[@]} -eq 0 ]; then
   exit 0
 fi
 
+# One compiler per CPU. Each file logs on its own, so the output below stays in file order.
+printf '%s\n' "${flags[@]}" "${defines[@]}" >>"$rsp"
+logs="$OUT/logs"
+rm -rf "$logs"
+mkdir -p "$logs"
+for i in "${!files[@]}"; do printf '%s\0%s\0' "$i" "${files[$i]}"; done |
+  CXX=$CXX RSP=$rsp LOGS=$logs xargs -0 -n 2 -P "$(getconf _NPROCESSORS_ONLN 2>/dev/null || echo 2)" \
+    sh -c '"$CXX" @"$RSP" "$2" >"$LOGS/$1.log" 2>&1 && touch "$LOGS/$1.ok"' sh
+
 fail=0
 log="$OUT/compile.log"
 : >"$log"
-for f in "${files[@]}"; do
-  echo "::group::$f"
-  "$CXX" "${flags[@]}" "${defines[@]}" @"$rsp" "$f" >"$OUT/one.log" 2>&1 || fail=1
-  cat "$OUT/one.log"
-  cat "$OUT/one.log" >>"$log"
+for i in "${!files[@]}"; do
+  echo "::group::${files[$i]}"
+  cat "$logs/$i.log" 2>/dev/null | tee -a "$log"
+  # No .ok also covers a compiler that never ran or was killed.
+  [ -e "$logs/$i.ok" ] || fail=1
   echo "::endgroup::"
 done
 

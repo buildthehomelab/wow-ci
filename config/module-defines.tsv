@@ -1,0 +1,5 @@
+# Defines a module's own CMake sets after probing the core. The syntax check can't run
+# CMake, so it adds the define when the core file contains the text.
+module	define	core file	contains
+mod-dungeon-clear	DC_CORE_HAS_ON_PACKET_SENT=1	src/server/game/Scripting/ScriptDefines/ServerScript.h	SERVERHOOK_ON_PACKET_SENT
+mod-dungeon-clear	DC_CORE_IWORLD_HAS_QUERYHOLDER=1	src/server/game/World/IWorld.h	AddQueryHolderCallback

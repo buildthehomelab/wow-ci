@@ -1,0 +1,3 @@
+# Server modules that include another server module's headers (upstream watch).
+module	needs
+mod-individual-progression-announce	mod-individual-progression
