@@ -29,7 +29,7 @@ mod-forever-racials	https://github.com/buildthehomelab/wow-mod-forever-racials.g
 mod-forever-rogue	https://github.com/buildthehomelab/wow-mod-forever-rogue.git	9194fa81a81c00267eefab283656b69e6b2b12ca
 mod-forever-shaman	https://github.com/buildthehomelab/wow-mod-forever-shaman.git	e6a07ce73a9f0857474aed71f4254da7334b12a6
 mod-gathering-node-dynamic	https://github.com/buildthehomelab/mod-gathering-node-dynamic	ebd5a198872b46e5c7323c04132140aff9dc81a6
-mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.git	32e5b08ad6f07e0ef3f039ef8ff96df497c8e23c
+mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.git	d5e8a565e1bb9c9437a6e00f98baca83bbd898f7
 mod-hearthstone-cd	https://github.com/buildthehomelab/wow-mod-hearthstone-cd.git	8595dd76ade65928438137ac58ad72dff7d69567
 mod-individual-progression	https://github.com/ZhengPeiRu21/mod-individual-progression.git	60336b349cce2bc209d154bb840f2370f1cc16f2
 mod-individual-progression-announce	https://github.com/borrowjack/mod-individual-progression-announce	744833b053c3d989e1b3ee18a7fadfb33b474efc
@@ -55,7 +55,7 @@ mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-cr
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	82191bd618739477ddaec95d02aadaf0ee87f43c
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	6f073c1bef1bba1aa73787d1e30db7429f2b1c7b
 mod-raid-clear	https://github.com/buildthehomelab/wow-mod-raid-clear.git	62fa492f347623e52dea7754d02aa059cac99503
-mod-raid-lockout	https://github.com/buildthehomelab/wow-mod-raid-lockout.git	307bb2f46f18a800d85bf3d5e44ce2970fde5d38
+mod-raid-lockout	https://github.com/buildthehomelab/wow-mod-raid-lockout.git	b746d7e7ddcbd0485f72506114489a5037bed0cc
 mod-rare-tracker	https://github.com/buildthehomelab/wow-mod-rare-tracker.git	9dca5b09af992334f08bbe6ed58564f16c9709d7
 mod-reagent-bank-account	https://github.com/buildthehomelab/mod-reagent-bank-account.git	f7b5c59cda31e67ea656d92e3385ea9f2c489b9c
 mod-realm-armory	https://github.com/Hisha/mod-realm-armory	9cb817dafa94ece12af0c44ad5d0c75ad3260ced
