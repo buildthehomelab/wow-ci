@@ -18,6 +18,7 @@ mod-dungeon-brd	https://github.com/buildthehomelab/wow-mod-dungeon-brd.git	fdcb7
 mod-dungeon-clear	https://github.com/jrad7/mod-dungeon-clear	d2242541f48fe2538e60fce0666a6bb509cae94a
 mod-dungeon-consumables	https://github.com/buildthehomelab/wow-mod-dungeon-consumables.git	0d2fec4c3d9b03e0fdc1d744c4a8ae6a8d9a6f91
 mod-dynamic-gathering-speed	https://github.com/silviu20092/mod-dynamic-gathering-speed	db2f734ea3569318d8b9f9ef64a0af68809b8f21
+mod-era-events	https://github.com/buildthehomelab/wow-mod-era-events.git	6dc801ae23a8d1fe55c138f3e8b3d70e6e05ffe3
 mod-fireworks-on-level	https://github.com/azerothcore/mod-fireworks-on-level	e5c58542996e0f1ad3410ebdb7cff9ed9d52e3d6
 mod-forever-class-combos	https://github.com/buildthehomelab/wow-mod-forever-class-combos.git	3268aeef264f49c408d2acca27697c2004a603da
 mod-forever-druid	https://github.com/buildthehomelab/wow-mod-forever-druid.git	3dd80dd0f81155733027cf189d97df5729ef66cd
@@ -33,7 +34,7 @@ mod-forever-torch	https://github.com/buildthehomelab/wow-mod-forever-torch.git	f
 mod-gathering-node-dynamic	https://github.com/buildthehomelab/mod-gathering-node-dynamic	ebd5a198872b46e5c7323c04132140aff9dc81a6
 mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.git	d5e8a565e1bb9c9437a6e00f98baca83bbd898f7
 mod-hearthstone-cd	https://github.com/buildthehomelab/wow-mod-hearthstone-cd.git	8595dd76ade65928438137ac58ad72dff7d69567
-mod-individual-progression	https://github.com/ZhengPeiRu21/mod-individual-progression.git	60336b349cce2bc209d154bb840f2370f1cc16f2
+mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	d7822ba5f883ba056bc6bc90195a997e6385e65d
 mod-individual-progression-announce	https://github.com/borrowjack/mod-individual-progression-announce	744833b053c3d989e1b3ee18a7fadfb33b474efc
 mod-individual-xp	https://github.com/azerothcore/mod-individual-xp	503471f766bc4f21dca0aa05e6a9d3d40718a780
 mod-junk-to-gold-plus	https://github.com/buildthehomelab/wow-mod-junk-to-gold-plus	91f575b69e2c9c90801db773d92e04478e3327a6
