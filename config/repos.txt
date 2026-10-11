@@ -9,6 +9,7 @@ mod-reagent-bank-account
 mod-world-buff-bots
 wow-addon-AtlasLootHD
 wow-addon-DBM
+wow-addon-Gatherer
 wow-addon-MinimalHunter
 wow-addon-RareAlert-Dungeon
 wow-addon-WeaponSkillInfo
