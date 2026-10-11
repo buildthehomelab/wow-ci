@@ -67,3 +67,4 @@ wow-mod-visible-bags
 wow-mod-cache-version
 wow-mod-lost-legendaries
 wow-mod-retail-pets
+wow-mod-retail-warlock-pets
