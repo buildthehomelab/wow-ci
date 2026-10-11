@@ -39,7 +39,7 @@ mod-learn-spells	https://github.com/buildthehomelab/wow-mod-learn-spells.git	842
 mod-learnable-mounts	https://github.com/buildthehomelab/mod-learnable-mounts	230485a8e6bdccfe10d1635fc85b35fca1128e59
 mod-lfg-progression	https://github.com/buildthehomelab/wow-mod-lfg-progression.git	5d64585dd2ac6d9313165f8c46f278980ae89f37
 mod-llm-chatter	https://github.com/buildthehomelab/mod-llm-chatter	58943d3374e2f193409e520f2fbc82f84cf9baf1
-mod-lost-legendaries	https://github.com/buildthehomelab/wow-mod-lost-legendaries.git	aeb768006335d4c88182d8cfc6a64939d6c21707
+mod-lost-legendaries	https://github.com/buildthehomelab/wow-mod-lost-legendaries.git	fb44f8619f5e972d0ca6d0f433f011056f790d50
 mod-mass-milling	https://github.com/buildthehomelab/mod-mass-milling	85dc502aa7dbca24a8262eaa923b1bdb6958ced3
 mod-mass-prospecting	https://github.com/buildthehomelab/mod-mass-prospecting	a5a0082e25b3cd937c3a395d93e72e8871873ea6
 mod-mount-requirements	https://github.com/buildthehomelab/mod-mount-requirements	1164887eea1259798b703c2700a8b540042e37b9
@@ -54,7 +54,7 @@ mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-c
 mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-craft-cd.git	76acc2964cc3aee1a80ffdf1628cca2256132b3e
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	82191bd618739477ddaec95d02aadaf0ee87f43c
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	6f073c1bef1bba1aa73787d1e30db7429f2b1c7b
-mod-raid-clear	https://github.com/buildthehomelab/wow-mod-raid-clear.git	62fa492f347623e52dea7754d02aa059cac99503
+mod-raid-clear	https://github.com/buildthehomelab/wow-mod-raid-clear.git	23d5ae66aeb031f8c40c02f6427466f7528a76d8
 mod-raid-lockout	https://github.com/buildthehomelab/wow-mod-raid-lockout.git	b746d7e7ddcbd0485f72506114489a5037bed0cc
 mod-rare-tracker	https://github.com/buildthehomelab/wow-mod-rare-tracker.git	9dca5b09af992334f08bbe6ed58564f16c9709d7
 mod-reagent-bank-account	https://github.com/buildthehomelab/mod-reagent-bank-account.git	f7b5c59cda31e67ea656d92e3385ea9f2c489b9c
