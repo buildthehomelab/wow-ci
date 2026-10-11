@@ -54,7 +54,10 @@ wow-mod-raid-lockout
 wow-mod-rare-tracker
 wow-mod-realm-armory
 wow-mod-retail-ah
+wow-mod-retail-creatures
+wow-mod-retail-druid-forms
 wow-mod-retail-professions
+wow-mod-retail-shaman-totems
 wow-mod-server-mail
 wow-mod-stack-size
 wow-mod-talent-per-level

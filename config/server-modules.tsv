@@ -61,14 +61,16 @@ mod-reagent-bank-account	https://github.com/buildthehomelab/mod-reagent-bank-acc
 mod-realm-armory	https://github.com/Hisha/mod-realm-armory	9cb817dafa94ece12af0c44ad5d0c75ad3260ced
 mod-realm-config	https://github.com/Hisha/mod-realm-config	fe36db9ba90c5d86e8d3a0315e2cac4367e7843f
 mod-retail-ah	https://github.com/buildthehomelab/wow-mod-retail-ah.git	f74cdf0767039089203aff650a7e3c66e12c80b1
+mod-retail-druid-forms	https://github.com/buildthehomelab/wow-mod-retail-druid-forms.git	63848110d015ced107a76a31d53583f16c96ef86
 mod-retail-pets	https://github.com/buildthehomelab/wow-mod-retail-pets.git	5eca801f11dc608285a26a763986ae2148a5758c
 mod-retail-professions	https://github.com/buildthehomelab/wow-mod-retail-professions.git	b95d5196f133a62ea5fbdf6f3076642fec92d780
+mod-retail-shaman-totems	https://github.com/buildthehomelab/wow-mod-retail-shaman-totems.git	901efe779daca398fd3d50143d86be1c377a0a39
 mod-server-mail	https://github.com/buildthehomelab/wow-mod-server-mail.git	e685615b25ecc5293f7f70b09bbc5f08ae187cdc
 mod-setxpbar	https://github.com/brian8544/mod-setxpbar	a8ed628e0d18c2bb50bf5a64be392bf8b6c9165c
 mod-stack-size	https://github.com/buildthehomelab/wow-mod-stack-size.git	f3c71461a7c7dd47a5b972361611e67bf6f1c6b2
 mod-starting-pet	https://github.com/Gozzim/mod-starting-pet	00d0543e79fb74dde4903706f4e096197b974e57
 mod-talent-per-level	https://github.com/buildthehomelab/wow-mod-talent-per-level.git	622a103999c25e39cdf2e4e475bb79a0da094036
 mod-tier0-trainers	https://github.com/buildthehomelab/wow-mod-tier0-trainers.git	f6d94bc8ca72f0802b9eee7360ef6325842c2798
-mod-transmog-plus	https://github.com/buildthehomelab/wow-mod-transmog-plus.git	6731c77ef327372f278d33d0ef2d49617c1d35a7
+mod-transmog-plus	https://github.com/buildthehomelab/wow-mod-transmog-plus.git	d796bf0b3d81d3f50906b3767913d90ca4723f9c
 mod-weather	https://github.com/buildthehomelab/wow-mod-weather.git	e09d41a31f56e387ca42f63e665de28384ebb3f8
 mod-world-buff-bots	https://github.com/buildthehomelab/mod-world-buff-bots	8a8a1a513bddbd78925e2465c3756be56a60be5c
