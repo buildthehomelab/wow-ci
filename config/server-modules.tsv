@@ -7,6 +7,7 @@ mod-aoe-loot	https://github.com/azerothcore/mod-aoe-loot.git	57279b660a278e9b3a1
 mod-auto-gather-tracking	https://github.com/Day36512/mod-auto-gather-tracking	7bec5b96f26f7b7efb625cd5917c41549c3f4fd2
 mod-beast-collection	https://github.com/buildthehomelab/wow-mod-beast-collection.git	7ecf7b6c78783669aca12d9d8ffc33e5c6ab456b
 mod-biome-effects	https://github.com/buildthehomelab/wow-mod-biome-effects	528b8ffd77fd11398ff1c83d62112a2437a222d6
+mod-boss-coins	https://github.com/buildthehomelab/wow-mod-boss-coins.git	6b35d792c0ecd8f5e6a39e230be811a88f3831e4
 mod-bot-lfg-accept	https://github.com/buildthehomelab/wow-mod-bot-lfg-accept.git	c40c4ec646b8fda111de3899157b75dcc6a7a12b
 mod-cache-version	https://github.com/buildthehomelab/wow-mod-cache-version.git	e05e24caf0afab24b0d43171ca98ba23ec23fb61
 mod-character-services	https://github.com/Zerkenn/mod-character-services	35459efdc958d457311f67a5cc6567907d83089b

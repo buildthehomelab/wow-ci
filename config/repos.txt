@@ -70,3 +70,4 @@ wow-mod-lost-legendaries
 wow-mod-retail-pets
 wow-mod-retail-warlock-pets
 wow-mod-forever-torch
+wow-mod-boss-coins
