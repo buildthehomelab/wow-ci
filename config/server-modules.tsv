@@ -30,7 +30,7 @@ mod-forever-periodic-crit	https://github.com/buildthehomelab/wow-mod-forever-per
 mod-forever-racials	https://github.com/buildthehomelab/wow-mod-forever-racials.git	23f0e7dac109fad5866fe6f82d9302a714097e7e
 mod-forever-rogue	https://github.com/buildthehomelab/wow-mod-forever-rogue.git	9194fa81a81c00267eefab283656b69e6b2b12ca
 mod-forever-shaman	https://github.com/buildthehomelab/wow-mod-forever-shaman.git	e6a07ce73a9f0857474aed71f4254da7334b12a6
-mod-forever-torch	https://github.com/buildthehomelab/wow-mod-forever-torch.git	f059076c256f502b3483f822134efcb57cc65c2e
+mod-forever-torch	https://github.com/buildthehomelab/wow-mod-forever-torch.git	6688b79de13e29fed889311d5acf5c51938406de
 mod-gathering-node-dynamic	https://github.com/buildthehomelab/mod-gathering-node-dynamic	ebd5a198872b46e5c7323c04132140aff9dc81a6
 mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.git	d5e8a565e1bb9c9437a6e00f98baca83bbd898f7
 mod-hearthstone-cd	https://github.com/buildthehomelab/wow-mod-hearthstone-cd.git	8595dd76ade65928438137ac58ad72dff7d69567
