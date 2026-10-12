@@ -9,6 +9,7 @@ mod-beast-collection	https://github.com/buildthehomelab/wow-mod-beast-collection
 mod-biome-effects	https://github.com/buildthehomelab/wow-mod-biome-effects	528b8ffd77fd11398ff1c83d62112a2437a222d6
 mod-boss-coins	https://github.com/buildthehomelab/wow-mod-boss-coins.git	482790e8af261d04ffa88e74b9e26a0d2b577052
 mod-bot-lfg-accept	https://github.com/buildthehomelab/wow-mod-bot-lfg-accept.git	c40c4ec646b8fda111de3899157b75dcc6a7a12b
+mod-bot-quiet-rolls	https://github.com/buildthehomelab/wow-mod-bot-quiet-rolls.git	55f8372cfd4fa5d9520b7b5ef6acd44fd52e0aa1
 mod-cache-version	https://github.com/buildthehomelab/wow-mod-cache-version.git	e05e24caf0afab24b0d43171ca98ba23ec23fb61
 mod-character-services	https://github.com/Zerkenn/mod-character-services	35459efdc958d457311f67a5cc6567907d83089b
 mod-combat-watchdog	https://github.com/buildthehomelab/wow-mod-combat-watchdog.git	0ed66e680be132cdb2f276a98c1a68a68ea431fd

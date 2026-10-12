@@ -73,3 +73,4 @@ wow-mod-retail-warlock-pets
 wow-mod-forever-torch
 wow-mod-boss-coins
 wow-mod-vendor-item-preload
+wow-mod-bot-quiet-rolls
