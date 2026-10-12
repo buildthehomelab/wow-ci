@@ -7,7 +7,7 @@ mod-aoe-loot	https://github.com/azerothcore/mod-aoe-loot.git	57279b660a278e9b3a1
 mod-auto-gather-tracking	https://github.com/Day36512/mod-auto-gather-tracking	7bec5b96f26f7b7efb625cd5917c41549c3f4fd2
 mod-beast-collection	https://github.com/buildthehomelab/wow-mod-beast-collection.git	7ecf7b6c78783669aca12d9d8ffc33e5c6ab456b
 mod-biome-effects	https://github.com/buildthehomelab/wow-mod-biome-effects	528b8ffd77fd11398ff1c83d62112a2437a222d6
-mod-boss-coins	https://github.com/buildthehomelab/wow-mod-boss-coins.git	482790e8af261d04ffa88e74b9e26a0d2b577052
+mod-boss-coins	https://github.com/buildthehomelab/wow-mod-boss-coins.git	e8834ce497439d4c9cd5fc669d95f3d6e055f5f9
 mod-bot-lfg-accept	https://github.com/buildthehomelab/wow-mod-bot-lfg-accept.git	c40c4ec646b8fda111de3899157b75dcc6a7a12b
 mod-bot-quiet-rolls	https://github.com/buildthehomelab/wow-mod-bot-quiet-rolls.git	55f8372cfd4fa5d9520b7b5ef6acd44fd52e0aa1
 mod-cache-version	https://github.com/buildthehomelab/wow-mod-cache-version.git	e05e24caf0afab24b0d43171ca98ba23ec23fb61
@@ -33,7 +33,7 @@ mod-forever-rogue	https://github.com/buildthehomelab/wow-mod-forever-rogue.git	9
 mod-forever-shaman	https://github.com/buildthehomelab/wow-mod-forever-shaman.git	e6a07ce73a9f0857474aed71f4254da7334b12a6
 mod-forever-torch	https://github.com/buildthehomelab/wow-mod-forever-torch.git	6688b79de13e29fed889311d5acf5c51938406de
 mod-gathering-node-dynamic	https://github.com/buildthehomelab/mod-gathering-node-dynamic	ebd5a198872b46e5c7323c04132140aff9dc81a6
-mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.git	c6064b3db6c3f9f8139d3e2e37bf0f9978031e91
+mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.git	2edd9855627489bd8ebbee970645c9c8010efa32
 mod-hearthstone-cd	https://github.com/buildthehomelab/wow-mod-hearthstone-cd.git	8595dd76ade65928438137ac58ad72dff7d69567
 mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	004f4e325171da210cc37764c230d770d556a055
 mod-individual-progression-announce	https://github.com/borrowjack/mod-individual-progression-announce	744833b053c3d989e1b3ee18a7fadfb33b474efc
