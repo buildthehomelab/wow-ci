@@ -11,7 +11,7 @@ Each job runs only if the repo contains that kind of file. **Errors** fail the c
 
 | Job | Runs when the repo has | Errors (fail the check) | Warnings |
 |---|---|---|---|
-| **cpp** | `src/*.cpp` | Loader name doesn't match the module folder (`Addmod_fooScripts`). An `Add...Scripts()` is called but never defined. Any compile error against the server's core (Playerbot branch, `config/core.env`) with mod-playerbots headers. | clang `-Wall -Wextra` in module code |
+| **cpp** | `src/*.cpp` | Loader name doesn't match the module folder (`Addmod_fooScripts`). An `Add...Scripts()` is called but never defined. Any compile error against the server's core (our fork's `evermore` branch, `config/core.env`) with mod-playerbots headers. | clang `-Wall -Wextra` in module code |
 | **sql** | `data/sql/**.sql` | A file fails on a snapshot of the server DB. Applying it twice fails (the server re-applies changed files). A duplicate filename within the module or against the core/other modules. Uninstall SQL where dbimport would run it. | SQL in dirs dbimport never reads; uninstall scripts that fail |
 | **addon** | `*.toc` / `*.lua` | `## Interface` isn't 30300. The .toc name doesn't match its folder. A `Blizzard*` folder. Files missing from the .toc or XML includes. Malformed XML. Lua 5.1 syntax errors. Reading a lower-case global that nothing sets. | everything else luacheck finds |
 | **php** | `*.php` | `php -l` | |
@@ -34,27 +34,36 @@ After a pin bump in `wow-server`, refresh the two config files and push. The DB 
 rebuilds by itself.
 
 ```bash
-tail -n +2 ../wow-server/manifest/core.tsv      # -> config/core.env (CORE_REF)
-awk -F'\t' '$1=="mod-playerbots"{print $4}' ../wow-server/manifest/modules.tsv   # -> PLAYERBOTS_REF
+tail -n +2 ../wow-server/manifest/core.tsv      # -> config/core.env (CORE_REPO, CORE_BRANCH, CORE_REF)
+awk -F'\t' '$1=="mod-playerbots"{print $2, $3, $4}' ../wow-server/manifest/modules.tsv   # -> PLAYERBOTS_*
 awk -F'\t' 'NR==1{print "folder\turl\tcommit";next}{print $1"\t"$2"\t"$4}' \
   ../wow-server/manifest/modules.tsv >config/server-modules.tsv
 ```
 
 ## Upstream watch
 
-**Actions → Upstream watch** runs every morning. It compares the core's `Playerbot` branch
-and mod-playerbots `master` with the pins in `config/core.env`. When upstream has new
-commits it syntax-checks every module in `config/server-modules.tsv`, at its pinned commit,
-against them, and opens one issue with the label `upstream`:
+**Actions → Upstream watch** runs every morning. The server runs our forks of the core
+(`buildthehomelab/wow-azerothcore`) and mod-playerbots (`buildthehomelab/wow-mod-playerbots`),
+branch `evermore`: upstream plus our own fixes as ordinary commits. The watch compares the
+core's `Playerbot` branch and mod-playerbots `master` with the `evermore` pins in
+`config/core.env`. When upstream has commits the pins don't contain, it syntax-checks every
+module in `config/server-modules.tsv`, at its pinned commit, against the new upstream commits,
+and opens one issue with the label `upstream`:
 
 - the new commits, how many SQL files they add, and any `.conf.dist` that changed (a
   renamed config key is silently ignored by the server);
+- whether upstream merges cleanly into `evermore` (with a link that opens the merge PR on the
+  fork), which files conflict if not, and which files both upstream and our commits touch;
 - the modules that no longer compile, with a link to each log.
 
 So the issue says whether it's safe to pull on the server, before pulling. It is a syntax
-check only: it doesn't build the core, link, or apply the new SQL. New upstream commits or
-a changed pin update the same issue, and it closes by itself once the pins match upstream
-again. A run where some module couldn't be checked says so and is redone the next day.
+check only: it doesn't build the core, link, or apply the new SQL, and the modules are
+checked against upstream without our commits on top. New upstream commits or a changed pin
+update the same issue, and it closes by itself once the pins contain upstream again. A run
+where some module couldn't be checked says so and is redone the next day.
+
+Merge upstream into `evermore` with a merge commit, never by rebasing or squashing: every pin
+the server ever used has to stay in the branch's history.
 
 A module that includes another module's headers needs a line in
 `config/module-headers.tsv`; one whose own CMake sets defines after probing the core needs

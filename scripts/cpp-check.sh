@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Compiles every .cpp in a module's src/ with -fsyntax-only against the AzerothCore
-# (Playerbot branch) headers. Errors fail the job; warnings become PR annotations.
+# headers (config/core.env). Errors fail the job; warnings become PR annotations.
 #
 #   CORE_DIR        core checkout (required)
 #   PLAYERBOTS_DIR  mod-playerbots checkout (optional; adds -DMOD_PLAYERBOTS + its headers)

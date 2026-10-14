@@ -1,8 +1,9 @@
-# Looks once a day whether the server's upstream has new commits: the core branch and
-# mod-playerbots (config/core.env). When it has, every module on the server
-# (config/server-modules.tsv, at its pinned commit) is syntax-checked against the new
-# commits, and one issue with the label `upstream` says what changed and which modules
-# would stop building. The issue closes itself once the pins match upstream again.
+# Looks once a day whether the server's upstream has new commits that our forks' `evermore`
+# pins don't contain: the core's Playerbot branch and mod-playerbots master
+# (config/core.env). When it has, every module on the server (config/server-modules.tsv,
+# at its pinned commit) is syntax-checked against the new commits, and one issue with the
+# label `upstream` says what changed, whether it merges into `evermore`, and which modules
+# would stop building. The issue closes itself once the pins contain upstream again.
 # A run that could not check every module is redone the next day.
 name: Upstream watch
 
