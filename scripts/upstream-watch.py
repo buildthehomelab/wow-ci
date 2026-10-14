@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
-"""Watches the server's upstream: the core branch and mod-playerbots (config/core.env).
+"""Watches the server's upstream (config/core.env). The server runs our forks of the core and
+mod-playerbots, branch `evermore`: upstream plus our own commits. Their upstreams are the
+mod-playerbots core's Playerbot branch and mod-playerbots master.
 
-    upstream-watch.py check     compare the branch heads with the pins; write job outputs
+    upstream-watch.py check     compare the upstream heads with the pins; write job outputs
     upstream-watch.py report    open or update the issue once the modules were checked
 
-`check` sets moved=true when a branch head differs from its pin and this exact state
-(heads, pins and module config) has no complete report yet. The workflow then
-syntax-checks every server module against the new heads, and `report` writes one issue
-(label `upstream`): what changed upstream, what to look at before pulling, and which
-modules stop compiling. A report with modules that could not be checked is redone on the
-next run. The issue is closed again once the pins match the heads.
+`check` sets moved=true when an upstream head has commits its pin doesn't contain and this
+exact state (heads, pins and module config) has no complete report yet. The workflow then
+syntax-checks every server module against the new upstream heads, and `report` writes one
+issue (label `upstream`): what changed upstream, whether it merges into `evermore`, what to
+look at before pulling, and which modules stop compiling. A report with modules that could
+not be checked is redone on the next run. The issue is closed again once the pins contain
+the upstream heads.
 
 Environment: GH_TOKEN, GITHUB_REPOSITORY, and for `report` GITHUB_RUN_ID plus the values
 from `check` (CORE_OLD, CORE_NEW, PLAYERBOTS_OLD, PLAYERBOTS_NEW, STATE, MODULES).
@@ -69,6 +72,15 @@ def head(url, branch):
     return out.split()[0]
 
 
+def unmerged(url, old, upstream_url, new):
+    """Commits of upstream's `new` that `old` (a commit of `url`, a fork of upstream) doesn't
+    contain. None when GitHub can't compare them, for example because `old` is gone."""
+    owner, name = slug(upstream_url).split("/")
+    res = subprocess.run(["gh", "api", f"repos/{slug(url)}/compare/{old}...{owner}:{name}:{new}",
+                          "--jq", ".ahead_by"], capture_output=True, text=True)
+    return int(res.stdout) if res.returncode == 0 else None
+
+
 def marker(state, complete):
     return f"<!-- upstream-watch state={state} complete={'yes' if complete else 'no'} -->"
 
@@ -93,10 +105,13 @@ def check():
     base_core, base_pb = os.environ.get("BASE_CORE_REF"), os.environ.get("BASE_PLAYERBOTS_REF")
     dry = flag("DRY_RUN") or bool(base_core or base_pb)
     core_old, pb_old = base_core or env["CORE_REF"], base_pb or env["PLAYERBOTS_REF"]
-    core_new = head(env["CORE_REPO"], env["CORE_BRANCH"])
-    pb_new = head(env["PLAYERBOTS_REPO"], env["PLAYERBOTS_BRANCH"])
-    print(f"core        {core_old[:7]} -> {core_new[:7]}")
-    print(f"playerbots  {pb_old[:7]} -> {pb_new[:7]}")
+    core_new = head(env["CORE_UPSTREAM_REPO"], env["CORE_UPSTREAM_BRANCH"])
+    pb_new = head(env["PLAYERBOTS_UPSTREAM_REPO"], env["PLAYERBOTS_UPSTREAM_BRANCH"])
+    core_n = unmerged(env["CORE_REPO"], core_old, env["CORE_UPSTREAM_REPO"], core_new)
+    pb_n = unmerged(env["PLAYERBOTS_REPO"], pb_old, env["PLAYERBOTS_UPSTREAM_REPO"], pb_new)
+    for name, old, new, n in (("core", core_old, core_new, core_n), ("playerbots", pb_old, pb_new, pb_n)):
+        print(f"{name:<11} pin {old[:7]}, upstream {new[:7]}: "
+              + ("can't compare" if n is None else f"{n} upstream commit(s) not merged"))
 
     # A fixed module or a new pin changes the state, so the report is redone.
     digest = hashlib.sha256("\n".join([core_old, pb_old, core_new, pb_new]).encode())
@@ -105,12 +120,13 @@ def check():
     state = digest.hexdigest()[:16]
 
     issue = None if dry else open_issue()
-    moved = (core_old, pb_old) != (core_new, pb_new)
+    # A pin GitHub can't compare counts as moved: the report says what's wrong with it.
+    moved = core_n != 0 or pb_n != 0
     if not moved:
-        print("The pins match upstream.")
+        print("The pins contain upstream.")
         if issue:
             run("gh", "issue", "close", str(issue["number"]), "--repo", os.environ["GITHUB_REPOSITORY"],
-                "--comment", "The pins match upstream again.")
+                "--comment", "The pins contain upstream again.")
     elif issue and marker(state, True) in issue["body"] and not flag("RECHECK"):
         print(f"Already reported in #{issue['number']}.")
         moved = False
@@ -140,35 +156,55 @@ def check():
         out.write(f"modules={json.dumps(modules)}\n")
 
 
-def upstream_section(title, url, branch, old, new, sql_dir):
-    """(markdown, commit count) for one upstream repo; (None, 0) when it didn't move."""
-    if old == new:
+def upstream_section(title, url, branch, upstream_url, upstream_branch, old, new, sql_dir):
+    """(markdown, commit count) for one fork: what upstream's `new` adds to our pin `old`, and
+    whether it merges. (None, 0) when the pin already contains it."""
+    if unmerged(url, old, upstream_url, new) == 0:
         return None, 0
-    repo = slug(url)
-    # Commits and trees only: enough for the log and for which paths changed.
-    clone = str(pathlib.Path(os.environ.get("RUNNER_TEMP", "/tmp")) / f"upstream-{repo.replace('/', '-')}.git")
+    fork, upstream = slug(url), slug(upstream_url)
+    # Commits and trees only: enough for the log and for which paths changed. The test merge
+    # fetches the few blobs it needs by itself.
+    clone = str(pathlib.Path(os.environ.get("RUNNER_TEMP", "/tmp")) / f"upstream-{upstream.replace('/', '-')}.git")
     if not os.path.exists(clone):
-        run("git", "clone", "-q", "--bare", "--filter=blob:none", "--single-branch", "--branch", branch, url, clone)
+        run("git", "clone", "-q", "--bare", "--filter=blob:none", "--single-branch", "--branch", upstream_branch,
+            upstream_url, clone)
 
     def git(*args):
         return run("git", "-C", clone, *args)
 
     lines = [f"## {title}", ""]
     if not (ok("git", "-C", clone, "cat-file", "-e", f"{old}^{{commit}}")
-            or ok("git", "-C", clone, "fetch", "-q", "--filter=blob:none", "origin", old)):
-        lines += [f"`{old[:7]}` → `{new[:7]}`", "",
-                  f"**The pinned commit `{old[:7]}` no longer exists upstream**, so there is nothing to "
-                  "compare with. A plain `git pull` on the server will not work."]
+            or ok("git", "-C", clone, "fetch", "-q", "--filter=blob:none", url, old)):
+        lines += [f"`{old[:7]}` + `{new[:7]}`", "",
+                  f"**The pinned commit `{old[:7]}` no longer exists in {fork}**, so there is nothing to "
+                  "compare with. Was `" + branch + "` force-pushed?"]
         return "\n".join(lines), 0
 
+    base = git("merge-base", old, new).strip()
     total = int(git("rev-list", "--count", f"{old}..{new}"))
-    lines += [f"`{old[:7]}` → `{new[:7]}` · {total} commit{'s' if total != 1 else ''} · "
-              f"[compare](https://github.com/{repo}/compare/{old}...{new})", ""]
-    if not ok("git", "-C", clone, "merge-base", "--is-ancestor", old, new):
-        lines += ["**The pinned commit is not in the branch's history** (upstream rewrote it, or the pin is "
-                  "from somewhere else). A plain `git pull` on the server will not work.", ""]
+    owner, name = upstream.split("/")
+    merge_url = f"https://github.com/{fork}/compare/{branch}...{owner}:{name}:{upstream_branch}"
+    lines += [f"Our `{old[:7]}` + upstream `{new[:7]}` · {total} new commit{'s' if total != 1 else ''} · "
+              f"[compare](https://github.com/{upstream}/compare/{base}...{new})", ""]
 
-    changed = [row.split("\t") for row in git("diff", "--name-status", "--no-renames", old, new).splitlines()]
+    changed = [row.split("\t") for row in git("diff", "--name-status", "--no-renames", base, new).splitlines()]
+    ours = set(git("diff", "--name-only", "--no-renames", base, old).splitlines())
+    merge = subprocess.run(["git", "-C", clone, "merge-tree", "--write-tree", "--name-only", "--no-messages",
+                            old, new], capture_output=True, text=True)
+    if merge.returncode == 0:
+        lines.append(f"Merges cleanly into `{branch}`: [open the merge PR]({merge_url}).")
+        both = sorted(ours & {path for _, path in changed})
+        if both:
+            lines.append("Upstream also changed files our commits touch, so check those still do what they "
+                         "should: " + ", ".join(f"`{p}`" for p in both))
+    elif merge.returncode == 1:
+        conflicts = merge.stdout.splitlines()[1:]
+        lines.append(f"**Conflicts with our commits on `{branch}`** in "
+                     + ", ".join(f"`{p}`" for p in conflicts) + ". It needs a merge by hand.")
+    else:
+        lines.append(f"The test merge failed: `{merge.stderr.strip()[:200]}`")
+    lines.append("")
+
     sql = sum(1 for status, path in changed if status == "A" and path.startswith(sql_dir) and path.endswith(".sql"))
     confs = [path for _, path in changed if path.endswith(".conf.dist")]
     found = []
@@ -227,10 +263,14 @@ def report():
     pb_old, pb_new = os.environ["PLAYERBOTS_OLD"], os.environ["PLAYERBOTS_NEW"]
     state = os.environ["STATE"]
 
-    core, core_n = upstream_section(f"{slug(env['CORE_REPO']).split('/')[1]} ({env['CORE_BRANCH']})",
-                                    env["CORE_REPO"], env["CORE_BRANCH"], core_old, core_new, "data/sql/updates/")
-    pb, pb_n = upstream_section(f"mod-playerbots ({env['PLAYERBOTS_BRANCH']})",
-                                env["PLAYERBOTS_REPO"], env["PLAYERBOTS_BRANCH"], pb_old, pb_new, "data/sql/")
+    core, core_n = upstream_section(
+        f"{slug(env['CORE_UPSTREAM_REPO']).split('/')[1]} ({env['CORE_UPSTREAM_BRANCH']})",
+        env["CORE_REPO"], env["CORE_BRANCH"], env["CORE_UPSTREAM_REPO"], env["CORE_UPSTREAM_BRANCH"],
+        core_old, core_new, "data/sql/updates/")
+    pb, pb_n = upstream_section(
+        f"mod-playerbots ({env['PLAYERBOTS_UPSTREAM_BRANCH']})",
+        env["PLAYERBOTS_REPO"], env["PLAYERBOTS_BRANCH"], env["PLAYERBOTS_UPSTREAM_REPO"],
+        env["PLAYERBOTS_UPSTREAM_BRANCH"], pb_old, pb_new, "data/sql/")
 
     compiled, failed, unchecked = module_results([m["module"] for m in json.loads(os.environ["MODULES"])])
 
@@ -248,21 +288,25 @@ def report():
         mods += ["", f"{len(unchecked)} could not be checked (the job broke or was cancelled). "
                  "The next run tries again:"]
         mods += [f"- {m}{log(url)}" for m, url in unchecked]
-    mods += ["", "This is a syntax check of each module at its pinned commit (`config/server-modules.tsv`). "
+    mods += ["", "This is a syntax check of each module at its pinned commit (`config/server-modules.tsv`) "
+             "against the new upstream commits, without our commits on top. "
              "It does not build the core, link, or apply the new SQL."]
 
-    parts = [f"`{env['CORE_BRANCH']}`" + (f" +{core_n}" if core_n else ""),
+    parts = [f"`{env['CORE_UPSTREAM_BRANCH']}`" + (f" +{core_n}" if core_n else ""),
              "mod-playerbots" + (f" +{pb_n}" if pb_n else "")]
     title = "Upstream has new commits: " + ", ".join(p for p, s in zip(parts, (core, pb)) if s)
     body = "\n\n".join(filter(None, [
-        "The server's upstream moved past the pinned commits (`config/core.env`, copied from "
-        "wow-server `manifest/`).",
+        "The server's upstream has commits that our `evermore` pins don't (`config/core.env`, "
+        "copied from wow-server `manifest/`).",
         "\n".join(mods), core, pb,
         "## Updating\n\n"
         "1. Fix the modules listed above, if any.\n"
-        "2. On the server, pull the core and mod-playerbots and rebuild.\n"
-        "3. Record the new commits in wow-server `manifest/`, then in `config/core.env` and "
-        "`config/server-modules.tsv` here. This issue closes by itself once they match.",
+        "2. Merge upstream into `evermore` on each fork. When it merges cleanly, open the merge PR "
+        "link above and merge it with **Create a merge commit** (never squash or rebase: the old "
+        "pins must stay in the branch's history). On conflicts, merge by hand and resolve.\n"
+        "3. On the server, `git pull` in the core folder and in `modules/mod-playerbots`, and rebuild.\n"
+        "4. Record the new `evermore` commits in wow-server `manifest/`, then in `config/core.env` and "
+        "`config/server-modules.tsv` here. This issue closes by itself once they contain upstream.",
         marker(state, not unchecked),
     ]))
 
