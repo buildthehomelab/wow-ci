@@ -59,7 +59,7 @@ mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-cr
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	82191bd618739477ddaec95d02aadaf0ee87f43c
 mod-proficiency-sync	https://github.com/buildthehomelab/wow-mod-proficiency-sync.git	536f5874e691fa9853ff6c883f2f844f655d8f5f
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	6f073c1bef1bba1aa73787d1e30db7429f2b1c7b
-mod-raid-clear	https://github.com/buildthehomelab/wow-mod-raid-clear.git	3730b2b7d46eadfa672f519157bc2dc0db81d8a7
+mod-raid-clear	https://github.com/buildthehomelab/wow-mod-raid-clear.git	bfe22d0cd29f3a4ecbcc01f9af21c659a1877cb3
 mod-raid-lockout	https://github.com/buildthehomelab/wow-mod-raid-lockout.git	b746d7e7ddcbd0485f72506114489a5037bed0cc
 mod-rare-tracker	https://github.com/buildthehomelab/wow-mod-rare-tracker.git	9dca5b09af992334f08bbe6ed58564f16c9709d7
 mod-reagent-bank-account	https://github.com/buildthehomelab/mod-reagent-bank-account.git	f7b5c59cda31e67ea656d92e3385ea9f2c489b9c
