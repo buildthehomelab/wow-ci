@@ -48,6 +48,7 @@ mod-mass-milling	https://github.com/buildthehomelab/mod-mass-milling	85dc502aa7d
 mod-mass-prospecting	https://github.com/buildthehomelab/mod-mass-prospecting	a5a0082e25b3cd937c3a395d93e72e8871873ea6
 mod-mount-requirements	https://github.com/buildthehomelab/mod-mount-requirements	1164887eea1259798b703c2700a8b540042e37b9
 mod-mount-scaling	https://github.com/buildthehomelab/wow-mod-mount-scaling	e2619b0a7e5a42f6a101f6b364d0ad8d6ff655bc
+mod-night-brightness	https://github.com/buildthehomelab/wow-mod-night-brightness.git	3c3b41061c00800e2fd823f28e353df396414bb0
 mod-no-profession-limit	https://github.com/AlsoNotMehh/mod-no-profession-limit	5c64277a52d7014a7501f6cf6a111cef137f2888
 mod-npc-finder	https://github.com/buildthehomelab/wow-mod-npc-finder.git	08bb65c0820d82c9967ccda3d9702768df4746fc
 mod-npc-services	https://github.com/azerothcore/mod-npc-services	aa44c28acb21fdc1d45084788214f2eee2d5f87c
