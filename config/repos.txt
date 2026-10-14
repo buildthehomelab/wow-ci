@@ -27,9 +27,9 @@ wow-mod-dungeon-consumables
 wow-mod-era-events
 wow-mod-forever-class-combos
 wow-mod-forever-druid
-wow-mod-forever-dungeon-journal
 wow-mod-forever-dungeon-xp
 wow-mod-forever-hunter
+wow-mod-forever-journal
 wow-mod-forever-paladin
 wow-mod-forever-periodic-crit
 wow-mod-forever-racials

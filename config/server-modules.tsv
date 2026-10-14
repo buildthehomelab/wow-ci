@@ -23,9 +23,9 @@ mod-era-events	https://github.com/buildthehomelab/wow-mod-era-events.git	4fcaf89
 mod-fireworks-on-level	https://github.com/azerothcore/mod-fireworks-on-level	e5c58542996e0f1ad3410ebdb7cff9ed9d52e3d6
 mod-forever-class-combos	https://github.com/buildthehomelab/wow-mod-forever-class-combos.git	3268aeef264f49c408d2acca27697c2004a603da
 mod-forever-druid	https://github.com/buildthehomelab/wow-mod-forever-druid.git	ece4c0f45b4cefb42e3a349c62c6dbad975e75a1
-mod-forever-dungeon-journal	https://github.com/buildthehomelab/wow-mod-forever-dungeon-journal.git	3f5cedcbdfcc5e90251a5e4160cd93b46bda6d41
 mod-forever-dungeon-xp	https://github.com/buildthehomelab/wow-mod-forever-dungeon-xp.git	f3cd9caefd16f1584967294861ccf95e67038f5c
 mod-forever-hunter	https://github.com/buildthehomelab/wow-mod-forever-hunter.git	ecb0a51c5d1e1524e2027d1d88c698f714627393
+mod-forever-journal	https://github.com/buildthehomelab/wow-mod-forever-journal.git	9618da1e7c10af7d0a29f498b51062a8bba1dd45
 mod-forever-paladin	https://github.com/buildthehomelab/wow-mod-forever-paladin.git	0a7b99a1e5d9021f421412d4249fa62e695d2865
 mod-forever-periodic-crit	https://github.com/buildthehomelab/wow-mod-forever-periodic-crit.git	a0d17150fdceb44df509866f6850b69b0237c7d4
 mod-forever-racials	https://github.com/buildthehomelab/wow-mod-forever-racials.git	e80c5f1fe2e05f6db3d214cbb805ec9f73b2373f
