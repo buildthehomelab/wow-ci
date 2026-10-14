@@ -44,8 +44,6 @@ mod-learnable-mounts	https://github.com/buildthehomelab/mod-learnable-mounts	230
 mod-lfg-progression	https://github.com/buildthehomelab/wow-mod-lfg-progression.git	5d64585dd2ac6d9313165f8c46f278980ae89f37
 mod-llm-chatter	https://github.com/buildthehomelab/mod-llm-chatter	58943d3374e2f193409e520f2fbc82f84cf9baf1
 mod-lost-legendaries	https://github.com/buildthehomelab/wow-mod-lost-legendaries.git	01d88aabc06d19822efc727d8518da571b16963f
-mod-mass-milling	https://github.com/buildthehomelab/mod-mass-milling	85dc502aa7dbca24a8262eaa923b1bdb6958ced3
-mod-mass-prospecting	https://github.com/buildthehomelab/mod-mass-prospecting	a5a0082e25b3cd937c3a395d93e72e8871873ea6
 mod-mount-requirements	https://github.com/buildthehomelab/mod-mount-requirements	1164887eea1259798b703c2700a8b540042e37b9
 mod-mount-scaling	https://github.com/buildthehomelab/wow-mod-mount-scaling	e2619b0a7e5a42f6a101f6b364d0ad8d6ff655bc
 mod-night-brightness	https://github.com/buildthehomelab/wow-mod-night-brightness.git	53bdcf554511c2cfb0e143af8ddf1e72adf9f88b

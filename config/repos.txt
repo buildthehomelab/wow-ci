@@ -2,8 +2,6 @@ LearnedAlert
 mod-gathering-node-dynamic
 mod-learnable-mounts
 mod-llm-chatter
-mod-mass-milling
-mod-mass-prospecting
 mod-mount-requirements
 mod-reagent-bank-account
 mod-world-buff-bots
