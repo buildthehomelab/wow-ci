@@ -66,7 +66,7 @@ mod-realm-config	https://github.com/Hisha/mod-realm-config	fe36db9ba90c5d86e8d3a
 mod-retail-ah	https://github.com/buildthehomelab/wow-mod-retail-ah.git	f74cdf0767039089203aff650a7e3c66e12c80b1
 mod-retail-druid-forms	https://github.com/buildthehomelab/wow-mod-retail-druid-forms.git	63848110d015ced107a76a31d53583f16c96ef86
 mod-retail-pets	https://github.com/buildthehomelab/wow-mod-retail-pets.git	2c4e1820c4a20068258f3f14301fc89a645d1f1f
-mod-retail-professions	https://github.com/buildthehomelab/wow-mod-retail-professions.git	043a386ff3a1c1028472f7b7e4cb6ad37ccbdc10
+mod-retail-professions	https://github.com/buildthehomelab/wow-mod-retail-professions.git	1b06e37c05b2d1948def1f5dce68a949189320b5
 mod-retail-shaman-totems	https://github.com/buildthehomelab/wow-mod-retail-shaman-totems.git	901efe779daca398fd3d50143d86be1c377a0a39
 mod-retail-warlock-pets	https://github.com/buildthehomelab/wow-mod-retail-warlock-pets.git	efbb37cf89906ca0a90ee58a71d59c0defd487ff
 mod-server-mail	https://github.com/buildthehomelab/wow-mod-server-mail.git	8d3f17a290f4b200d8d881a2885341640b6c0be6
