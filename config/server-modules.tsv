@@ -7,7 +7,7 @@ mod-aoe-loot	https://github.com/azerothcore/mod-aoe-loot.git	44486b1aecebd86944c
 mod-auto-gather-tracking	https://github.com/Day36512/mod-auto-gather-tracking	7bec5b96f26f7b7efb625cd5917c41549c3f4fd2
 mod-beast-collection	https://github.com/buildthehomelab/wow-mod-beast-collection.git	0fcfd6426ad1926f4498936f0f74234f9c6f5cc7
 mod-biome-effects	https://github.com/buildthehomelab/wow-mod-biome-effects	4d61605a3ea5c1f8f6e18782d94dbb584ccff36a
-mod-boss-coins	https://github.com/buildthehomelab/wow-mod-boss-coins.git	45a1a339318cbdf5583210559d01448379cedd72
+mod-boss-coins	https://github.com/buildthehomelab/wow-mod-boss-coins.git	a0c235112b5fdb05839910c2e66abb7eb82cb999
 mod-bot-lfg-accept	https://github.com/buildthehomelab/wow-mod-bot-lfg-accept.git	b3969f348ade6d1cbf37445d3e78ffe5df368907
 mod-bot-quiet-rolls	https://github.com/buildthehomelab/wow-mod-bot-quiet-rolls.git	55f8372cfd4fa5d9520b7b5ef6acd44fd52e0aa1
 mod-cache-version	https://github.com/buildthehomelab/wow-mod-cache-version.git	e05e24caf0afab24b0d43171ca98ba23ec23fb61
@@ -64,8 +64,8 @@ mod-reagent-bank-account	https://github.com/buildthehomelab/mod-reagent-bank-acc
 mod-realm-armory	https://github.com/Hisha/mod-realm-armory	9cb817dafa94ece12af0c44ad5d0c75ad3260ced
 mod-realm-config	https://github.com/Hisha/mod-realm-config	fe36db9ba90c5d86e8d3a0315e2cac4367e7843f
 mod-retail-ah	https://github.com/buildthehomelab/wow-mod-retail-ah.git	f74cdf0767039089203aff650a7e3c66e12c80b1
-mod-retail-druid-forms	https://github.com/buildthehomelab/wow-mod-retail-druid-forms.git	63848110d015ced107a76a31d53583f16c96ef86
-mod-retail-pets	https://github.com/buildthehomelab/wow-mod-retail-pets.git	2c4e1820c4a20068258f3f14301fc89a645d1f1f
+mod-retail-druid-forms	https://github.com/buildthehomelab/wow-mod-retail-druid-forms.git	2dd29652c1ba2cac35d18de5b0132aff3af9baec
+mod-retail-pets	https://github.com/buildthehomelab/wow-mod-retail-pets.git	69288d7deba3f0ee0688e9ad1cd1e1296a7d5b26
 mod-retail-professions	https://github.com/buildthehomelab/wow-mod-retail-professions.git	1b06e37c05b2d1948def1f5dce68a949189320b5
 mod-retail-shaman-totems	https://github.com/buildthehomelab/wow-mod-retail-shaman-totems.git	901efe779daca398fd3d50143d86be1c377a0a39
 mod-retail-warlock-pets	https://github.com/buildthehomelab/wow-mod-retail-warlock-pets.git	efbb37cf89906ca0a90ee58a71d59c0defd487ff
@@ -75,7 +75,7 @@ mod-stack-size	https://github.com/buildthehomelab/wow-mod-stack-size.git	9100618
 mod-starting-pet	https://github.com/Gozzim/mod-starting-pet	00d0543e79fb74dde4903706f4e096197b974e57
 mod-talent-per-level	https://github.com/buildthehomelab/wow-mod-talent-per-level.git	a50b73443824cc273ad50f03d6d9255da92b1fee
 mod-tier0-trainers	https://github.com/buildthehomelab/wow-mod-tier0-trainers.git	361b6b92ee84a0d793505bccd0a94586024e0943
-mod-transmog-plus	https://github.com/buildthehomelab/wow-mod-transmog-plus.git	860dc5b16750d63465a68a4d01a6f4bbc55722dd
+mod-transmog-plus	https://github.com/buildthehomelab/wow-mod-transmog-plus.git	80648f290a9c3a3c9e260e50c9dcf3528a5e6cb5
 mod-vendor-item-preload	https://github.com/buildthehomelab/wow-mod-vendor-item-preload.git	5fe78219f9671dc237f647b5ece055601587cd20
 mod-weather	https://github.com/buildthehomelab/wow-mod-weather.git	4b9b7068920eaa237db8565866138d3d7550b8f1
 mod-world-buff-bots	https://github.com/buildthehomelab/mod-world-buff-bots	a6c057306107dd3ddb390f4b499df9a5b058ff32
