@@ -36,7 +36,7 @@ mod-gathering-node-dynamic	https://github.com/buildthehomelab/mod-gathering-node
 mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.git	2edd9855627489bd8ebbee970645c9c8010efa32
 mod-hearthstone-cd	https://github.com/buildthehomelab/wow-mod-hearthstone-cd.git	58cb527401b5e1d1971fd51ca6fda214520da3ea
 mod-individual-progression-announce	https://github.com/borrowjack/mod-individual-progression-announce	744833b053c3d989e1b3ee18a7fadfb33b474efc
-mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	8ceaff92268bbb21d83e4de6f32b6eed61a1afcf
+mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	550bee70cc8c46a04f2a53edb1919426078ff67c
 mod-individual-xp	https://github.com/buildthehomelab/wow-mod-individual-xp.git	6caaf7c4671deaad85064c87e72276c9164f530b
 mod-junk-to-gold-plus	https://github.com/buildthehomelab/wow-mod-junk-to-gold-plus.git	3087d1d8e6964616cd7366d09e5fee1166c8a4db
 mod-learn-spells	https://github.com/buildthehomelab/wow-mod-learn-spells.git	dd72058e713b9296ab97f090815559f8c02babec
