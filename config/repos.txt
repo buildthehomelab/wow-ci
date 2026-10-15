@@ -73,3 +73,4 @@ wow-mod-boss-coins
 wow-mod-vendor-item-preload
 wow-mod-bot-quiet-rolls
 wow-mod-night-brightness
+wow-mod-retail-library
