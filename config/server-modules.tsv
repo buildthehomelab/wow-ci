@@ -19,7 +19,7 @@ mod-dungeon-brd	https://github.com/buildthehomelab/wow-mod-dungeon-brd.git	56eb8
 mod-dungeon-clear	https://github.com/jrad7/mod-dungeon-clear	da0bdfbc724024929ffade3b0a2e83c2c0087f69
 mod-dungeon-consumables	https://github.com/buildthehomelab/wow-mod-dungeon-consumables.git	8550c164a887c0a8fc792c0386642eb9f91e2dac
 mod-dynamic-gathering-speed	https://github.com/silviu20092/mod-dynamic-gathering-speed	db2f734ea3569318d8b9f9ef64a0af68809b8f21
-mod-era-events	https://github.com/buildthehomelab/wow-mod-era-events.git	4fcaf89e57e33b22838440d2b66de555d4ec9193
+mod-era-events	https://github.com/buildthehomelab/wow-mod-era-events.git	cf02786aceb531df76ff065d8be7a1973344cfb1
 mod-fireworks-on-level	https://github.com/azerothcore/mod-fireworks-on-level	e5c58542996e0f1ad3410ebdb7cff9ed9d52e3d6
 mod-forever-class-combos	https://github.com/buildthehomelab/wow-mod-forever-class-combos.git	3268aeef264f49c408d2acca27697c2004a603da
 mod-forever-druid	https://github.com/buildthehomelab/wow-mod-forever-druid.git	ece4c0f45b4cefb42e3a349c62c6dbad975e75a1
@@ -36,13 +36,13 @@ mod-gathering-node-dynamic	https://github.com/buildthehomelab/mod-gathering-node
 mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.git	2edd9855627489bd8ebbee970645c9c8010efa32
 mod-hearthstone-cd	https://github.com/buildthehomelab/wow-mod-hearthstone-cd.git	58cb527401b5e1d1971fd51ca6fda214520da3ea
 mod-individual-progression-announce	https://github.com/borrowjack/mod-individual-progression-announce	744833b053c3d989e1b3ee18a7fadfb33b474efc
-mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	352532a9839ccb00926fd137d02d404c75dacb2b
+mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	29f00754f3d41f71f134a016dc2ad57ca8cfb83a
 mod-individual-xp	https://github.com/buildthehomelab/wow-mod-individual-xp.git	6caaf7c4671deaad85064c87e72276c9164f530b
-mod-junk-to-gold-plus	https://github.com/buildthehomelab/wow-mod-junk-to-gold-plus.git	91f575b69e2c9c90801db773d92e04478e3327a6
+mod-junk-to-gold-plus	https://github.com/buildthehomelab/wow-mod-junk-to-gold-plus.git	3087d1d8e6964616cd7366d09e5fee1166c8a4db
 mod-learn-spells	https://github.com/buildthehomelab/wow-mod-learn-spells.git	dd72058e713b9296ab97f090815559f8c02babec
 mod-learnable-mounts	https://github.com/buildthehomelab/mod-learnable-mounts	11051d32dd5484f5aa785aa8bfe49c2fe787d51c
 mod-lfg-progression	https://github.com/buildthehomelab/wow-mod-lfg-progression.git	5d64585dd2ac6d9313165f8c46f278980ae89f37
-mod-llm-chatter	https://github.com/buildthehomelab/mod-llm-chatter	1eca7be8866f6ea505f432a594e97120dc003648
+mod-llm-chatter	https://github.com/buildthehomelab/mod-llm-chatter	d48b7839f7fa0b3abb9af86489cd3e82982d0b5c
 mod-lost-legendaries	https://github.com/buildthehomelab/wow-mod-lost-legendaries.git	63b0dcce4f7f6e7863be7ccd5f1960d0325314ae
 mod-mount-requirements	https://github.com/buildthehomelab/mod-mount-requirements	2c7d9e1780f85683eb135df56aafa262d99ec90a
 mod-mount-scaling	https://github.com/buildthehomelab/wow-mod-mount-scaling	897be3f782e585070788bfa93bfcde462b392d2a
@@ -57,7 +57,7 @@ mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	5da8f06
 mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-craft-cd.git	5bd0b4dfbbe687982aaafe3958cd6f72b3ad2c9f
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	9a1578516aec8c0ba773eea32724eb94e76ea7f1
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	c3955915c76d5a22a9d25a44482345d368a8de82
-mod-raid-clear	https://github.com/buildthehomelab/wow-mod-raid-clear.git	71d61b8f600a8b3db3957369eb8b07b54715ca63
+mod-raid-clear	https://github.com/buildthehomelab/wow-mod-raid-clear.git	d93b82dd2774696c2a7f14d64dc92b389fa06867
 mod-raid-lockout	https://github.com/buildthehomelab/wow-mod-raid-lockout.git	b746d7e7ddcbd0485f72506114489a5037bed0cc
 mod-rare-tracker	https://github.com/buildthehomelab/wow-mod-rare-tracker.git	9dca5b09af992334f08bbe6ed58564f16c9709d7
 mod-reagent-bank-account	https://github.com/buildthehomelab/mod-reagent-bank-account	dd7dfca652f0e249a3fe80f95c12e1ba5f7dfb15
