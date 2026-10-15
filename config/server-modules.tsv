@@ -2,7 +2,7 @@ folder	url	commit
 mod-accountwide-flight-paths	https://github.com/buildthehomelab/wow-mod-accountwide-flight-paths.git	cebbbbda9ad421f8c81056e6d390567c100f8773
 mod-accountwide-mounts	https://github.com/buildthehomelab/wow-mod-accountwide-mounts.git	aeead30510af7ef4439012340cb5f6d02835b4c9
 mod-accountwide-pets	https://github.com/buildthehomelab/wow-mod-accountwide-pets.git	c4c98a164d8f89709bb02127437b0add77a7ad1b
-mod-ah-bot-plus	https://github.com/buildthehomelab/wow-mod-ah-bot-plus.git	d02686f62ea20da06db82f19d575d4bfbb6f1ca8
+mod-ah-bot-plus	https://github.com/buildthehomelab/wow-mod-ah-bot-plus.git	4aa99e980f63eadf10d554735677cffcdb8cd2c7
 mod-aoe-loot	https://github.com/azerothcore/mod-aoe-loot.git	44486b1aecebd86944ce115972b3c839544903d3
 mod-auto-gather-tracking	https://github.com/Day36512/mod-auto-gather-tracking	7bec5b96f26f7b7efb625cd5917c41549c3f4fd2
 mod-beast-collection	https://github.com/buildthehomelab/wow-mod-beast-collection.git	0fcfd6426ad1926f4498936f0f74234f9c6f5cc7
@@ -53,7 +53,7 @@ mod-npc-services	https://github.com/azerothcore/mod-npc-services	aa44c28acb21fdc
 mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid.git	c571e1d9abc73f88ad009a5729f5efb969dc6881
 mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	b4abdc60024110cc6934aa7fa110ef6b6eb7d958
 mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	12c0c7fd26b744cc10badae6a543f04a18695f1a
-mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	5da8f06864c952768487ee3f9e96842d5ffac7a6
+mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	1cd1d90ac6661e599f0dc049fc5ffac4cb850c9e
 mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-craft-cd.git	5bd0b4dfbbe687982aaafe3958cd6f72b3ad2c9f
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	9a1578516aec8c0ba773eea32724eb94e76ea7f1
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	c3955915c76d5a22a9d25a44482345d368a8de82
