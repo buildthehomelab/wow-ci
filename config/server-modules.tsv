@@ -36,8 +36,8 @@ mod-gathering-node-dynamic	https://github.com/buildthehomelab/mod-gathering-node
 mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.git	2edd9855627489bd8ebbee970645c9c8010efa32
 mod-hearthstone-cd	https://github.com/buildthehomelab/wow-mod-hearthstone-cd.git	58cb527401b5e1d1971fd51ca6fda214520da3ea
 mod-individual-progression-announce	https://github.com/borrowjack/mod-individual-progression-announce	744833b053c3d989e1b3ee18a7fadfb33b474efc
-mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	9883fcfd872cf14610313a4e0514360cd0878157
-mod-individual-xp	https://github.com/azerothcore/mod-individual-xp	503471f766bc4f21dca0aa05e6a9d3d40718a780
+mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	352532a9839ccb00926fd137d02d404c75dacb2b
+mod-individual-xp	https://github.com/buildthehomelab/wow-mod-individual-xp.git	6caaf7c4671deaad85064c87e72276c9164f530b
 mod-junk-to-gold-plus	https://github.com/buildthehomelab/wow-mod-junk-to-gold-plus.git	91f575b69e2c9c90801db773d92e04478e3327a6
 mod-learn-spells	https://github.com/buildthehomelab/wow-mod-learn-spells.git	dd72058e713b9296ab97f090815559f8c02babec
 mod-learnable-mounts	https://github.com/buildthehomelab/mod-learnable-mounts	11051d32dd5484f5aa785aa8bfe49c2fe787d51c
@@ -47,12 +47,12 @@ mod-lost-legendaries	https://github.com/buildthehomelab/wow-mod-lost-legendaries
 mod-mount-requirements	https://github.com/buildthehomelab/mod-mount-requirements	2c7d9e1780f85683eb135df56aafa262d99ec90a
 mod-mount-scaling	https://github.com/buildthehomelab/wow-mod-mount-scaling	897be3f782e585070788bfa93bfcde462b392d2a
 mod-night-brightness	https://github.com/buildthehomelab/wow-mod-night-brightness.git	53bdcf554511c2cfb0e143af8ddf1e72adf9f88b
-mod-no-profession-limit	https://github.com/AlsoNotMehh/mod-no-profession-limit	5c64277a52d7014a7501f6cf6a111cef137f2888
+mod-no-profession-limit	https://github.com/buildthehomelab/wow-mod-no-profession-limit.git	7f9719789ff94d1b7c6c206d87b22cc7bead4171
 mod-npc-finder	https://github.com/buildthehomelab/wow-mod-npc-finder.git	cf9d54f739363e1ddddd0bfceddb82fd52ef70bf
 mod-npc-services	https://github.com/azerothcore/mod-npc-services	aa44c28acb21fdc1d45084788214f2eee2d5f87c
 mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid.git	c571e1d9abc73f88ad009a5729f5efb969dc6881
 mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	b4abdc60024110cc6934aa7fa110ef6b6eb7d958
-mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	7e2b5ad9ef9e397134450d815ba57849c84887e4
+mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	12c0c7fd26b744cc10badae6a543f04a18695f1a
 mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	5da8f06864c952768487ee3f9e96842d5ffac7a6
 mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-craft-cd.git	5bd0b4dfbbe687982aaafe3958cd6f72b3ad2c9f
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	9a1578516aec8c0ba773eea32724eb94e76ea7f1
@@ -76,7 +76,7 @@ mod-stack-size	https://github.com/buildthehomelab/wow-mod-stack-size.git	9100618
 mod-starting-pet	https://github.com/Gozzim/mod-starting-pet	00d0543e79fb74dde4903706f4e096197b974e57
 mod-talent-per-level	https://github.com/buildthehomelab/wow-mod-talent-per-level.git	a50b73443824cc273ad50f03d6d9255da92b1fee
 mod-tier0-trainers	https://github.com/buildthehomelab/wow-mod-tier0-trainers.git	361b6b92ee84a0d793505bccd0a94586024e0943
-mod-transmog-plus	https://github.com/buildthehomelab/wow-mod-transmog-plus.git	80648f290a9c3a3c9e260e50c9dcf3528a5e6cb5
+mod-transmog-plus	https://github.com/buildthehomelab/wow-mod-transmog-plus.git	8751a553265278f05b1b3629fb7f4513fcf4ee7a
 mod-vendor-item-preload	https://github.com/buildthehomelab/wow-mod-vendor-item-preload.git	5fe78219f9671dc237f647b5ece055601587cd20
 mod-weather	https://github.com/buildthehomelab/wow-mod-weather.git	4b9b7068920eaa237db8565866138d3d7550b8f1
 mod-world-buff-bots	https://github.com/buildthehomelab/mod-world-buff-bots	a6c057306107dd3ddb390f4b499df9a5b058ff32
