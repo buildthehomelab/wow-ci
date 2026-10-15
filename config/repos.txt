@@ -43,7 +43,6 @@ wow-mod-holiday-control
 wow-mod-learn-spells
 wow-mod-lfg-progression
 wow-mod-mount-scaling
-wow-mod-npc-finder
 wow-mod-optimal-bot-raid
 wow-mod-pet-loot
 wow-mod-profession-craft-cd
