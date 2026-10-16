@@ -3,3 +3,4 @@
 module	define	core file	contains
 mod-dungeon-clear	DC_CORE_HAS_ON_PACKET_SENT=1	src/server/game/Scripting/ScriptDefines/ServerScript.h	SERVERHOOK_ON_PACKET_SENT
 mod-dungeon-clear	DC_CORE_IWORLD_HAS_QUERYHOLDER=1	src/server/game/World/IWorld.h	AddQueryHolderCallback
+mod-guild-levels	GL_CORE_HAS_TAXI_SPEED=1	src/server/game/Scripting/ScriptDefines/PlayerScript.h	PLAYERHOOK_ON_TAXI_FLIGHT_SPEED
