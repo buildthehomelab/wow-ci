@@ -77,3 +77,4 @@ wow-mod-retail-library
 wow-mod-black-market
 wow-mod-quick-lockpick
 wow-mod-retail-collection
+wow-mod-retail-achievements
