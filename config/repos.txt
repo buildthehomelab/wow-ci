@@ -76,3 +76,4 @@ wow-mod-night-brightness
 wow-mod-retail-library
 wow-mod-black-market
 wow-mod-quick-lockpick
+wow-mod-retail-collection
