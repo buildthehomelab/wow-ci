@@ -75,3 +75,4 @@ wow-mod-bot-quiet-rolls
 wow-mod-night-brightness
 wow-mod-retail-library
 wow-mod-black-market
+wow-mod-retail-collection

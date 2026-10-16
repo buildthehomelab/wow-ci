@@ -65,6 +65,7 @@ mod-reagent-bank-account	https://github.com/buildthehomelab/mod-reagent-bank-acc
 mod-realm-armory	https://github.com/Hisha/mod-realm-armory	9cb817dafa94ece12af0c44ad5d0c75ad3260ced
 mod-realm-config	https://github.com/Hisha/mod-realm-config	fe36db9ba90c5d86e8d3a0315e2cac4367e7843f
 mod-retail-ah	https://github.com/buildthehomelab/wow-mod-retail-ah.git	f2330ad9000d1217525a72cd21ac0f33a613efcf
+mod-retail-collection	https://github.com/buildthehomelab/wow-mod-retail-collection.git	b140f1c9503f89a24664ca79465a1dfb1866b255
 mod-retail-druid-forms	https://github.com/buildthehomelab/wow-mod-retail-druid-forms.git	1bc05c5321181673258e2649295aea23e2903ee0
 mod-retail-library	https://github.com/buildthehomelab/wow-mod-retail-library.git	4cd3ef49b83f430ea9439b285a48d147406e7f1b
 mod-retail-pets	https://github.com/buildthehomelab/wow-mod-retail-pets.git	41195808ccdcc161f0a65cc4b3525890185c2048
