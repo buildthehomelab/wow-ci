@@ -35,7 +35,7 @@ mod-forever-shaman	https://github.com/buildthehomelab/wow-mod-forever-shaman.git
 mod-forever-torch	https://github.com/buildthehomelab/wow-mod-forever-torch.git	0797fdca7d1b4eb96ae6f0412c71fb6675d9efd7
 mod-gathering-node-dynamic	https://github.com/buildthehomelab/mod-gathering-node-dynamic	358ea016cbde079d1b3c2c73a3a298979a3e3e54
 mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.git	2edd9855627489bd8ebbee970645c9c8010efa32
-mod-guild-levels	https://github.com/buildthehomelab/wow-mod-guild-levels.git	d69ec6e7c2ce03575b677278836d571d3f38c545
+mod-guild-levels	https://github.com/buildthehomelab/wow-mod-guild-levels.git	7d59b373395c0629e88afcfdbd55f6880601d8ec
 mod-hearthstone-cd	https://github.com/buildthehomelab/wow-mod-hearthstone-cd.git	58cb527401b5e1d1971fd51ca6fda214520da3ea
 mod-individual-progression-announce	https://github.com/borrowjack/mod-individual-progression-announce	744833b053c3d989e1b3ee18a7fadfb33b474efc
 mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	550bee70cc8c46a04f2a53edb1919426078ff67c
@@ -67,7 +67,7 @@ mod-realm-config	https://github.com/Hisha/mod-realm-config	fe36db9ba90c5d86e8d3a
 mod-retail-ah	https://github.com/buildthehomelab/wow-mod-retail-ah.git	f2330ad9000d1217525a72cd21ac0f33a613efcf
 mod-retail-druid-forms	https://github.com/buildthehomelab/wow-mod-retail-druid-forms.git	1bc05c5321181673258e2649295aea23e2903ee0
 mod-retail-library	https://github.com/buildthehomelab/wow-mod-retail-library.git	4cd3ef49b83f430ea9439b285a48d147406e7f1b
-mod-retail-pets	https://github.com/buildthehomelab/wow-mod-retail-pets.git	69288d7deba3f0ee0688e9ad1cd1e1296a7d5b26
+mod-retail-pets	https://github.com/buildthehomelab/wow-mod-retail-pets.git	41195808ccdcc161f0a65cc4b3525890185c2048
 mod-retail-professions	https://github.com/buildthehomelab/wow-mod-retail-professions.git	916cc74120975589b01f2af226edfacb2da0b3c2
 mod-retail-shaman-totems	https://github.com/buildthehomelab/wow-mod-retail-shaman-totems.git	6ff705776d8855253e37920f34ceec874352112e
 mod-retail-warlock-pets	https://github.com/buildthehomelab/wow-mod-retail-warlock-pets.git	c061dec8b55f61b0559a2816e1cc17c69137f133
