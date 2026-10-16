@@ -54,7 +54,7 @@ mod-npc-services	https://github.com/azerothcore/mod-npc-services	aa44c28acb21fdc
 mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid.git	2a1b188c02e7da89ce22d0a2c8745cbd7d8b3b53
 mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	b4abdc60024110cc6934aa7fa110ef6b6eb7d958
 mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	12c0c7fd26b744cc10badae6a543f04a18695f1a
-mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	1cd1d90ac6661e599f0dc049fc5ffac4cb850c9e
+mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	32fd96ea0654da826227bef84c7059ec38092a51
 mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-craft-cd.git	5bd0b4dfbbe687982aaafe3958cd6f72b3ad2c9f
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	9a1578516aec8c0ba773eea32724eb94e76ea7f1
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	c3955915c76d5a22a9d25a44482345d368a8de82
