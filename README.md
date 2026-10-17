@@ -62,6 +62,12 @@ checked against upstream without our commits on top. New upstream commits or a c
 update the same issue, and it closes by itself once the pins contain upstream again. A run
 where some module couldn't be checked says so and is redone the next day.
 
+Server modules that are our fork of someone else's module are watched the same way:
+`config/module-forks.tsv` names the fork's branch (its pin is the module's row in
+`config/server-modules.tsv`) and the upstream it follows. Today that is mod-dungeon-clear
+(`buildthehomelab/wow-mod-dungeon-clear`, branch `evermore`, following jrad7's `master`). Its
+section in the issue lists the new commits and whether they merge into `evermore`.
+
 Merge upstream into `evermore` with a merge commit, never by rebasing or squashing: every pin
 the server ever used has to stay in the branch's history.
 

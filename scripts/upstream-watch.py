@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Watches the server's upstream (config/core.env). The server runs our forks of the core and
 mod-playerbots, branch `evermore`: upstream plus our own commits. Their upstreams are the
-mod-playerbots core's Playerbot branch and mod-playerbots master.
+mod-playerbots core's Playerbot branch and mod-playerbots master. Server modules that are forks
+of someone else's module (config/module-forks.tsv) are watched the same way.
 
     upstream-watch.py check     compare the upstream heads with the pins; write job outputs
     upstream-watch.py report    open or update the issue once the modules were checked
@@ -15,7 +16,7 @@ not be checked is redone on the next run. The issue is closed again once the pin
 the upstream heads.
 
 Environment: GH_TOKEN, GITHUB_REPOSITORY, and for `report` GITHUB_RUN_ID plus the values
-from `check` (CORE_OLD, CORE_NEW, PLAYERBOTS_OLD, PLAYERBOTS_NEW, STATE, MODULES).
+from `check` (CORE_OLD, CORE_NEW, PLAYERBOTS_OLD, PLAYERBOTS_NEW, STATE, MODULES, FORKS).
 BASE_CORE_REF / BASE_PLAYERBOTS_REF pretend the server is on other commits and imply
 DRY_RUN=true, which only prints. RECHECK=true reports a state that already has an issue.
 """
@@ -32,7 +33,8 @@ MAX_COMMITS = 30
 # Steps of ci.yml's cpp job that fail because of the module's code. A cpp job that failed
 # anywhere else (fetching the core, pulling the image) says nothing about the module.
 CODE_STEPS = {"Loader name", "Syntax check against the server's core"}
-CONFIG = ("config/server-modules.tsv", "config/module-headers.tsv", "config/module-defines.tsv")
+CONFIG = ("config/server-modules.tsv", "config/module-headers.tsv", "config/module-defines.tsv",
+          "config/module-forks.tsv")
 
 
 def run(*cmd, check=True):
@@ -113,15 +115,31 @@ def check():
         print(f"{name:<11} pin {old[:7]}, upstream {new[:7]}: "
               + ("can't compare" if n is None else f"{n} upstream commit(s) not merged"))
 
+    # Forked server modules: the pin is a commit of the fork's branch.
+    forks, forks_moved = [], False
+    for row in tsv("config/module-forks.tsv"):
+        module, branch, upstream_url, upstream_branch = row.split("\t")
+        if module not in pins:
+            sys.exit(f"::error::config/module-forks.tsv: {module} is not in config/server-modules.tsv.")
+        url, old = pins[module].split("\t")
+        new = head(upstream_url, upstream_branch)
+        n = unmerged(url, old, upstream_url, new)
+        print(f"{module:<11} pin {old[:7]}, upstream {new[:7]}: "
+              + ("can't compare" if n is None else f"{n} upstream commit(s) not merged"))
+        forks_moved = forks_moved or n != 0
+        forks.append({"module": module, "url": url, "branch": branch, "upstream": upstream_url,
+                      "upstream_branch": upstream_branch, "old": old, "new": new})
+
     # A fixed module or a new pin changes the state, so the report is redone.
-    digest = hashlib.sha256("\n".join([core_old, pb_old, core_new, pb_new]).encode())
+    digest = hashlib.sha256("\n".join([core_old, pb_old, core_new, pb_new]
+                                      + [f["old"] + f["new"] for f in forks]).encode())
     for path in CONFIG:
         digest.update((ROOT / path).read_bytes())
     state = digest.hexdigest()[:16]
 
     issue = None if dry else open_issue()
     # A pin GitHub can't compare counts as moved: the report says what's wrong with it.
-    moved = core_n != 0 or pb_n != 0
+    moved = core_n != 0 or pb_n != 0 or forks_moved
     if not moved:
         print("The pins contain upstream.")
         if issue:
@@ -154,6 +172,7 @@ def check():
         out.write(f"core-old={core_old}\ncore-new={core_new}\n")
         out.write(f"playerbots-old={pb_old}\nplayerbots-new={pb_new}\n")
         out.write(f"modules={json.dumps(modules)}\n")
+        out.write(f"forks={json.dumps(forks)}\n")
 
 
 def upstream_section(title, url, branch, upstream_url, upstream_branch, old, new, sql_dir):
@@ -272,6 +291,14 @@ def report():
         env["PLAYERBOTS_REPO"], env["PLAYERBOTS_BRANCH"], env["PLAYERBOTS_UPSTREAM_REPO"],
         env["PLAYERBOTS_UPSTREAM_BRANCH"], pb_old, pb_new, "data/sql/")
 
+    forks = []
+    for fork in json.loads(os.environ.get("FORKS") or "[]"):
+        section, n = upstream_section(
+            f"{fork['module']} ({slug(fork['upstream'])} {fork['upstream_branch']})", fork["url"], fork["branch"],
+            fork["upstream"], fork["upstream_branch"], fork["old"], fork["new"], "data/sql/")
+        if section:
+            forks.append((fork["module"], section, n))
+
     compiled, failed, unchecked = module_results([m["module"] for m in json.loads(os.environ["MODULES"])])
 
     def log(url):
@@ -294,17 +321,19 @@ def report():
 
     parts = [f"`{env['CORE_UPSTREAM_BRANCH']}`" + (f" +{core_n}" if core_n else ""),
              "mod-playerbots" + (f" +{pb_n}" if pb_n else "")]
-    title = "Upstream has new commits: " + ", ".join(p for p, s in zip(parts, (core, pb)) if s)
+    title = "Upstream has new commits: " + ", ".join(
+        [p for p, s in zip(parts, (core, pb)) if s] + [f"{m}" + (f" +{n}" if n else "") for m, _, n in forks])
     body = "\n\n".join(filter(None, [
-        "The server's upstream has commits that our `evermore` pins don't (`config/core.env`, "
-        "copied from wow-server `manifest/`).",
-        "\n".join(mods), core, pb,
+        "The server's upstream has commits that our `evermore` pins don't (`config/core.env` and, "
+        "for forked modules, `config/module-forks.tsv`, copied from wow-server `manifest/`).",
+        "\n".join(mods), core, pb, *[section for _, section, _ in forks],
         "## Updating\n\n"
         "1. Fix the modules listed above, if any.\n"
         "2. Merge upstream into `evermore` on each fork. When it merges cleanly, open the merge PR "
         "link above and merge it with **Create a merge commit** (never squash or rebase: the old "
         "pins must stay in the branch's history). On conflicts, merge by hand and resolve.\n"
-        "3. On the server, `git pull` in the core folder and in `modules/mod-playerbots`, and rebuild.\n"
+        "3. On the server, `git pull` in the core folder, in `modules/mod-playerbots` and in each forked "
+        "module listed above, and rebuild.\n"
         "4. Record the new `evermore` commits in wow-server `manifest/`, then in `config/core.env` and "
         "`config/server-modules.tsv` here. This issue closes by itself once they contain upstream.",
         marker(state, not unchecked),
