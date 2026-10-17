@@ -1,6 +1,6 @@
 # Looks once a day whether the server's upstream has new commits that our forks' `evermore`
 # pins don't contain: the core's Playerbot branch and mod-playerbots master
-# (config/core.env). When it has, every module on the server (config/server-modules.tsv,
+# (config/core.env), and the upstreams of forked server modules (config/module-forks.tsv). When it has, every module on the server (config/server-modules.tsv,
 # at its pinned commit) is syntax-checked against the new commits, and one issue with the
 # label `upstream` says what changed, whether it merges into `evermore`, and which modules
 # would stop building. The issue closes itself once the pins contain upstream again.
@@ -49,6 +49,7 @@ jobs:
       playerbots-old: ${{ steps.c.outputs.playerbots-old }}
       playerbots-new: ${{ steps.c.outputs.playerbots-new }}
       modules: ${{ steps.c.outputs.modules }}
+      forks: ${{ steps.c.outputs.forks }}
     steps:
       - uses: actions/checkout@v5
       - id: c
@@ -103,5 +104,6 @@ jobs:
           PLAYERBOTS_NEW: ${{ needs.check.outputs.playerbots-new }}
           STATE: ${{ needs.check.outputs.state }}
           MODULES: ${{ needs.check.outputs.modules }}
+          FORKS: ${{ needs.check.outputs.forks }}
           DRY_RUN: ${{ needs.check.outputs.dry-run }}
         run: python3 scripts/upstream-watch.py report

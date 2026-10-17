@@ -1,0 +1,4 @@
+# Server modules that run our fork of someone else's module (upstream watch): the pin in
+# config/server-modules.tsv is a commit of `branch` on the fork, which follows `upstream`.
+module	branch	upstream	upstream_branch
+mod-dungeon-clear	evermore	https://github.com/jrad7/mod-dungeon-clear.git	master
