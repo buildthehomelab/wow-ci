@@ -54,12 +54,12 @@ mod-npc-services	https://github.com/azerothcore/mod-npc-services	aa44c28acb21fdc
 mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid.git	2a1b188c02e7da89ce22d0a2c8745cbd7d8b3b53
 mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	b4abdc60024110cc6934aa7fa110ef6b6eb7d958
 mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	12c0c7fd26b744cc10badae6a543f04a18695f1a
-mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	32fd96ea0654da826227bef84c7059ec38092a51
+mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	fb25e19c26903ec7b01711cfbcca30e32c6448e2
 mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-craft-cd.git	5bd0b4dfbbe687982aaafe3958cd6f72b3ad2c9f
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	9a1578516aec8c0ba773eea32724eb94e76ea7f1
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	c3955915c76d5a22a9d25a44482345d368a8de82
 mod-quick-lockpick	https://github.com/buildthehomelab/wow-mod-quick-lockpick.git	d03422194b4f98fc0ae34071de68bb210ebc54d3
-mod-raid-clear	https://github.com/buildthehomelab/wow-mod-raid-clear.git	3f04659ef06a5ab5b4c3ed8320c3346d383dd76d
+mod-raid-clear	https://github.com/buildthehomelab/wow-mod-raid-clear.git	0b066d2c91b5434250c0cb88c8ca79688d2d4031
 mod-raid-lockout	https://github.com/buildthehomelab/wow-mod-raid-lockout.git	b746d7e7ddcbd0485f72506114489a5037bed0cc
 mod-rare-tracker	https://github.com/buildthehomelab/wow-mod-rare-tracker.git	9dca5b09af992334f08bbe6ed58564f16c9709d7
 mod-reagent-bank-account	https://github.com/buildthehomelab/mod-reagent-bank-account	e392cb993c2f7f6ba943887c1f887d99cec89423
