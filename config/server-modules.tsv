@@ -17,7 +17,7 @@ mod-combat-watchdog	https://github.com/buildthehomelab/wow-mod-combat-watchdog.g
 mod-druid-swipe-fishing	https://github.com/buildthehomelab/wow-mod-druid-swipe-fishing.git	8fdaef51fe425adad7b2cc666d5ac5b547ba0a01
 mod-dualspec	https://github.com/buildthehomelab/wow-mod-dualspec.git	6887e1623d6969c9ce18ee9967a9a0dae9b8c532
 mod-dungeon-brd	https://github.com/buildthehomelab/wow-mod-dungeon-brd.git	56eb8b80472f3d9d18decef55406c243605f0e78
-mod-dungeon-clear	https://github.com/buildthehomelab/wow-mod-dungeon-clear.git	c6d259b4c83264a4d512c920a633060d285f23f2
+mod-dungeon-clear	https://github.com/buildthehomelab/wow-mod-dungeon-clear.git	984738c4edcd543b8674365475c239b5864847ee
 mod-dungeon-consumables	https://github.com/buildthehomelab/wow-mod-dungeon-consumables.git	8550c164a887c0a8fc792c0386642eb9f91e2dac
 mod-dynamic-gathering-speed	https://github.com/silviu20092/mod-dynamic-gathering-speed	db2f734ea3569318d8b9f9ef64a0af68809b8f21
 mod-era-events	https://github.com/buildthehomelab/wow-mod-era-events.git	cf02786aceb531df76ff065d8be7a1973344cfb1
@@ -59,7 +59,7 @@ mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-cr
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	9a1578516aec8c0ba773eea32724eb94e76ea7f1
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	c3955915c76d5a22a9d25a44482345d368a8de82
 mod-quick-lockpick	https://github.com/buildthehomelab/wow-mod-quick-lockpick.git	d03422194b4f98fc0ae34071de68bb210ebc54d3
-mod-raid-clear	https://github.com/buildthehomelab/wow-mod-raid-clear.git	c116694b1ecb93fc64e552ef09e8a4a29576e95b
+mod-raid-clear	https://github.com/buildthehomelab/wow-mod-raid-clear.git	605a45a41dd5cb0da11bb346ebd61b94a2c533b9
 mod-raid-lockout	https://github.com/buildthehomelab/wow-mod-raid-lockout.git	b746d7e7ddcbd0485f72506114489a5037bed0cc
 mod-rare-tracker	https://github.com/buildthehomelab/wow-mod-rare-tracker.git	9dca5b09af992334f08bbe6ed58564f16c9709d7
 mod-reagent-bank-account	https://github.com/buildthehomelab/mod-reagent-bank-account	e392cb993c2f7f6ba943887c1f887d99cec89423
