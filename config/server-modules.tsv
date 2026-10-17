@@ -18,7 +18,7 @@ mod-combat-watchdog	https://github.com/buildthehomelab/wow-mod-combat-watchdog.g
 mod-druid-swipe-fishing	https://github.com/buildthehomelab/wow-mod-druid-swipe-fishing.git	8fdaef51fe425adad7b2cc666d5ac5b547ba0a01
 mod-dualspec	https://github.com/buildthehomelab/wow-mod-dualspec.git	6887e1623d6969c9ce18ee9967a9a0dae9b8c532
 mod-dungeon-brd	https://github.com/buildthehomelab/wow-mod-dungeon-brd.git	56eb8b80472f3d9d18decef55406c243605f0e78
-mod-dungeon-clear	https://github.com/buildthehomelab/wow-mod-dungeon-clear.git	984738c4edcd543b8674365475c239b5864847ee
+mod-dungeon-clear	https://github.com/buildthehomelab/wow-mod-dungeon-clear.git	acfac0a05d08dced7ffb250edf5690db343f89cb
 mod-dungeon-consumables	https://github.com/buildthehomelab/wow-mod-dungeon-consumables.git	8550c164a887c0a8fc792c0386642eb9f91e2dac
 mod-dynamic-gathering-speed	https://github.com/silviu20092/mod-dynamic-gathering-speed	db2f734ea3569318d8b9f9ef64a0af68809b8f21
 mod-era-events	https://github.com/buildthehomelab/wow-mod-era-events.git	cf02786aceb531df76ff065d8be7a1973344cfb1
@@ -54,7 +54,7 @@ mod-no-profession-limit	https://github.com/buildthehomelab/wow-mod-no-profession
 mod-npc-services	https://github.com/azerothcore/mod-npc-services	aa44c28acb21fdc1d45084788214f2eee2d5f87c
 mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid.git	2a1b188c02e7da89ce22d0a2c8745cbd7d8b3b53
 mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	b4abdc60024110cc6934aa7fa110ef6b6eb7d958
-mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	12c0c7fd26b744cc10badae6a543f04a18695f1a
+mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	c95227462007903a0006b7dc1e1a250cfdb6d5db
 mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	fb25e19c26903ec7b01711cfbcca30e32c6448e2
 mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-craft-cd.git	5bd0b4dfbbe687982aaafe3958cd6f72b3ad2c9f
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	9a1578516aec8c0ba773eea32724eb94e76ea7f1
