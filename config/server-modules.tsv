@@ -39,7 +39,7 @@ mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.g
 mod-guild-levels	https://github.com/buildthehomelab/wow-mod-guild-levels.git	7d59b373395c0629e88afcfdbd55f6880601d8ec
 mod-hearthstone-cd	https://github.com/buildthehomelab/wow-mod-hearthstone-cd.git	58cb527401b5e1d1971fd51ca6fda214520da3ea
 mod-individual-progression-announce	https://github.com/borrowjack/mod-individual-progression-announce	744833b053c3d989e1b3ee18a7fadfb33b474efc
-mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	550bee70cc8c46a04f2a53edb1919426078ff67c
+mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	edf5730e92c701adf42633e755d1d7948ac2c64f
 mod-individual-xp	https://github.com/buildthehomelab/wow-mod-individual-xp.git	6caaf7c4671deaad85064c87e72276c9164f530b
 mod-junk-to-gold-plus	https://github.com/buildthehomelab/wow-mod-junk-to-gold-plus.git	3087d1d8e6964616cd7366d09e5fee1166c8a4db
 mod-learn-spells	https://github.com/buildthehomelab/wow-mod-learn-spells.git	dd72058e713b9296ab97f090815559f8c02babec
@@ -52,7 +52,7 @@ mod-mount-scaling	https://github.com/buildthehomelab/wow-mod-mount-scaling	20d5b
 mod-night-brightness	https://github.com/buildthehomelab/wow-mod-night-brightness.git	0ca530ee7860b3ecd72d903e8a88f7b19ac308f1
 mod-no-profession-limit	https://github.com/buildthehomelab/wow-mod-no-profession-limit.git	7f9719789ff94d1b7c6c206d87b22cc7bead4171
 mod-npc-services	https://github.com/azerothcore/mod-npc-services	aa44c28acb21fdc1d45084788214f2eee2d5f87c
-mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid.git	2a1b188c02e7da89ce22d0a2c8745cbd7d8b3b53
+mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid.git	1d5476f7c782f824d6813786a50ba94a8f2b5ebd
 mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	9bb20a8a19302618bbc59a5f23ef937422234931
 mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	c95227462007903a0006b7dc1e1a250cfdb6d5db
 mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	fb25e19c26903ec7b01711cfbcca30e32c6448e2
@@ -60,7 +60,7 @@ mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-cr
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	9a1578516aec8c0ba773eea32724eb94e76ea7f1
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	c3955915c76d5a22a9d25a44482345d368a8de82
 mod-quick-lockpick	https://github.com/buildthehomelab/wow-mod-quick-lockpick.git	d03422194b4f98fc0ae34071de68bb210ebc54d3
-mod-raid-clear	https://github.com/buildthehomelab/wow-mod-raid-clear.git	671f421304f35ffeee327c1d50e1434b39189c9d
+mod-raid-clear	https://github.com/buildthehomelab/wow-mod-raid-clear.git	fa299223a92a0806eb778a182e85a76f3f3feb62
 mod-raid-lockout	https://github.com/buildthehomelab/wow-mod-raid-lockout.git	b746d7e7ddcbd0485f72506114489a5037bed0cc
 mod-rare-tracker	https://github.com/buildthehomelab/wow-mod-rare-tracker.git	82a9b35507b631d99dbc78ee6e6523c42e9ca2a0
 mod-reagent-bank-account	https://github.com/buildthehomelab/mod-reagent-bank-account	e98b2ef241da6f5f743acc696391908f4b8c9da7
