@@ -9,6 +9,7 @@ wow-addon-AtlasLootHD
 wow-addon-DBM
 wow-addon-Gatherer
 wow-addon-MinimalHunter
+wow-addon-OPie
 wow-addon-RareAlert-Dungeon
 wow-addon-WeaponSkillInfo
 wow-addon-unbot
