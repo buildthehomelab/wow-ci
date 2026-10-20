@@ -4,7 +4,7 @@ mod-accountwide-mounts	https://github.com/buildthehomelab/wow-mod-accountwide-mo
 mod-accountwide-pets	https://github.com/buildthehomelab/wow-mod-accountwide-pets.git	c4c98a164d8f89709bb02127437b0add77a7ad1b
 mod-ah-bot-plus	https://github.com/buildthehomelab/wow-mod-ah-bot-plus.git	c5884b76cedde344ee10c5aba63f00ac0f73ca74
 mod-aoe-loot	https://github.com/azerothcore/mod-aoe-loot.git	44486b1aecebd86944ce115972b3c839544903d3
-mod-archaeology	https://github.com/buildthehomelab/wow-mod-archaeology.git	0a6fd65a4fdfa536be54eae6f11872d3577cbd3c
+mod-archaeology	https://github.com/buildthehomelab/wow-mod-archaeology.git	b6a26ec70e890860dda2139ec5583e673c6c6107
 mod-auto-gather-tracking	https://github.com/Day36512/mod-auto-gather-tracking	7bec5b96f26f7b7efb625cd5917c41549c3f4fd2
 mod-beast-collection	https://github.com/buildthehomelab/wow-mod-beast-collection.git	f7357d70989496fada445dfe3992921849fdb1a6
 mod-biome-effects	https://github.com/buildthehomelab/wow-mod-biome-effects	4d61605a3ea5c1f8f6e18782d94dbb584ccff36a
