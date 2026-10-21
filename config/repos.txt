@@ -49,7 +49,6 @@ wow-mod-optimal-bot-raid
 wow-mod-pet-loot
 wow-mod-profession-craft-cd
 wow-mod-profession-specializations
-wow-mod-raid-clear
 wow-mod-raid-lockout
 wow-mod-rare-tracker
 wow-mod-realm-armory
