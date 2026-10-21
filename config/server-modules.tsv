@@ -36,6 +36,7 @@ mod-forever-shaman	https://github.com/buildthehomelab/wow-mod-forever-shaman.git
 mod-forever-torch	https://github.com/buildthehomelab/wow-mod-forever-torch.git	011e32444b12ef6fdcf1ff1471e2f969d8bc9b3c
 mod-gathering-node-dynamic	https://github.com/buildthehomelab/mod-gathering-node-dynamic	358ea016cbde079d1b3c2c73a3a298979a3e3e54
 mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.git	da491b5cddb3a114e2e91106aaf0f539ffd44495
+mod-guild-chat-bridge	https://github.com/buildthehomelab/wow-mod-guild-chat-bridge.git	5bd7838c5918e1374f000bca9a84db77fb78ce6c
 mod-guild-levels	https://github.com/buildthehomelab/wow-mod-guild-levels.git	4f6cd0d06def7177cd753aff4cc12de5f143e6c1
 mod-hearthstone-cd	https://github.com/buildthehomelab/wow-mod-hearthstone-cd.git	58cb527401b5e1d1971fd51ca6fda214520da3ea
 mod-individual-progression-announce	https://github.com/borrowjack/mod-individual-progression-announce	744833b053c3d989e1b3ee18a7fadfb33b474efc
