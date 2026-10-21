@@ -2,9 +2,9 @@ folder	url	commit
 mod-accountwide-flight-paths	https://github.com/buildthehomelab/wow-mod-accountwide-flight-paths.git	cebbbbda9ad421f8c81056e6d390567c100f8773
 mod-accountwide-mounts	https://github.com/buildthehomelab/wow-mod-accountwide-mounts.git	aeead30510af7ef4439012340cb5f6d02835b4c9
 mod-accountwide-pets	https://github.com/buildthehomelab/wow-mod-accountwide-pets.git	c4c98a164d8f89709bb02127437b0add77a7ad1b
-mod-ah-bot-plus	https://github.com/buildthehomelab/wow-mod-ah-bot-plus.git	c5884b76cedde344ee10c5aba63f00ac0f73ca74
+mod-ah-bot-plus	https://github.com/buildthehomelab/wow-mod-ah-bot-plus.git	a4c5c329e6d4d975e3113e67671f9315f83cc1f9
 mod-aoe-loot	https://github.com/azerothcore/mod-aoe-loot.git	44486b1aecebd86944ce115972b3c839544903d3
-mod-archaeology	https://github.com/buildthehomelab/wow-mod-archaeology.git	b6a26ec70e890860dda2139ec5583e673c6c6107
+mod-archaeology	https://github.com/buildthehomelab/wow-mod-archaeology.git	84b35692388f479ad84426c7423d3750e990ac54
 mod-auto-gather-tracking	https://github.com/Day36512/mod-auto-gather-tracking	7bec5b96f26f7b7efb625cd5917c41549c3f4fd2
 mod-beast-collection	https://github.com/buildthehomelab/wow-mod-beast-collection.git	f7357d70989496fada445dfe3992921849fdb1a6
 mod-biome-effects	https://github.com/buildthehomelab/wow-mod-biome-effects	4d61605a3ea5c1f8f6e18782d94dbb584ccff36a
@@ -27,7 +27,7 @@ mod-forever-class-combos	https://github.com/buildthehomelab/wow-mod-forever-clas
 mod-forever-druid	https://github.com/buildthehomelab/wow-mod-forever-druid.git	3f3db20c3cac1b2346a81e2eadda64081803909c
 mod-forever-dungeon-xp	https://github.com/buildthehomelab/wow-mod-forever-dungeon-xp.git	f3cd9caefd16f1584967294861ccf95e67038f5c
 mod-forever-hunter	https://github.com/buildthehomelab/wow-mod-forever-hunter.git	708733622f2c96ccb640c40f7bc13db6e5d573df
-mod-forever-journal	https://github.com/buildthehomelab/wow-mod-forever-journal.git	04b7d4e15ba13f0a04492d607715e9662f878ab1
+mod-forever-journal	https://github.com/buildthehomelab/wow-mod-forever-journal.git	eb7b9ea12525d5b0c8ac1c9c31721a4bf906203c
 mod-forever-paladin	https://github.com/buildthehomelab/wow-mod-forever-paladin.git	f2a5c3b2f113bc82cecb537baf27a9e4c561cedf
 mod-forever-periodic-crit	https://github.com/buildthehomelab/wow-mod-forever-periodic-crit.git	a0d17150fdceb44df509866f6850b69b0237c7d4
 mod-forever-racials	https://github.com/buildthehomelab/wow-mod-forever-racials.git	adeafe306684baaf4aa5116401aa8454a268c309
@@ -44,12 +44,12 @@ mod-individual-xp	https://github.com/buildthehomelab/wow-mod-individual-xp.git	6
 mod-junk-to-gold-plus	https://github.com/buildthehomelab/wow-mod-junk-to-gold-plus.git	3087d1d8e6964616cd7366d09e5fee1166c8a4db
 mod-learn-spells	https://github.com/buildthehomelab/wow-mod-learn-spells.git	dd72058e713b9296ab97f090815559f8c02babec
 mod-learnable-mounts	https://github.com/buildthehomelab/mod-learnable-mounts	11051d32dd5484f5aa785aa8bfe49c2fe787d51c
-mod-lfg-progression	https://github.com/buildthehomelab/wow-mod-lfg-progression.git	5d64585dd2ac6d9313165f8c46f278980ae89f37
+mod-lfg-progression	https://github.com/buildthehomelab/wow-mod-lfg-progression.git	2615e82902cf92c0e7dd93dd6c2472d7b40fe14a
 mod-llm-chatter	https://github.com/buildthehomelab/mod-llm-chatter	d48b7839f7fa0b3abb9af86489cd3e82982d0b5c
 mod-lost-legendaries	https://github.com/buildthehomelab/wow-mod-lost-legendaries.git	63b0dcce4f7f6e7863be7ccd5f1960d0325314ae
 mod-mount-requirements	https://github.com/buildthehomelab/mod-mount-requirements	2c7d9e1780f85683eb135df56aafa262d99ec90a
 mod-mount-scaling	https://github.com/buildthehomelab/wow-mod-mount-scaling	20d5b5b8c5a13081f4b4d6c03f935bfaee9b5aef
-mod-night-brightness	https://github.com/buildthehomelab/wow-mod-night-brightness.git	f7afb365b4761871bb5ed8ae316a3372ea9c7e3f
+mod-night-brightness	https://github.com/buildthehomelab/wow-mod-night-brightness.git	2c09d638a61a22b36ab6b4b4845738cd80712d4c
 mod-no-profession-limit	https://github.com/buildthehomelab/wow-mod-no-profession-limit.git	7f9719789ff94d1b7c6c206d87b22cc7bead4171
 mod-npc-services	https://github.com/azerothcore/mod-npc-services	aa44c28acb21fdc1d45084788214f2eee2d5f87c
 mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid.git	1d5476f7c782f824d6813786a50ba94a8f2b5ebd
@@ -66,12 +66,12 @@ mod-reagent-bank-account	https://github.com/buildthehomelab/mod-reagent-bank-acc
 mod-realm-armory	https://github.com/Hisha/mod-realm-armory	9cb817dafa94ece12af0c44ad5d0c75ad3260ced
 mod-realm-config	https://github.com/Hisha/mod-realm-config	fe36db9ba90c5d86e8d3a0315e2cac4367e7843f
 mod-retail-achievements	https://github.com/buildthehomelab/wow-mod-retail-achievements.git	1a3305b8396c2543b7ffc96e4d67602f8b0c2b06
-mod-retail-ah	https://github.com/buildthehomelab/wow-mod-retail-ah.git	d37f7c6f573657ded1e759003ee97f2bdd2cc14f
+mod-retail-ah	https://github.com/buildthehomelab/wow-mod-retail-ah.git	2b17aea46545bc4c7eefbcf8e121ddc8e180b34f
 mod-retail-collection	https://github.com/buildthehomelab/wow-mod-retail-collection.git	b140f1c9503f89a24664ca79465a1dfb1866b255
 mod-retail-druid-forms	https://github.com/buildthehomelab/wow-mod-retail-druid-forms.git	1bc05c5321181673258e2649295aea23e2903ee0
 mod-retail-library	https://github.com/buildthehomelab/wow-mod-retail-library.git	4cd3ef49b83f430ea9439b285a48d147406e7f1b
 mod-retail-pets	https://github.com/buildthehomelab/wow-mod-retail-pets.git	0ae04497d3e2de095f114cd52549cc5dc9bcf5fe
-mod-retail-professions	https://github.com/buildthehomelab/wow-mod-retail-professions.git	3b805fdd631a72598da8e84480365e5cad0a6dbe
+mod-retail-professions	https://github.com/buildthehomelab/wow-mod-retail-professions.git	5f4894b3820d916d1125c99c1df196090bf67ebd
 mod-retail-shaman-totems	https://github.com/buildthehomelab/wow-mod-retail-shaman-totems.git	6ff705776d8855253e37920f34ceec874352112e
 mod-retail-warlock-pets	https://github.com/buildthehomelab/wow-mod-retail-warlock-pets.git	c061dec8b55f61b0559a2816e1cc17c69137f133
 mod-server-mail	https://github.com/buildthehomelab/wow-mod-server-mail.git	6f0742fa6151c86b06b9dfdd03e748566be92f2f
@@ -82,5 +82,5 @@ mod-talent-per-level	https://github.com/buildthehomelab/wow-mod-talent-per-level
 mod-tier0-trainers	https://github.com/buildthehomelab/wow-mod-tier0-trainers.git	361b6b92ee84a0d793505bccd0a94586024e0943
 mod-transmog-plus	https://github.com/buildthehomelab/wow-mod-transmog-plus.git	8b082df96b4130ca0e3a11a074f0592e6eee306c
 mod-vendor-item-preload	https://github.com/buildthehomelab/wow-mod-vendor-item-preload.git	42474aec8a770d7d3fd43204bc7e2a454267ddff
-mod-weather	https://github.com/buildthehomelab/wow-mod-weather.git	ccdb7f1ca306b3af2b780431c255700484fada62
+mod-weather	https://github.com/buildthehomelab/wow-mod-weather.git	f4d5d032074de8f05a47ed91c477415f3c1f82c7
 mod-world-buff-bots	https://github.com/buildthehomelab/mod-world-buff-bots	a6c057306107dd3ddb390f4b499df9a5b058ff32
