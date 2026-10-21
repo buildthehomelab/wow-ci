@@ -80,3 +80,4 @@ wow-mod-retail-collection
 wow-mod-retail-achievements
 wow-mod-archaeology
 wow-mod-raid-finder
+wow-mod-nat-pagle

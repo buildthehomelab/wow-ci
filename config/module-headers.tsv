@@ -2,3 +2,4 @@
 module	needs
 mod-individual-progression-announce	mod-individual-progression
 mod-raid-finder	mod-optimal-bot-raid mod-individual-progression
+mod-nat-pagle	mod-boss-coins
