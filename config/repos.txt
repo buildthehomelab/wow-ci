@@ -89,3 +89,4 @@ wow-mod-retail-achievements
 wow-mod-archaeology
 wow-mod-raid-finder
 wow-mod-nat-pagle
+wow-mod-bad-luck-protection
