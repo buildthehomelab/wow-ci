@@ -52,7 +52,6 @@ mod-mount-scaling	https://github.com/buildthehomelab/wow-mod-mount-scaling	858e4
 mod-nat-pagle	https://github.com/buildthehomelab/wow-mod-nat-pagle.git	dc6a40f2f6051a34a666bc884120371c76704e41
 mod-night-brightness	https://github.com/buildthehomelab/wow-mod-night-brightness.git	2c09d638a61a22b36ab6b4b4845738cd80712d4c
 mod-no-profession-limit	https://github.com/buildthehomelab/wow-mod-no-profession-limit.git	7f9719789ff94d1b7c6c206d87b22cc7bead4171
-mod-npc-services	https://github.com/azerothcore/mod-npc-services	aa44c28acb21fdc1d45084788214f2eee2d5f87c
 mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid.git	c674ae4b3346b255795979b430c3c45e660a985d
 mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	3282f04daa497245f48c1a50a7da555d8ba14655
 mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	c95227462007903a0006b7dc1e1a250cfdb6d5db
