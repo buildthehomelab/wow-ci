@@ -9,7 +9,7 @@ mod-auto-gather-tracking	https://github.com/Day36512/mod-auto-gather-tracking	7b
 mod-beast-collection	https://github.com/buildthehomelab/wow-mod-beast-collection.git	fdb540b0941fe5f1b4d07bd89f5fb1334cfe4457
 mod-biome-effects	https://github.com/buildthehomelab/wow-mod-biome-effects	1cb2d1d815c03c643b88101aa1ae1419dc9b192c
 mod-black-market	https://github.com/buildthehomelab/wow-mod-black-market.git	752a5b280645394c9d3b3b920313050d025a1f41
-mod-boss-coins	https://github.com/buildthehomelab/wow-mod-boss-coins.git	2e979f6e9c237066cb16b6c372eb19b85fe406ba
+mod-boss-coins	https://github.com/buildthehomelab/wow-mod-boss-coins.git	1ee2321e52c9c60e68cfaaca42b65f3a7b619ac8
 mod-bot-lfg-accept	https://github.com/buildthehomelab/wow-mod-bot-lfg-accept.git	8afac593cae198e1c1ffd58cdd8b8394ac1e7c6a
 mod-bot-quiet-rolls	https://github.com/buildthehomelab/wow-mod-bot-quiet-rolls.git	55f8372cfd4fa5d9520b7b5ef6acd44fd52e0aa1
 mod-cache-version	https://github.com/buildthehomelab/wow-mod-cache-version.git	11185b0865502a994bede8dea105396d3f68dcd5
@@ -71,7 +71,7 @@ mod-retail-ah	https://github.com/buildthehomelab/wow-mod-retail-ah.git	c39e5b025
 mod-retail-collection	https://github.com/buildthehomelab/wow-mod-retail-collection.git	74f2f1579bdbdf6c1e64fcdd8008f17cd44993bb
 mod-retail-druid-forms	https://github.com/buildthehomelab/wow-mod-retail-druid-forms.git	1bc05c5321181673258e2649295aea23e2903ee0
 mod-retail-library	https://github.com/buildthehomelab/wow-mod-retail-library.git	4cd3ef49b83f430ea9439b285a48d147406e7f1b
-mod-retail-pets	https://github.com/buildthehomelab/wow-mod-retail-pets.git	0ae04497d3e2de095f114cd52549cc5dc9bcf5fe
+mod-retail-pets	https://github.com/buildthehomelab/wow-mod-retail-pets.git	01da9531ecfa787dd94bedfd027c814859c5da85
 mod-retail-professions	https://github.com/buildthehomelab/wow-mod-retail-professions.git	5f4894b3820d916d1125c99c1df196090bf67ebd
 mod-retail-shaman-totems	https://github.com/buildthehomelab/wow-mod-retail-shaman-totems.git	6ff705776d8855253e37920f34ceec874352112e
 mod-retail-warlock-pets	https://github.com/buildthehomelab/wow-mod-retail-warlock-pets.git	c061dec8b55f61b0559a2816e1cc17c69137f133
