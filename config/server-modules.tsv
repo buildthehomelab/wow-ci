@@ -2,7 +2,7 @@ folder	url	commit
 mod-accountwide-flight-paths	https://github.com/buildthehomelab/wow-mod-accountwide-flight-paths.git	cebbbbda9ad421f8c81056e6d390567c100f8773
 mod-accountwide-mounts	https://github.com/buildthehomelab/wow-mod-accountwide-mounts.git	aeead30510af7ef4439012340cb5f6d02835b4c9
 mod-accountwide-pets	https://github.com/buildthehomelab/wow-mod-accountwide-pets.git	c4c98a164d8f89709bb02127437b0add77a7ad1b
-mod-ah-bot-plus	https://github.com/buildthehomelab/wow-mod-ah-bot-plus.git	4fb810cf018c58f7144d6469a9433611c8df9eea
+mod-ah-bot-plus	https://github.com/buildthehomelab/wow-mod-ah-bot-plus.git	3df09e325b54634b12c689156981922aa9a21ba5
 mod-aoe-loot	https://github.com/azerothcore/mod-aoe-loot.git	44486b1aecebd86944ce115972b3c839544903d3
 mod-archaeology	https://github.com/buildthehomelab/wow-mod-archaeology.git	78fcef3b513d613d24f20e0d8fe369522615cbe6
 mod-auto-gather-tracking	https://github.com/Day36512/mod-auto-gather-tracking	7bec5b96f26f7b7efb625cd5917c41549c3f4fd2
@@ -39,7 +39,7 @@ mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.g
 mod-guild-levels	https://github.com/buildthehomelab/wow-mod-guild-levels.git	0be3cf69a9259a4611d4b9ae0ff7e43518b8d945
 mod-hearthstone-cd	https://github.com/buildthehomelab/wow-mod-hearthstone-cd.git	58cb527401b5e1d1971fd51ca6fda214520da3ea
 mod-individual-progression-announce	https://github.com/borrowjack/mod-individual-progression-announce	744833b053c3d989e1b3ee18a7fadfb33b474efc
-mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	70c49ec8c0d254c4a184e2b021e23235c52d7775
+mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	188f697a79a8d129816fd892bd44df962228d676
 mod-individual-xp	https://github.com/buildthehomelab/wow-mod-individual-xp.git	a88f4180102d1bf165bfb6805e21ec1332aeb9cd
 mod-junk-to-gold-plus	https://github.com/buildthehomelab/wow-mod-junk-to-gold-plus.git	6875a0738a764fef8d9e9c824f065e7ab540e9d3
 mod-learn-spells	https://github.com/buildthehomelab/wow-mod-learn-spells.git	dd72058e713b9296ab97f090815559f8c02babec
@@ -67,7 +67,7 @@ mod-reagent-bank-account	https://github.com/buildthehomelab/mod-reagent-bank-acc
 mod-realm-armory	https://github.com/Hisha/mod-realm-armory	9cb817dafa94ece12af0c44ad5d0c75ad3260ced
 mod-realm-config	https://github.com/Hisha/mod-realm-config	fe36db9ba90c5d86e8d3a0315e2cac4367e7843f
 mod-retail-achievements	https://github.com/buildthehomelab/wow-mod-retail-achievements.git	1a3305b8396c2543b7ffc96e4d67602f8b0c2b06
-mod-retail-ah	https://github.com/buildthehomelab/wow-mod-retail-ah.git	e6630b1f614d70b6c8809c66efba1b7a0b884d5e
+mod-retail-ah	https://github.com/buildthehomelab/wow-mod-retail-ah.git	c39e5b0255c1ca4f31a787b6f5c41728fc2e7cf5
 mod-retail-collection	https://github.com/buildthehomelab/wow-mod-retail-collection.git	b140f1c9503f89a24664ca79465a1dfb1866b255
 mod-retail-druid-forms	https://github.com/buildthehomelab/wow-mod-retail-druid-forms.git	1bc05c5321181673258e2649295aea23e2903ee0
 mod-retail-library	https://github.com/buildthehomelab/wow-mod-retail-library.git	4cd3ef49b83f430ea9439b285a48d147406e7f1b
