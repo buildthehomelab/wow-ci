@@ -4,7 +4,7 @@ mod-accountwide-mounts	https://github.com/buildthehomelab/wow-mod-accountwide-mo
 mod-accountwide-pets	https://github.com/buildthehomelab/wow-mod-accountwide-pets.git	c4c98a164d8f89709bb02127437b0add77a7ad1b
 mod-ah-bot-plus	https://github.com/buildthehomelab/wow-mod-ah-bot-plus.git	3df09e325b54634b12c689156981922aa9a21ba5
 mod-aoe-loot	https://github.com/azerothcore/mod-aoe-loot.git	44486b1aecebd86944ce115972b3c839544903d3
-mod-archaeology	https://github.com/buildthehomelab/wow-mod-archaeology.git	750aef762137cb51371f7f80d6094ee9db75ae73
+mod-archaeology	https://github.com/buildthehomelab/wow-mod-archaeology.git	12332507bff313973922ef6a359c1d6817a3147e
 mod-auto-gather-tracking	https://github.com/Day36512/mod-auto-gather-tracking	7bec5b96f26f7b7efb625cd5917c41549c3f4fd2
 mod-bad-luck-protection	https://github.com/buildthehomelab/wow-mod-bad-luck-protection.git	ef94e917039df66c4c505787729bc24a26e88673
 mod-beast-collection	https://github.com/buildthehomelab/wow-mod-beast-collection.git	fdb540b0941fe5f1b4d07bd89f5fb1334cfe4457
@@ -28,13 +28,13 @@ mod-forever-class-combos	https://github.com/buildthehomelab/wow-mod-forever-clas
 mod-forever-druid	https://github.com/buildthehomelab/wow-mod-forever-druid.git	4674ade362bf332dc5837f55eb5bf21a9a1e3496
 mod-forever-dungeon-xp	https://github.com/buildthehomelab/wow-mod-forever-dungeon-xp.git	f3cd9caefd16f1584967294861ccf95e67038f5c
 mod-forever-hunter	https://github.com/buildthehomelab/wow-mod-forever-hunter.git	708733622f2c96ccb640c40f7bc13db6e5d573df
-mod-forever-journal	https://github.com/buildthehomelab/wow-mod-forever-journal.git	21ab25159744e37b03184c9d06a760cd0bb167f4
+mod-forever-journal	https://github.com/buildthehomelab/wow-mod-forever-journal.git	c6c28ddeebb3e58055eb7b3fb34cc6eb98793976
 mod-forever-paladin	https://github.com/buildthehomelab/wow-mod-forever-paladin.git	f2a5c3b2f113bc82cecb537baf27a9e4c561cedf
 mod-forever-periodic-crit	https://github.com/buildthehomelab/wow-mod-forever-periodic-crit.git	ab3818c01f2b34dae9e72952323f6e254b905ef2
 mod-forever-racials	https://github.com/buildthehomelab/wow-mod-forever-racials.git	5aabb782a307af46944fa692b6a161a77cc14269
 mod-forever-rogue	https://github.com/buildthehomelab/wow-mod-forever-rogue.git	cee36757ce0fff37ae5c06826c6593508f607db7
 mod-forever-shaman	https://github.com/buildthehomelab/wow-mod-forever-shaman.git	57200e47d5a070f316d29ffd242a9caa3e3dbb9f
-mod-forever-torch	https://github.com/buildthehomelab/wow-mod-forever-torch.git	9dabd101636c78e33a9c1778b3f5574edbe5e2ac
+mod-forever-torch	https://github.com/buildthehomelab/wow-mod-forever-torch.git	d31ea508cae4a6550668ffc75dc4c1aa24a8477b
 mod-gathering-node-dynamic	https://github.com/buildthehomelab/mod-gathering-node-dynamic	3909f6624537f4136b704a49224c05c3ef9ecb7a
 mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.git	da491b5cddb3a114e2e91106aaf0f539ffd44495
 mod-guild-levels	https://github.com/buildthehomelab/wow-mod-guild-levels.git	918b9ae359f0c147b76a250308ff42307aff933c
@@ -56,7 +56,7 @@ mod-no-profession-limit	https://github.com/buildthehomelab/wow-mod-no-profession
 mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid.git	86826f7990b08252152726552f24611ac425048c
 mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	415b4d28cb620881161de647c8360b983c16bb9f
 mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	f7288a87b600402b57c1d4fb4b437a07ef630ca2
-mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	22e730d480d5b29ece25ad7aafa0bbb58d46fe4d
+mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	7779c91e70bf7f26547126850cadf7e881e71faa
 mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-craft-cd.git	5bd0b4dfbbe687982aaafe3958cd6f72b3ad2c9f
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	9a1578516aec8c0ba773eea32724eb94e76ea7f1
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	c3955915c76d5a22a9d25a44482345d368a8de82
