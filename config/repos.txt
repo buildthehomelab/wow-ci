@@ -48,6 +48,7 @@ wow-mod-individual-xp
 wow-mod-junk-to-gold-plus
 wow-mod-holiday-control
 wow-mod-learn-spells
+wow-mod-legacy
 wow-mod-lfg-expansion
 wow-mod-lfg-progression
 wow-mod-mount-scaling
