@@ -57,7 +57,7 @@ mod-no-profession-limit	https://github.com/buildthehomelab/wow-mod-no-profession
 mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid.git	86826f7990b08252152726552f24611ac425048c
 mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	415b4d28cb620881161de647c8360b983c16bb9f
 mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	f7288a87b600402b57c1d4fb4b437a07ef630ca2
-mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	d490f896d905900d62f1621c923132bd3bdd1075
+mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	80f2afa04543871245d22ee0a314e78e29f2feb0
 mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-craft-cd.git	5bd0b4dfbbe687982aaafe3958cd6f72b3ad2c9f
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	9a1578516aec8c0ba773eea32724eb94e76ea7f1
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	c3955915c76d5a22a9d25a44482345d368a8de82
@@ -79,7 +79,7 @@ mod-retail-shaman-totems	https://github.com/buildthehomelab/wow-mod-retail-shama
 mod-retail-warlock-pets	https://github.com/buildthehomelab/wow-mod-retail-warlock-pets.git	c061dec8b55f61b0559a2816e1cc17c69137f133
 mod-server-mail	https://github.com/buildthehomelab/wow-mod-server-mail.git	c95f496894fdea19bd10e083b408ea7cbd692d66
 mod-setxpbar	https://github.com/brian8544/mod-setxpbar	a8ed628e0d18c2bb50bf5a64be392bf8b6c9165c
-mod-stack-size	https://github.com/buildthehomelab/wow-mod-stack-size.git	910061854e463cb6579b4fbc2f216607f210d941
+mod-stack-size	https://github.com/buildthehomelab/wow-mod-stack-size.git	1d86b706d16b13c606f9a67b00349749eb912dda
 mod-starting-pet	https://github.com/Gozzim/mod-starting-pet	00d0543e79fb74dde4903706f4e096197b974e57
 mod-talent-per-level	https://github.com/buildthehomelab/wow-mod-talent-per-level.git	a50b73443824cc273ad50f03d6d9255da92b1fee
 mod-tier0-trainers	https://github.com/buildthehomelab/wow-mod-tier0-trainers.git	361b6b92ee84a0d793505bccd0a94586024e0943
