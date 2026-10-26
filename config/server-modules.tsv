@@ -2,7 +2,7 @@ folder	url	commit
 mod-accountwide-flight-paths	https://github.com/buildthehomelab/wow-mod-accountwide-flight-paths.git	cebbbbda9ad421f8c81056e6d390567c100f8773
 mod-accountwide-mounts	https://github.com/buildthehomelab/wow-mod-accountwide-mounts.git	aeead30510af7ef4439012340cb5f6d02835b4c9
 mod-accountwide-pets	https://github.com/buildthehomelab/wow-mod-accountwide-pets.git	c4c98a164d8f89709bb02127437b0add77a7ad1b
-mod-ah-bot-plus	https://github.com/buildthehomelab/wow-mod-ah-bot-plus.git	3df09e325b54634b12c689156981922aa9a21ba5
+mod-ah-bot-plus	https://github.com/buildthehomelab/wow-mod-ah-bot-plus.git	d4c938cc14d28117599e90e9338a22c65b67ea45
 mod-aoe-loot	https://github.com/azerothcore/mod-aoe-loot.git	44486b1aecebd86944ce115972b3c839544903d3
 mod-archaeology	https://github.com/buildthehomelab/wow-mod-archaeology.git	472e69573fcf17fffab2c7e40249e85e1f6af93b
 mod-auto-gather-tracking	https://github.com/Day36512/mod-auto-gather-tracking	7bec5b96f26f7b7efb625cd5917c41549c3f4fd2
@@ -69,7 +69,7 @@ mod-reagent-bank-account	https://github.com/buildthehomelab/mod-reagent-bank-acc
 mod-realm-armory	https://github.com/Hisha/mod-realm-armory	9cb817dafa94ece12af0c44ad5d0c75ad3260ced
 mod-realm-config	https://github.com/Hisha/mod-realm-config	fe36db9ba90c5d86e8d3a0315e2cac4367e7843f
 mod-retail-achievements	https://github.com/buildthehomelab/wow-mod-retail-achievements.git	1f6b16ed7605ff53f1ed3995aaed6e9dacbd0dbb
-mod-retail-ah	https://github.com/buildthehomelab/wow-mod-retail-ah.git	c39e5b0255c1ca4f31a787b6f5c41728fc2e7cf5
+mod-retail-ah	https://github.com/buildthehomelab/wow-mod-retail-ah.git	5ac7fa8ec23304f141f8ec60a10db5a2def1a0d8
 mod-retail-collection	https://github.com/buildthehomelab/wow-mod-retail-collection.git	74f2f1579bdbdf6c1e64fcdd8008f17cd44993bb
 mod-retail-druid-forms	https://github.com/buildthehomelab/wow-mod-retail-druid-forms.git	8bf0688d97c76f99b153d1087fe7b5d24c7afcd7
 mod-retail-library	https://github.com/buildthehomelab/wow-mod-retail-library.git	393af3364d86afa5993023890de4c34a4fcf3a67
