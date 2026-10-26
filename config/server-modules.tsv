@@ -58,7 +58,7 @@ mod-no-profession-limit	https://github.com/buildthehomelab/wow-mod-no-profession
 mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid.git	86826f7990b08252152726552f24611ac425048c
 mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	415b4d28cb620881161de647c8360b983c16bb9f
 mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	f7288a87b600402b57c1d4fb4b437a07ef630ca2
-mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	80f2afa04543871245d22ee0a314e78e29f2feb0
+mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	0e6b4e9c4135929529ceacb4bbcdb2ed873eb24e
 mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-craft-cd.git	5bd0b4dfbbe687982aaafe3958cd6f72b3ad2c9f
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	9a1578516aec8c0ba773eea32724eb94e76ea7f1
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	c3955915c76d5a22a9d25a44482345d368a8de82
