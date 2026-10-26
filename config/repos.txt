@@ -58,6 +58,7 @@ wow-mod-pet-loot
 wow-mod-playerbots-city-life
 wow-mod-profession-craft-cd
 wow-mod-profession-specializations
+wow-mod-quest-map
 wow-mod-raid-lockout
 wow-mod-rare-tracker
 wow-mod-realm-armory
