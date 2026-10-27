@@ -2,4 +2,9 @@
 module	needs
 mod-individual-progression-announce	mod-individual-progression
 mod-raid-finder	mod-optimal-bot-raid mod-individual-progression
-mod-nat-pagle	mod-boss-coins
+mod-nat-pagle	mod-boss-coins mod-challenges
+mod-reagent-bank-account	mod-challenges
+mod-boss-coins	mod-challenges
+mod-black-market	mod-challenges
+mod-accountwide-mounts	mod-challenges
+mod-accountwide-pets	mod-challenges
