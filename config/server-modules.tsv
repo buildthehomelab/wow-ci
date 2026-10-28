@@ -17,7 +17,7 @@ mod-cache-version	https://github.com/buildthehomelab/wow-mod-cache-version.git	1
 mod-challenges	https://github.com/buildthehomelab/wow-mod-challenges.git	62757782a36df08766386a91274b70ff46f91ae0
 mod-character-services	https://github.com/Zerkenn/mod-character-services	35459efdc958d457311f67a5cc6567907d83089b
 mod-combat-watchdog	https://github.com/buildthehomelab/wow-mod-combat-watchdog.git	ec3802fd6701dfffab28472db9af4eb911cce878
-mod-delves	https://github.com/buildthehomelab/wow-mod-delves.git	711e523a254ce92e86cf80f5f87de4ccfee310ec
+mod-delves	https://github.com/buildthehomelab/wow-mod-delves.git	a77a0e98d4c886e3c1c3993ecb21e20dad98fae0
 mod-druid-swipe-fishing	https://github.com/buildthehomelab/wow-mod-druid-swipe-fishing.git	cbf60ef4c8092ef8bf7dc02fbfea6023d9aa3730
 mod-dualspec	https://github.com/buildthehomelab/wow-mod-dualspec.git	6887e1623d6969c9ce18ee9967a9a0dae9b8c532
 mod-dungeon-brd	https://github.com/buildthehomelab/wow-mod-dungeon-brd.git	56eb8b80472f3d9d18decef55406c243605f0e78
