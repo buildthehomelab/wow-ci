@@ -61,6 +61,7 @@ mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid
 mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	415b4d28cb620881161de647c8360b983c16bb9f
 mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	f7288a87b600402b57c1d4fb4b437a07ef630ca2
 mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	5283a13e0a5d873350fdaef777b95d553d354bee
+mod-primal-bones	https://github.com/buildthehomelab/wow-mod-primal-bones.git	5786bcc26387a27963fafcbd58d5896774b52209
 mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-craft-cd.git	5bd0b4dfbbe687982aaafe3958cd6f72b3ad2c9f
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	9a1578516aec8c0ba773eea32724eb94e76ea7f1
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	c3955915c76d5a22a9d25a44482345d368a8de82
@@ -76,7 +77,7 @@ mod-retail-achievements	https://github.com/buildthehomelab/wow-mod-retail-achiev
 mod-retail-ah	https://github.com/buildthehomelab/wow-mod-retail-ah.git	e4242b3d12eb4f79a746d6a2fdfaa9b9514eabae
 mod-retail-collection	https://github.com/buildthehomelab/wow-mod-retail-collection.git	e01548b5cc25012e8553dd37ca89e021381c24e3
 mod-retail-druid-forms	https://github.com/buildthehomelab/wow-mod-retail-druid-forms.git	8bf0688d97c76f99b153d1087fe7b5d24c7afcd7
-mod-retail-library	https://github.com/buildthehomelab/wow-mod-retail-library.git	c9f48991cf9a4fceb93ab723ac56190474aed4d0
+mod-retail-library	https://github.com/buildthehomelab/wow-mod-retail-library.git	f8bc78f427a55d4b3af786b7d96d01412854494b
 mod-retail-pets	https://github.com/buildthehomelab/wow-mod-retail-pets.git	a7ba3328fc7422e11638295de61ef41bea65c019
 mod-retail-professions	https://github.com/buildthehomelab/wow-mod-retail-professions.git	2c13c6981db5fd9062152279deeaae8d02f6c2a2
 mod-retail-shaman-totems	https://github.com/buildthehomelab/wow-mod-retail-shaman-totems.git	6e241de55f0c7a049f81046a6918c8cdde804ac3
