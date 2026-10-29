@@ -21,7 +21,7 @@ mod-delves	https://github.com/buildthehomelab/wow-mod-delves.git	a77a0e98d4c886e
 mod-druid-swipe-fishing	https://github.com/buildthehomelab/wow-mod-druid-swipe-fishing.git	cbf60ef4c8092ef8bf7dc02fbfea6023d9aa3730
 mod-dualspec	https://github.com/buildthehomelab/wow-mod-dualspec.git	6887e1623d6969c9ce18ee9967a9a0dae9b8c532
 mod-dungeon-brd	https://github.com/buildthehomelab/wow-mod-dungeon-brd.git	56eb8b80472f3d9d18decef55406c243605f0e78
-mod-dungeon-clear	https://github.com/buildthehomelab/wow-mod-dungeon-clear.git	5d49ee7ab0595de4031c73f6a2b41e17b371d13c
+mod-dungeon-clear	https://github.com/buildthehomelab/wow-mod-dungeon-clear.git	6057486eaea7def949a83823bbd63c8b91637579
 mod-dungeon-consumables	https://github.com/buildthehomelab/wow-mod-dungeon-consumables.git	8550c164a887c0a8fc792c0386642eb9f91e2dac
 mod-dynamic-gathering-speed	https://github.com/silviu20092/mod-dynamic-gathering-speed	db2f734ea3569318d8b9f9ef64a0af68809b8f21
 mod-era-events	https://github.com/buildthehomelab/wow-mod-era-events.git	cf02786aceb531df76ff065d8be7a1973344cfb1
@@ -30,7 +30,7 @@ mod-forever-class-combos	https://github.com/buildthehomelab/wow-mod-forever-clas
 mod-forever-druid	https://github.com/buildthehomelab/wow-mod-forever-druid.git	4674ade362bf332dc5837f55eb5bf21a9a1e3496
 mod-forever-dungeon-xp	https://github.com/buildthehomelab/wow-mod-forever-dungeon-xp.git	c7ad377442aa5e11b815d14cedd084fea3c745ab
 mod-forever-hunter	https://github.com/buildthehomelab/wow-mod-forever-hunter.git	708733622f2c96ccb640c40f7bc13db6e5d573df
-mod-forever-journal	https://github.com/buildthehomelab/wow-mod-forever-journal.git	74f8fa438a8a7eaaec4d9345e549ae8b275eac1d
+mod-forever-journal	https://github.com/buildthehomelab/wow-mod-forever-journal.git	4300e6bd031db72fea3caf8688cb0ea280efd30a
 mod-forever-paladin	https://github.com/buildthehomelab/wow-mod-forever-paladin.git	f2a5c3b2f113bc82cecb537baf27a9e4c561cedf
 mod-forever-periodic-crit	https://github.com/buildthehomelab/wow-mod-forever-periodic-crit.git	ab3818c01f2b34dae9e72952323f6e254b905ef2
 mod-forever-racials	https://github.com/buildthehomelab/wow-mod-forever-racials.git	a2cdda47a9c1a0cf6452eaaa08ba68d437b1c25e
@@ -48,12 +48,12 @@ mod-individual-xp	https://github.com/buildthehomelab/wow-mod-individual-xp.git	0
 mod-junk-to-gold-plus	https://github.com/buildthehomelab/wow-mod-junk-to-gold-plus.git	6875a0738a764fef8d9e9c824f065e7ab540e9d3
 mod-learn-spells	https://github.com/buildthehomelab/wow-mod-learn-spells.git	dd72058e713b9296ab97f090815559f8c02babec
 mod-learnable-mounts	https://github.com/buildthehomelab/mod-learnable-mounts	11051d32dd5484f5aa785aa8bfe49c2fe787d51c
-mod-legacy	https://github.com/buildthehomelab/wow-mod-legacy.git	1320eef62d708e70e0201f74ab6fc339930e4a40
+mod-legacy	https://github.com/buildthehomelab/wow-mod-legacy.git	91a67d473e6dd09f72a02e10f5697641d14784d2
 mod-lfg-progression	https://github.com/buildthehomelab/wow-mod-lfg-progression.git	2615e82902cf92c0e7dd93dd6c2472d7b40fe14a
 mod-llm-chatter	https://github.com/buildthehomelab/mod-llm-chatter	b3559c07c1bad54fabcc597f07a828efdf403ce6
 mod-lost-legendaries	https://github.com/buildthehomelab/wow-mod-lost-legendaries.git	63b0dcce4f7f6e7863be7ccd5f1960d0325314ae
 mod-mount-requirements	https://github.com/buildthehomelab/mod-mount-requirements	2c7d9e1780f85683eb135df56aafa262d99ec90a
-mod-mount-scaling	https://github.com/buildthehomelab/wow-mod-mount-scaling	858e4bf7c34fde76e18d48b7f1bde2f409064180
+mod-mount-scaling	https://github.com/buildthehomelab/wow-mod-mount-scaling	8812ddc9e1d1b76c5ccd3fb28b4462d56cdb8a1b
 mod-nat-pagle	https://github.com/buildthehomelab/wow-mod-nat-pagle.git	9de8c520c12383eb355e97d6fa81913e3cc1904e
 mod-night-brightness	https://github.com/buildthehomelab/wow-mod-night-brightness.git	2c09d638a61a22b36ab6b4b4845738cd80712d4c
 mod-no-profession-limit	https://github.com/buildthehomelab/wow-mod-no-profession-limit.git	7f9719789ff94d1b7c6c206d87b22cc7bead4171
@@ -83,7 +83,7 @@ mod-retail-shaman-totems	https://github.com/buildthehomelab/wow-mod-retail-shama
 mod-retail-warlock-pets	https://github.com/buildthehomelab/wow-mod-retail-warlock-pets.git	c061dec8b55f61b0559a2816e1cc17c69137f133
 mod-server-mail	https://github.com/buildthehomelab/wow-mod-server-mail.git	c95f496894fdea19bd10e083b408ea7cbd692d66
 mod-setxpbar	https://github.com/brian8544/mod-setxpbar	a8ed628e0d18c2bb50bf5a64be392bf8b6c9165c
-mod-stack-size	https://github.com/buildthehomelab/wow-mod-stack-size.git	1d86b706d16b13c606f9a67b00349749eb912dda
+mod-stack-size	https://github.com/buildthehomelab/wow-mod-stack-size.git	f5b1bc9f7e6cf6e6955d5d7928066416a4d77dab
 mod-starting-pet	https://github.com/Gozzim/mod-starting-pet	00d0543e79fb74dde4903706f4e096197b974e57
 mod-talent-per-level	https://github.com/buildthehomelab/wow-mod-talent-per-level.git	a50b73443824cc273ad50f03d6d9255da92b1fee
 mod-tier0-trainers	https://github.com/buildthehomelab/wow-mod-tier0-trainers.git	361b6b92ee84a0d793505bccd0a94586024e0943
