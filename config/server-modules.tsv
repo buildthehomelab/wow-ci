@@ -4,7 +4,7 @@ mod-accountwide-mounts	https://github.com/buildthehomelab/wow-mod-accountwide-mo
 mod-accountwide-pets	https://github.com/buildthehomelab/wow-mod-accountwide-pets.git	9af469be6566161934958a463c091e4248527b26
 mod-ah-bot-plus	https://github.com/buildthehomelab/wow-mod-ah-bot-plus.git	9ef2b28cc5f629d2a9faf9fb5a24ca03cfc5d601
 mod-aoe-loot	https://github.com/azerothcore/mod-aoe-loot.git	44486b1aecebd86944ce115972b3c839544903d3
-mod-archaeology	https://github.com/buildthehomelab/wow-mod-archaeology.git	7a091bd21b5d510d1ed64f9f7b7ff6cc17c52c75
+mod-archaeology	https://github.com/buildthehomelab/wow-mod-archaeology.git	d5f3a61a6d519b720c316cd92d1e37c91a5cb1f8
 mod-auto-gather-tracking	https://github.com/Day36512/mod-auto-gather-tracking	7bec5b96f26f7b7efb625cd5917c41549c3f4fd2
 mod-bad-luck-protection	https://github.com/buildthehomelab/wow-mod-bad-luck-protection.git	ef94e917039df66c4c505787729bc24a26e88673
 mod-beast-collection	https://github.com/buildthehomelab/wow-mod-beast-collection.git	fdb540b0941fe5f1b4d07bd89f5fb1334cfe4457
@@ -41,14 +41,13 @@ mod-forever-world-buffs	https://github.com/buildthehomelab/wow-mod-forever-world
 mod-gathering-node-dynamic	https://github.com/buildthehomelab/mod-gathering-node-dynamic	3909f6624537f4136b704a49224c05c3ef9ecb7a
 mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.git	da491b5cddb3a114e2e91106aaf0f539ffd44495
 mod-guild-levels	https://github.com/buildthehomelab/wow-mod-guild-levels.git	f4aa9cf267e46bec265fb188af82de2a5533d314
-mod-hearthstone-cd	https://github.com/buildthehomelab/wow-mod-hearthstone-cd.git	58cb527401b5e1d1971fd51ca6fda214520da3ea
 mod-individual-progression-announce	https://github.com/borrowjack/mod-individual-progression-announce	744833b053c3d989e1b3ee18a7fadfb33b474efc
 mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	a6a3438eab783ec1314c599829ff9cef4b812324
 mod-individual-xp	https://github.com/buildthehomelab/wow-mod-individual-xp.git	0a1e8ee1bdbe8ab0fcd25ae8645a2bb49df6235f
 mod-junk-to-gold-plus	https://github.com/buildthehomelab/wow-mod-junk-to-gold-plus.git	6875a0738a764fef8d9e9c824f065e7ab540e9d3
 mod-learn-spells	https://github.com/buildthehomelab/wow-mod-learn-spells.git	dd72058e713b9296ab97f090815559f8c02babec
 mod-learnable-mounts	https://github.com/buildthehomelab/mod-learnable-mounts	11051d32dd5484f5aa785aa8bfe49c2fe787d51c
-mod-legacy	https://github.com/buildthehomelab/wow-mod-legacy.git	0cf562ad580eef9b6062503df79ae2c7e0c2c25b
+mod-legacy	https://github.com/buildthehomelab/wow-mod-legacy.git	3046b61999d0130c212b9972e0429fa54adfeb9d
 mod-lfg-progression	https://github.com/buildthehomelab/wow-mod-lfg-progression.git	2615e82902cf92c0e7dd93dd6c2472d7b40fe14a
 mod-llm-chatter	https://github.com/buildthehomelab/mod-llm-chatter	b3559c07c1bad54fabcc597f07a828efdf403ce6
 mod-lost-legendaries	https://github.com/buildthehomelab/wow-mod-lost-legendaries.git	63b0dcce4f7f6e7863be7ccd5f1960d0325314ae
