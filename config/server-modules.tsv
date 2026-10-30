@@ -13,7 +13,7 @@ mod-black-market	https://github.com/buildthehomelab/wow-mod-black-market.git	390
 mod-boss-coins	https://github.com/buildthehomelab/wow-mod-boss-coins.git	40e035e145c4f0354874f46f77d91f8b23100ac1
 mod-bot-lfg-accept	https://github.com/buildthehomelab/wow-mod-bot-lfg-accept.git	8afac593cae198e1c1ffd58cdd8b8394ac1e7c6a
 mod-bot-quiet-rolls	https://github.com/buildthehomelab/wow-mod-bot-quiet-rolls.git	55f8372cfd4fa5d9520b7b5ef6acd44fd52e0aa1
-mod-cache-version	https://github.com/buildthehomelab/wow-mod-cache-version.git	11185b0865502a994bede8dea105396d3f68dcd5
+mod-cache-version	https://github.com/buildthehomelab/wow-mod-cache-version.git	e24aaa4de5ca716ec87d7a007a45395b924f2eda
 mod-challenges	https://github.com/buildthehomelab/wow-mod-challenges.git	388bdd2771054540938ea1af2cc180cc665357de
 mod-character-services	https://github.com/Zerkenn/mod-character-services	35459efdc958d457311f67a5cc6567907d83089b
 mod-combat-watchdog	https://github.com/buildthehomelab/wow-mod-combat-watchdog.git	ec3802fd6701dfffab28472db9af4eb911cce878
