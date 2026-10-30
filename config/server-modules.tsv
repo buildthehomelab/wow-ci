@@ -19,7 +19,7 @@ mod-character-services	https://github.com/Zerkenn/mod-character-services	35459ef
 mod-combat-watchdog	https://github.com/buildthehomelab/wow-mod-combat-watchdog.git	ec3802fd6701dfffab28472db9af4eb911cce878
 mod-delves	https://github.com/buildthehomelab/wow-mod-delves.git	a77a0e98d4c886e3c1c3993ecb21e20dad98fae0
 mod-druid-swipe-fishing	https://github.com/buildthehomelab/wow-mod-druid-swipe-fishing.git	cbf60ef4c8092ef8bf7dc02fbfea6023d9aa3730
-mod-dualspec	https://github.com/buildthehomelab/wow-mod-dualspec.git	6887e1623d6969c9ce18ee9967a9a0dae9b8c532
+mod-dualspec	https://github.com/buildthehomelab/wow-mod-dualspec.git	1a11a8087b3857d862255bb6724402b9488b7c7e
 mod-dungeon-brd	https://github.com/buildthehomelab/wow-mod-dungeon-brd.git	56eb8b80472f3d9d18decef55406c243605f0e78
 mod-dungeon-clear	https://github.com/buildthehomelab/wow-mod-dungeon-clear.git	6057486eaea7def949a83823bbd63c8b91637579
 mod-dungeon-consumables	https://github.com/buildthehomelab/wow-mod-dungeon-consumables.git	8550c164a887c0a8fc792c0386642eb9f91e2dac
