@@ -43,12 +43,12 @@ mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.g
 mod-guild-levels	https://github.com/buildthehomelab/wow-mod-guild-levels.git	55a0ffd18980ba117be0fad364dfb19267977c52
 mod-hearthstone-cd	https://github.com/buildthehomelab/wow-mod-hearthstone-cd.git	58cb527401b5e1d1971fd51ca6fda214520da3ea
 mod-individual-progression-announce	https://github.com/borrowjack/mod-individual-progression-announce	744833b053c3d989e1b3ee18a7fadfb33b474efc
-mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	7c7e4a68a409779ea3fece2a1836462c5c32b79a
+mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	a6a3438eab783ec1314c599829ff9cef4b812324
 mod-individual-xp	https://github.com/buildthehomelab/wow-mod-individual-xp.git	0a1e8ee1bdbe8ab0fcd25ae8645a2bb49df6235f
 mod-junk-to-gold-plus	https://github.com/buildthehomelab/wow-mod-junk-to-gold-plus.git	6875a0738a764fef8d9e9c824f065e7ab540e9d3
 mod-learn-spells	https://github.com/buildthehomelab/wow-mod-learn-spells.git	dd72058e713b9296ab97f090815559f8c02babec
 mod-learnable-mounts	https://github.com/buildthehomelab/mod-learnable-mounts	11051d32dd5484f5aa785aa8bfe49c2fe787d51c
-mod-legacy	https://github.com/buildthehomelab/wow-mod-legacy.git	91a67d473e6dd09f72a02e10f5697641d14784d2
+mod-legacy	https://github.com/buildthehomelab/wow-mod-legacy.git	0332c8ecb37a917ca5f09a20db88ac76adc8ae63
 mod-lfg-progression	https://github.com/buildthehomelab/wow-mod-lfg-progression.git	2615e82902cf92c0e7dd93dd6c2472d7b40fe14a
 mod-llm-chatter	https://github.com/buildthehomelab/mod-llm-chatter	b3559c07c1bad54fabcc597f07a828efdf403ce6
 mod-lost-legendaries	https://github.com/buildthehomelab/wow-mod-lost-legendaries.git	63b0dcce4f7f6e7863be7ccd5f1960d0325314ae
@@ -67,7 +67,7 @@ mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profes
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	c3955915c76d5a22a9d25a44482345d368a8de82
 mod-quest-map	https://github.com/buildthehomelab/wow-mod-quest-map.git	3e374837eb75a18f291dc4763fe752480263e31d
 mod-quick-lockpick	https://github.com/buildthehomelab/wow-mod-quick-lockpick.git	0e1a56e86dab714aa59c95f6b70b76e6e85eee4f
-mod-raid-finder	https://github.com/buildthehomelab/wow-mod-raid-finder.git	539532be01abbaefdeaef9329779ec8fc07d7a12
+mod-raid-finder	https://github.com/buildthehomelab/wow-mod-raid-finder.git	5d66c6c29319d928a6827300ff7d26191e422744
 mod-raid-lockout	https://github.com/buildthehomelab/wow-mod-raid-lockout.git	8276848251be76a358b70eff8de4572c46121514
 mod-rare-tracker	https://github.com/buildthehomelab/wow-mod-rare-tracker.git	82a9b35507b631d99dbc78ee6e6523c42e9ca2a0
 mod-reagent-bank-account	https://github.com/buildthehomelab/mod-reagent-bank-account	3c9a02ed4b3736e2449cd9ae9187492b466222af
