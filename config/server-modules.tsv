@@ -30,7 +30,7 @@ mod-forever-class-combos	https://github.com/buildthehomelab/wow-mod-forever-clas
 mod-forever-druid	https://github.com/buildthehomelab/wow-mod-forever-druid.git	4674ade362bf332dc5837f55eb5bf21a9a1e3496
 mod-forever-dungeon-xp	https://github.com/buildthehomelab/wow-mod-forever-dungeon-xp.git	c7ad377442aa5e11b815d14cedd084fea3c745ab
 mod-forever-hunter	https://github.com/buildthehomelab/wow-mod-forever-hunter.git	708733622f2c96ccb640c40f7bc13db6e5d573df
-mod-forever-journal	https://github.com/buildthehomelab/wow-mod-forever-journal.git	4300e6bd031db72fea3caf8688cb0ea280efd30a
+mod-forever-journal	https://github.com/buildthehomelab/wow-mod-forever-journal.git	c9e0d856d6afef62680c9a9797005d652f2bbf75
 mod-forever-paladin	https://github.com/buildthehomelab/wow-mod-forever-paladin.git	f2a5c3b2f113bc82cecb537baf27a9e4c561cedf
 mod-forever-periodic-crit	https://github.com/buildthehomelab/wow-mod-forever-periodic-crit.git	ab3818c01f2b34dae9e72952323f6e254b905ef2
 mod-forever-racials	https://github.com/buildthehomelab/wow-mod-forever-racials.git	a2cdda47a9c1a0cf6452eaaa08ba68d437b1c25e
@@ -57,7 +57,7 @@ mod-nat-pagle	https://github.com/buildthehomelab/wow-mod-nat-pagle.git	9de8c520c
 mod-night-brightness	https://github.com/buildthehomelab/wow-mod-night-brightness.git	2c09d638a61a22b36ab6b4b4845738cd80712d4c
 mod-no-profession-limit	https://github.com/buildthehomelab/wow-mod-no-profession-limit.git	7f9719789ff94d1b7c6c206d87b22cc7bead4171
 mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid.git	86826f7990b08252152726552f24611ac425048c
-mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	415b4d28cb620881161de647c8360b983c16bb9f
+mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	f0405b41c3f8098af94c7d31679902ebdd3ca4be
 mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	f7288a87b600402b57c1d4fb4b437a07ef630ca2
 mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	08e5a03f99b648745b840707327f7c803ed51aa1
 mod-primal-bones	https://github.com/buildthehomelab/wow-mod-primal-bones.git	8d3d18aecfaaa9cefd5de60464db13508e13451a
