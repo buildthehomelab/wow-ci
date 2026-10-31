@@ -14,7 +14,7 @@ mod-boss-coins	https://github.com/buildthehomelab/wow-mod-boss-coins.git	40e035e
 mod-bot-lfg-accept	https://github.com/buildthehomelab/wow-mod-bot-lfg-accept.git	8afac593cae198e1c1ffd58cdd8b8394ac1e7c6a
 mod-bot-quiet-rolls	https://github.com/buildthehomelab/wow-mod-bot-quiet-rolls.git	55f8372cfd4fa5d9520b7b5ef6acd44fd52e0aa1
 mod-cache-version	https://github.com/buildthehomelab/wow-mod-cache-version.git	e24aaa4de5ca716ec87d7a007a45395b924f2eda
-mod-challenges	https://github.com/buildthehomelab/wow-mod-challenges.git	b805dcb878e316485706ffda3b36ea2e56077fda
+mod-challenges	https://github.com/buildthehomelab/wow-mod-challenges.git	4a87040da41d087fb5e7560dc81cbd825b3838a5
 mod-character-services	https://github.com/Zerkenn/mod-character-services	35459efdc958d457311f67a5cc6567907d83089b
 mod-combat-watchdog	https://github.com/buildthehomelab/wow-mod-combat-watchdog.git	ec3802fd6701dfffab28472db9af4eb911cce878
 mod-delves	https://github.com/buildthehomelab/wow-mod-delves.git	a77a0e98d4c886e3c1c3993ecb21e20dad98fae0
@@ -30,7 +30,7 @@ mod-forever-class-combos	https://github.com/buildthehomelab/wow-mod-forever-clas
 mod-forever-druid	https://github.com/buildthehomelab/wow-mod-forever-druid.git	4674ade362bf332dc5837f55eb5bf21a9a1e3496
 mod-forever-dungeon-xp	https://github.com/buildthehomelab/wow-mod-forever-dungeon-xp.git	c7ad377442aa5e11b815d14cedd084fea3c745ab
 mod-forever-hunter	https://github.com/buildthehomelab/wow-mod-forever-hunter.git	708733622f2c96ccb640c40f7bc13db6e5d573df
-mod-forever-journal	https://github.com/buildthehomelab/wow-mod-forever-journal.git	c9e0d856d6afef62680c9a9797005d652f2bbf75
+mod-forever-journal	https://github.com/buildthehomelab/wow-mod-forever-journal.git	2f64374f4000d5ce452bbf1c6b9139cdeafcfbda
 mod-forever-paladin	https://github.com/buildthehomelab/wow-mod-forever-paladin.git	f2a5c3b2f113bc82cecb537baf27a9e4c561cedf
 mod-forever-periodic-crit	https://github.com/buildthehomelab/wow-mod-forever-periodic-crit.git	ab3818c01f2b34dae9e72952323f6e254b905ef2
 mod-forever-racials	https://github.com/buildthehomelab/wow-mod-forever-racials.git	a2cdda47a9c1a0cf6452eaaa08ba68d437b1c25e
@@ -60,7 +60,7 @@ mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid
 mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	f0405b41c3f8098af94c7d31679902ebdd3ca4be
 mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	f7288a87b600402b57c1d4fb4b437a07ef630ca2
 mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	08e5a03f99b648745b840707327f7c803ed51aa1
-mod-primal-bones	https://github.com/buildthehomelab/wow-mod-primal-bones.git	8d3d18aecfaaa9cefd5de60464db13508e13451a
+mod-primal-bones	https://github.com/buildthehomelab/wow-mod-primal-bones.git	b22c2f84aaec7cf3a510342210d6c16acd570341
 mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-craft-cd.git	5bd0b4dfbbe687982aaafe3958cd6f72b3ad2c9f
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	9a1578516aec8c0ba773eea32724eb94e76ea7f1
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	c3955915c76d5a22a9d25a44482345d368a8de82
