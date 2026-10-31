@@ -14,7 +14,7 @@ mod-boss-coins	https://github.com/buildthehomelab/wow-mod-boss-coins.git	40e035e
 mod-bot-lfg-accept	https://github.com/buildthehomelab/wow-mod-bot-lfg-accept.git	8afac593cae198e1c1ffd58cdd8b8394ac1e7c6a
 mod-bot-quiet-rolls	https://github.com/buildthehomelab/wow-mod-bot-quiet-rolls.git	55f8372cfd4fa5d9520b7b5ef6acd44fd52e0aa1
 mod-cache-version	https://github.com/buildthehomelab/wow-mod-cache-version.git	e24aaa4de5ca716ec87d7a007a45395b924f2eda
-mod-challenges	https://github.com/buildthehomelab/wow-mod-challenges.git	be2e413b8f080d6996c8b18f6ecfda9eb1d9eb60
+mod-challenges	https://github.com/buildthehomelab/wow-mod-challenges.git	b805dcb878e316485706ffda3b36ea2e56077fda
 mod-character-services	https://github.com/Zerkenn/mod-character-services	35459efdc958d457311f67a5cc6567907d83089b
 mod-combat-watchdog	https://github.com/buildthehomelab/wow-mod-combat-watchdog.git	ec3802fd6701dfffab28472db9af4eb911cce878
 mod-delves	https://github.com/buildthehomelab/wow-mod-delves.git	a77a0e98d4c886e3c1c3993ecb21e20dad98fae0
@@ -78,7 +78,7 @@ mod-retail-collection	https://github.com/buildthehomelab/wow-mod-retail-collecti
 mod-retail-druid-forms	https://github.com/buildthehomelab/wow-mod-retail-druid-forms.git	8bf0688d97c76f99b153d1087fe7b5d24c7afcd7
 mod-retail-library	https://github.com/buildthehomelab/wow-mod-retail-library.git	f8bc78f427a55d4b3af786b7d96d01412854494b
 mod-retail-pets	https://github.com/buildthehomelab/wow-mod-retail-pets.git	a7ba3328fc7422e11638295de61ef41bea65c019
-mod-retail-professions	https://github.com/buildthehomelab/wow-mod-retail-professions.git	aed4377542f8f4c889169e54ff413144ef11658f
+mod-retail-professions	https://github.com/buildthehomelab/wow-mod-retail-professions.git	d2a5c90de287d5218922652b289ed18cea41c9c5
 mod-retail-shaman-totems	https://github.com/buildthehomelab/wow-mod-retail-shaman-totems.git	6e241de55f0c7a049f81046a6918c8cdde804ac3
 mod-retail-warlock-pets	https://github.com/buildthehomelab/wow-mod-retail-warlock-pets.git	c061dec8b55f61b0559a2816e1cc17c69137f133
 mod-server-mail	https://github.com/buildthehomelab/wow-mod-server-mail.git	c95f496894fdea19bd10e083b408ea7cbd692d66
