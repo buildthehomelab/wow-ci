@@ -6,7 +6,7 @@ mod-ah-bot-plus	https://github.com/buildthehomelab/wow-mod-ah-bot-plus.git	9ef2b
 mod-aoe-loot	https://github.com/azerothcore/mod-aoe-loot.git	44486b1aecebd86944ce115972b3c839544903d3
 mod-archaeology	https://github.com/buildthehomelab/wow-mod-archaeology.git	d5f3a61a6d519b720c316cd92d1e37c91a5cb1f8
 mod-auto-gather-tracking	https://github.com/Day36512/mod-auto-gather-tracking	7bec5b96f26f7b7efb625cd5917c41549c3f4fd2
-mod-bad-luck-protection	https://github.com/buildthehomelab/wow-mod-bad-luck-protection.git	ef94e917039df66c4c505787729bc24a26e88673
+mod-bad-luck-protection	https://github.com/buildthehomelab/wow-mod-bad-luck-protection.git	6096fcd66159d97974d684ebfbd0393198044a40
 mod-beast-collection	https://github.com/buildthehomelab/wow-mod-beast-collection.git	fdb540b0941fe5f1b4d07bd89f5fb1334cfe4457
 mod-biome-effects	https://github.com/buildthehomelab/wow-mod-biome-effects	1cb2d1d815c03c643b88101aa1ae1419dc9b192c
 mod-black-market	https://github.com/buildthehomelab/wow-mod-black-market.git	3907a4cc49eb0cbd3dc0e313a30ee65a37443242
@@ -60,7 +60,7 @@ mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid
 mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	415b4d28cb620881161de647c8360b983c16bb9f
 mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	f7288a87b600402b57c1d4fb4b437a07ef630ca2
 mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	2766198984c23252fd1e0c84d5547f87ec995fcf
-mod-primal-bones	https://github.com/buildthehomelab/wow-mod-primal-bones.git	aa8e869d8e3fbc9d9eab890555112e1d75125991
+mod-primal-bones	https://github.com/buildthehomelab/wow-mod-primal-bones.git	8d3d18aecfaaa9cefd5de60464db13508e13451a
 mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-craft-cd.git	5bd0b4dfbbe687982aaafe3958cd6f72b3ad2c9f
 mod-profession-specializations	https://github.com/buildthehomelab/wow-mod-profession-specializations.git	9a1578516aec8c0ba773eea32724eb94e76ea7f1
 mod-quest-loot-party	https://github.com/pangolp/mod-quest-loot-party	c3955915c76d5a22a9d25a44482345d368a8de82
