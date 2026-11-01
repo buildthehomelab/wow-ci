@@ -10,6 +10,7 @@ wow-addon-DBM
 wow-addon-DragonUI
 wow-addon-DungeonClear
 wow-addon-Gatherer
+wow-addon-LibMapData
 wow-addon-MinimalHunter
 wow-addon-OPie
 wow-addon-RareAlert-Dungeon
