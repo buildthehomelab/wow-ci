@@ -1,5 +1,15 @@
 # Server modules that include another server module's headers (upstream watch).
 module	needs
 mod-individual-progression-announce	mod-individual-progression
-mod-raid-finder	mod-optimal-bot-raid mod-individual-progression
-mod-nat-pagle	mod-boss-coins
+mod-raid-finder	mod-optimal-bot-raid mod-individual-progression mod-legacy
+mod-nat-pagle	mod-boss-coins mod-challenges
+mod-reagent-bank-account	mod-challenges
+mod-boss-coins	mod-challenges
+mod-black-market	mod-challenges
+mod-accountwide-mounts	mod-challenges
+mod-accountwide-pets	mod-challenges
+mod-individual-xp	mod-challenges
+mod-forever-dungeon-xp	mod-challenges
+mod-guild-levels	mod-challenges
+mod-delves	mod-boss-coins
+mod-legacy	mod-challenges
