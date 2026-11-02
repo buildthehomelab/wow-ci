@@ -40,7 +40,7 @@ mod-forever-torch	https://github.com/buildthehomelab/wow-mod-forever-torch.git	d
 mod-forever-world-buffs	https://github.com/buildthehomelab/wow-mod-forever-world-buffs.git	91be91eb69450ac1229bf2fa118649c2b26b78ae
 mod-gathering-node-dynamic	https://github.com/buildthehomelab/mod-gathering-node-dynamic	3909f6624537f4136b704a49224c05c3ef9ecb7a
 mod-gathering-tools	https://github.com/buildthehomelab/wow-mod-gathering-tools.git	da491b5cddb3a114e2e91106aaf0f539ffd44495
-mod-guild-chat-bridge	https://github.com/buildthehomelab/wow-mod-guild-chat-bridge.git	5bd7838c5918e1374f000bca9a84db77fb78ce6c
+mod-guild-chat-bridge	https://github.com/buildthehomelab/wow-mod-guild-chat-bridge.git	0fa1e89842ae6363b1cce027ceba25f0ced7683f
 mod-guild-levels	https://github.com/buildthehomelab/wow-mod-guild-levels.git	f4aa9cf267e46bec265fb188af82de2a5533d314
 mod-individual-progression-announce	https://github.com/borrowjack/mod-individual-progression-announce	744833b053c3d989e1b3ee18a7fadfb33b474efc
 mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	a6a3438eab783ec1314c599829ff9cef4b812324
