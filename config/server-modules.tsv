@@ -54,6 +54,7 @@ mod-lost-legendaries	https://github.com/buildthehomelab/wow-mod-lost-legendaries
 mod-mount-requirements	https://github.com/buildthehomelab/mod-mount-requirements	2c7d9e1780f85683eb135df56aafa262d99ec90a
 mod-mount-scaling	https://github.com/buildthehomelab/wow-mod-mount-scaling	8812ddc9e1d1b76c5ccd3fb28b4462d56cdb8a1b
 mod-nat-pagle	https://github.com/buildthehomelab/wow-mod-nat-pagle.git	7b8eb02921f1bf417de7f1e42482c073d10539a7
+mod-nemesis	https://github.com/buildthehomelab/wow-mod-nemesis.git	43b879b9fc94132df2a9b8e54bbf861cc9a002f9
 mod-night-brightness	https://github.com/buildthehomelab/wow-mod-night-brightness.git	2c09d638a61a22b36ab6b4b4845738cd80712d4c
 mod-no-profession-limit	https://github.com/buildthehomelab/wow-mod-no-profession-limit.git	7f9719789ff94d1b7c6c206d87b22cc7bead4171
 mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid.git	86826f7990b08252152726552f24611ac425048c
