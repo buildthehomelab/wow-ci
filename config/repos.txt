@@ -96,3 +96,4 @@ wow-mod-raid-finder
 wow-mod-nat-pagle
 wow-mod-bad-luck-protection
 wow-mod-challenges
+wow-mod-trading-post
