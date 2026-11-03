@@ -17,6 +17,7 @@ wow-addon-RareAlert-Dungeon
 wow-addon-Skada
 wow-addon-WeaponSkillInfo
 wow-addon-unbot
+wow-mod-account-friends
 wow-mod-accountwide-flight-paths
 wow-mod-accountwide-mounts
 wow-mod-accountwide-pets
