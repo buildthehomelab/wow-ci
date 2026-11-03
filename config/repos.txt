@@ -98,3 +98,5 @@ wow-mod-bad-luck-protection
 wow-mod-challenges
 wow-mod-trading-post
 wow-mod-nemesis
+wow-mod-playerhousing
+wow-addon-HomeScreen
