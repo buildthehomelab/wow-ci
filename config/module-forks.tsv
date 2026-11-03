@@ -2,3 +2,4 @@
 # config/server-modules.tsv is a commit of `branch` on the fork, which follows `upstream`.
 module	branch	upstream	upstream_branch
 mod-dungeon-clear	evermore	https://github.com/jrad7/mod-dungeon-clear.git	master
+mod-realm-armory	main	https://github.com/Hisha/mod-realm-armory.git	main
