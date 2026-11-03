@@ -1,4 +1,5 @@
 folder	url	commit
+mod-account-friends	https://github.com/buildthehomelab/wow-mod-account-friends.git	391bd866ce78c8e30a8c255cf5cb567be8396dee
 mod-accountwide-flight-paths	https://github.com/buildthehomelab/wow-mod-accountwide-flight-paths.git	cebbbbda9ad421f8c81056e6d390567c100f8773
 mod-accountwide-mounts	https://github.com/buildthehomelab/wow-mod-accountwide-mounts.git	40cc8f9b1c0b9b00c0974084f23807753ef80878
 mod-accountwide-pets	https://github.com/buildthehomelab/wow-mod-accountwide-pets.git	9af469be6566161934958a463c091e4248527b26
