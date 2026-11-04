@@ -44,7 +44,7 @@ mod-guild-chat-bridge	https://github.com/buildthehomelab/wow-mod-guild-chat-brid
 mod-guild-levels	https://github.com/buildthehomelab/wow-mod-guild-levels.git	597b0511c5531e0266e01c035ec0574573bdab99
 mod-individual-progression-announce	https://github.com/borrowjack/mod-individual-progression-announce	744833b053c3d989e1b3ee18a7fadfb33b474efc
 mod-individual-progression	https://github.com/buildthehomelab/wow-mod-individual-progression.git	a6a3438eab783ec1314c599829ff9cef4b812324
-mod-individual-xp	https://github.com/buildthehomelab/wow-mod-individual-xp.git	0a1e8ee1bdbe8ab0fcd25ae8645a2bb49df6235f
+mod-individual-xp	https://github.com/buildthehomelab/wow-mod-individual-xp.git	5ea606456cd65492d645ae9c639f30f677c1b74f
 mod-junk-to-gold-plus	https://github.com/buildthehomelab/wow-mod-junk-to-gold-plus.git	6875a0738a764fef8d9e9c824f065e7ab540e9d3
 mod-learn-spells	https://github.com/buildthehomelab/wow-mod-learn-spells.git	dd72058e713b9296ab97f090815559f8c02babec
 mod-learnable-mounts	https://github.com/buildthehomelab/mod-learnable-mounts	11051d32dd5484f5aa785aa8bfe49c2fe787d51c
@@ -61,7 +61,7 @@ mod-no-profession-limit	https://github.com/buildthehomelab/wow-mod-no-profession
 mod-optimal-bot-raid	https://github.com/buildthehomelab/wow-mod-optimal-bot-raid.git	86826f7990b08252152726552f24611ac425048c
 mod-pet-loot	https://github.com/buildthehomelab/wow-mod-pet-loot.git	f0405b41c3f8098af94c7d31679902ebdd3ca4be
 mod-playerbots-city-life	https://github.com/buildthehomelab/wow-mod-playerbots-city-life.git	f7288a87b600402b57c1d4fb4b437a07ef630ca2
-mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	a462174e1afc7f5d7f2c7705616bc66aeb579f0b
+mod-playerbots	https://github.com/buildthehomelab/wow-mod-playerbots.git	e6b77699904bcaa7e9f625978f3c6a19ff175bbe
 mod-playerhousing	https://github.com/buildthehomelab/wow-mod-playerhousing.git	25c5c1a614a1dd95d2293a0832b4bd5868fc2ae4
 mod-primal-bones	https://github.com/buildthehomelab/wow-mod-primal-bones.git	948a4e585e112e7301e64978806022ffa5cfc7dc
 mod-profession-craft-cd	https://github.com/buildthehomelab/wow-mod-profession-craft-cd.git	5bd0b4dfbbe687982aaafe3958cd6f72b3ad2c9f
