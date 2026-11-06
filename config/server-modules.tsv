@@ -54,7 +54,7 @@ mod-llm-chatter	https://github.com/buildthehomelab/mod-llm-chatter	43ade6a74588e
 mod-lost-legendaries	https://github.com/buildthehomelab/wow-mod-lost-legendaries.git	63b0dcce4f7f6e7863be7ccd5f1960d0325314ae
 mod-mount-requirements	https://github.com/buildthehomelab/mod-mount-requirements	2c7d9e1780f85683eb135df56aafa262d99ec90a
 mod-mount-scaling	https://github.com/buildthehomelab/wow-mod-mount-scaling	8812ddc9e1d1b76c5ccd3fb28b4462d56cdb8a1b
-mod-nat-pagle	https://github.com/buildthehomelab/wow-mod-nat-pagle.git	7b8eb02921f1bf417de7f1e42482c073d10539a7
+mod-nat-pagle	https://github.com/buildthehomelab/wow-mod-nat-pagle.git	e7a4e2b01168b0fb97825c9be6c2c8b0b904f4b9
 mod-nemesis	https://github.com/buildthehomelab/wow-mod-nemesis.git	de796f6205b8f23a3fb728cab7027a104dac06bb
 mod-night-brightness	https://github.com/buildthehomelab/wow-mod-night-brightness.git	2c09d638a61a22b36ab6b4b4845738cd80712d4c
 mod-no-profession-limit	https://github.com/buildthehomelab/wow-mod-no-profession-limit.git	eb38a9fc53c358ca85e5f1f51e025a537386275a
